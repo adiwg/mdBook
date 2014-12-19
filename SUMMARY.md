@@ -24,5 +24,12 @@
        * [Creating Writers](mdtranslator/creating_writers.md)
 * [mdTranslator RoR API](mdtranslator_ror_api/README.md)
 * [mdCodes](mdcodes/README.md)
+   * [Usage](mdcodes/usage.md)
+       * [Installation](mdcodes/installation.md)
+       * [Ruby](mdcodes/ruby.md)
+       * [API](mdcodes/api.md)
+   * [Development](mdcodes/development.md)
+       * [Architecture](mdcodes/architecture.md)
+       * [Creating Static Codelists](mdcodes/creating_static_codelists.md)
 * [mdEditor](mdeditor/README.md)
 
