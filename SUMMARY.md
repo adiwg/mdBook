@@ -28,6 +28,7 @@
        * [Installation](mdcodes/installation.md)
        * [Ruby](mdcodes/ruby.md)
        * [API](mdcodes/api.md)
+       * [Output](mdcodes/output.md)
    * [Development](mdcodes/development.md)
        * [Architecture](mdcodes/architecture.md)
        * [Creating Static Codelists](mdcodes/creating_static_codelists.md)
