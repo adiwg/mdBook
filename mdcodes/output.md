@@ -39,32 +39,6 @@ note: The lists have been truncated for purposes of examples
 {"iso_scope"=>
   ["attribute",
    "attributeType",
-   "collectionHardware",
-   "collectionSession",
-   "dataset",
-   "series",
-   "nonGeographicDataset",
-   "dimensionGroup",
-   "feature",
-   "featureType",
-   "propertyType",
-   "fieldSession",
-   "software",
-   "service",
-   "model",
-   "tile",
-   "metadata",
-   "initiative",
-   "sample",
-   "document",
-   "repository",
-   "aggregate",
-   "product",
-   "collection",
-   "coverage",
-   "application",
-   "sciencePaper",
-   "userGuide",
    "dataDictionary",
    "website",
    "publication",
@@ -250,7 +224,7 @@ note: The list has been truncated for purposes of examples.  The hash example is
 
 ## ISO CT_CodelistCatalogue
 
-This format is provided as a REST endpoint [CT_CodelistCatalogue](http://mdtranslator.herokuapp.com/api/codelists?format=xml). It is intended for use as the formal ISO 'codeList=' reference in coding ISO 19115-2:2003 and 19115-1:2014 metadata codelists.  This output is only available throug the API.
+This format is provided as a REST endpoint [CT_CodelistCatalogue](http://mdtranslator.herokuapp.com/api/codelists?format=xml). It is intended for use as the formal ISO 'codeList=' reference in coding ISO 19115-2:2003 and 19115-1:2014 metadata codelists.  This output is only available through the API.
 
 ````xml
 <gmd:role>
