@@ -1,7 +1,7 @@
 # API
 
 ## Current Host
-The mdTranslator and mdCodes rubygems are currently hosted at [mdtranslator.herokuapp.com](http://mdtranslator.herokuapp.com/).  Click [here](http://mdtranslator.herokuapp.com/api/v1) for a full description of the API.
+The mdTranslator and mdCodes rubygems are currently hosted at [mdtranslator.adiwg.org](http://mdtranslator.adiwg.org/).  Click [here](http://mdtranslator.adiwg.org/api) for a full description of the API.
 
 ## Endpoints
  * __.../api/codelists__ # returns a JSON or XML object will all codeLists supported in mdJSON <br>
