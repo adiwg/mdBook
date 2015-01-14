@@ -20,6 +20,7 @@
        * [CLI](mdtranslator/cli.md)
    * [Development](mdtranslator/development.md)
        * [Architecture](mdtranslator/architecture.md)
+       * [Internal Object](mdtranslator/internal_object)
        * [Creating Readers](mdtranslator/creating_readers.md)
        * [Creating Writers](mdtranslator/creating_writers.md)
 * [mdTranslator RoR API](mdtranslator_ror_api/README.md)
