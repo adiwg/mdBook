@@ -20,6 +20,8 @@
        * [CLI](mdtranslator/cli.md)
    * [Development](mdtranslator/development.md)
        * [Architecture](mdtranslator/architecture.md)
+           * [Input](mdtranslator/input.md)
+           * [Validate](mdtranslator/validate.md)
        * [Internal Object](mdtranslator/internal_object)
        * [Creating Readers](mdtranslator/creating_readers.md)
        * [Creating Writers](mdtranslator/creating_writers.md)
