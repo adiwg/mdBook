@@ -1,1 +1,1 @@
-git --helpThe introduction goes here.
+The introduction goes here.
