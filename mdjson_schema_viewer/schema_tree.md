@@ -50,8 +50,8 @@ Clicking on a node name will display the Information panel, providing access to 
 The Information panel provides descriptive documentation relative to a selected element node in the Schema Viewer. The panel has three modal tabs at the top, and a text viewer below.
 
 ### Definition Tab
-This tab indicates the type of object the selected element is, and a definition for the element. If the element is mappable to known metadata standard elements, than that mapping is shown under the Translation heading.
+This tab indicates the type of object the selected element is, and a definition for the selected element. If the element is mappable to known metadata standard elements, than that mapping is shown under the Translation heading.
 ### Example Tab
-This tab provides examples of using this element. Note that the example is in relation to the hierarchial context in which the element was accessed. Clicking on the "Open in new window" button will bring the full example text up in a new browser window, handy for large example descriptions.
+This tab provides examples of using the selected element. Note that the example is in relation to the hierarchial context in which the element was accessed. Clicking on the "Open in new window" button will bring the full example text up in a new browser window, handy for large example descriptions.
 ### Schema Tab
-This tab provides a view of the ADIwg JSON for this element. Note that the example is in relation to the hierarchial context in which the element was accessed. Clicking on the "Open in new window" button will bring the full example text up in a new browser window, handy for large schema descriptions.
+This tab provides a view of the ADIwg JSON for the selected element. Note that the example is in relation to the hierarchial context in which the element was accessed. Clicking on the "Open in new window" button will bring the full example text up in a new browser window, handy for large schema descriptions.
