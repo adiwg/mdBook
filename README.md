@@ -1,6 +1,6 @@
 #Introduction
 
-This book contains the documentation for the *ADIwg Metadata Toolkit* (stanadards, applications, libraries, and services).
+This book contains the documentation for the *ADIwg Metadata Toolkit* (standards, applications, libraries, and services).
 
 ## Open Source Toolkit
 
@@ -14,7 +14,7 @@ You can send questions to <adiwg@adiwg.org> or create an issue (see above). Of c
 
 ## Contribute to this documentation
 
-You can contribute to improve this documentation on [GitHub](https://github.com/adiwg/mdBook). If you notice a mistake or have suggestion, you may create an issue here: <https://github.com/adiwg/mdBook/issues>.
+You can contribute to improve this documentation on [GitHub](https://github.com/adiwg/mdBook). If you notice a mistake or have a suggestion, you may create an issue here: <https://github.com/adiwg/mdBook/issues>.
 
 ----
 
