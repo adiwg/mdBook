@@ -2,8 +2,6 @@
 
 This book contains the documentation for the *ADIwg Metadata Toolkit* (stanadards, applications, libraries, and services).
 
-GitBook is a tool for building beautiful books using Git and Markdown. It can generate your book in multiple formats: **PDF**, **ePub**, **mobi** or as a **website**.
-
 ## Open Source Toolkit
 
 The toolkit is open source, public domain, and completely free, the source code for all the tools is available on [GitHub](https://github.com/adiwg).
