@@ -17,7 +17,7 @@
        * [Viewer](mdjson_schema_viewer/schema_tree.md)
        * [Validator](mdjson_schema_viewer/validator.md)
        * [Translator](mdjson_schema_viewer/translator.md)
-   * [Development](mdjson_schema_viewer/development)
+   * [Development](mdjson_schema_viewer/development.md)
 * [mdTranslator](mdtranslator/README.md)
    * [Usage](mdtranslator/usage.md)
        * [Installation](mdtranslator/installation.md)
