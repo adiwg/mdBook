@@ -1,20 +1,18 @@
-# mdJSON Schema Viewer
+# mdTools
 
 ## Summary
+mdTools is a web based user interface for accessing ADIwg tools and reference links. These tools are centered around production of ISO compliant metadata.
 
-## Purpose
+##Tools
 
-## Schema Tree
+### mdJSON Schema Viewer
+Interactive documenatation tool for the ADIwg JSON standard.
 
-## Symbology
+### mdJSON Validator
+A tool to test a metadata file written in the ADIwg JSON standard for valid input.
 
-## Definition Tab
-
-## Example Tab
-
-## JSON Schema Tab
-
-## How to...
+### mdTranslator
+Converts an input metadata record, written to a known JSON standard, such as the ADIwg JSON standard.
 
 
 
