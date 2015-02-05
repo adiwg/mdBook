@@ -1,1 +1,5 @@
-{}
+{
+    "gitbook": "2.x.x",
+    "plugins": [],
+    "pluginsConfig": {}
+}
