@@ -18,4 +18,4 @@ You can contribute to improve this documentation on [GitHub](https://github.com/
 
 ----
 
-{% include "SUMMARY.md" %}
+{% include "./SUMMARY.md" %}
