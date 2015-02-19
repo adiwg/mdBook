@@ -44,4 +44,3 @@
        * [Architecture](mdcodes/architecture.md)
        * [Creating Static Codelists](mdcodes/creating_static_codelists.md)
 * [mdEditor](mdeditor/README.md)
-

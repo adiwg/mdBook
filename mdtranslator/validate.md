@@ -12,5 +12,3 @@ If the mdJson file passes the above tests the reader will load it into the mdTra
 
 
 
-
-
