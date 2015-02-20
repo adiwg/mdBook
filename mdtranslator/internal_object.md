@@ -17,14 +17,20 @@ When building or reading an internal object start with the base object 'newBase'
             },
             contacts: [],
             metadata: {},
-            dataDictionary: {}
+            dataDictionary: []
         }
     end
 ````
 
 The base object has 4 sections:
 
-**schema:** *object* (required) - contains the name and version of the metadata input file submitted to the reader.
+**schema:** *object* (required) - contains the schema name and version for the metadata input file submitted to the reader.
+
+[**contacts:**](../mdtranslator/contacts.md) *array* - holds an array of contact objects.  The internal object stores information about a contact in an array so the contact can be stored once and reused multiple times throughout the metadata record.
+
+[**metadata:**](../mdtranslator/metadata.md) *object* - holds a hash object containing the metadata for the resource being described, generally a project or data resource.
+
+[**dataDictionary:**](../mdtranslator/dataDictionary.md) *array* - an array of dataDictionary descriptions.
 
 
 
