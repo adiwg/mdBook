@@ -19,5 +19,4 @@ __identifierType:__ *string* - the type of identifier such as uuid, acronym, or 
 
 ---
 [base](../mdtranslator/internal_object.md) <br>
-[parent - metadataInfo](../mdtranslator/metadataInfo.md) <br>
-[parent - citation](../mdtranslator/citation.md)
+<a href="#" onclick="history.go(-1)">parent</a>

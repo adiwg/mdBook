@@ -32,4 +32,4 @@ __citResourceForms:__ *array* - an array of strings that describe the forms in w
 
 ---
 [base](../mdtranslator/internal_object.md) <br>
-[parent - resourceId](../mdtranslator/resourceId.md)
+<a href="#" onclick="history.go(-1)">parent</a>
