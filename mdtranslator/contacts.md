@@ -35,9 +35,3 @@ __position:__ *string* - the position or title of the individual within the orga
 [__onlineRes:__](../mdtranslator/onlineResource.md) *array* - and array of online resources associated with the individual or organization.
 
 __contactInstructions:__ *text* - an open text field to provide any specific information about contacting the individual or organization.
-
----
-[base](../mdtranslator/internal_object.md) <br>
-[parent](../mdtranslator/internal_object.md)
-
-

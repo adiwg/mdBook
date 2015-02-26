@@ -26,7 +26,3 @@ __postalCode:__ *string* - postal district code; e.g. zip code in the U.S.
 __country:__ *string* - name of the country or internationally accepted country code.
 
 __eMailList:__ *array* - an array of quoted strings with each string being an email address.
-
----
-[base](../mdtranslator/internal_object.md) <br>
-[parent](../mdtranslator/contacts.md)

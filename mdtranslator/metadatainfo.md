@@ -1,7 +1,6 @@
 # metadataInfo:
 
-The *metadataInfo:* object contains information about the metadata record itself.
-
+The *metadataInfo:* object contains information about the metadata record itself. This is not the metadata for the resource, that metadata can be found in the [resourceInfo](../mdtranslator/resourceInfo.md) section.
 ````ruby
     def newMetadataInfo
         intObj = {
@@ -35,8 +34,3 @@ __metadataStatus:__ *string* - The status of the metadata record; e.g. complete,
 [__mainInfo:__](../mdtranslator/resourceMaint.md) *object* - Provides information about the frequency of metadata updates, and the scope of those updates.
 
 __extensions__ *array* - Information about metadata extensions.  This objects is automatically populated for ISO writers requiring the biological extension.
-
----
-[base](../mdtranslator/internal_object.md) <br>
-[parent](../mdtranslator/metadata.md)
-

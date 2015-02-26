@@ -17,8 +17,3 @@ __maintFreq:__ *string* - a description of the scheduled update frequency for th
 __maintNotes:__ *array* - an array of quoted string statements providing information about the maintenance of this resource.
 
 __maintContacts:__ *array* - a array of [responsibleParty](../mdtranslator/responsibleParty.md) objects identifying people and/or organizations in their roles for maintaining the resource being described.
-
-
----
-[base](../mdtranslator/internal_object.md) <br>
-<a href="#" onclick="history.go(-1)">parent</a>

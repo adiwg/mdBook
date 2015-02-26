@@ -18,7 +18,3 @@ __phoneServiceType:__ *string* - a user provided description of the phone servic
 __phoneName:__ *string* - an open text field to describe the phone e.g. 'main office' or 'Joe's mobile'.
 
 __phoneNumber:__ *alphaNumeric* - the phone number.  No format for the phone number is enforced.
-
----
-[base](../mdtranslator/internal_object.md) <br>
-[parent](../mdtranslator/contacts.md)

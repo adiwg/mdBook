@@ -23,7 +23,3 @@ __olResName:__ *string* - a user supplied name for the URI.
 __olResDesc:__ *string* - a short description of the URI.
 
 __onResFunction:__ *string* - the purpose of the online resource; e.g. information, data.
-
----
-[base](../mdtranslator/internal_object.md) <br>
-[parent](../mdtranslator/contacts.md)

@@ -16,7 +16,3 @@ The *resonsibleParty* in the internal object is just a contactId and a role for 
 __contactId:__ *string* - the unique ID the user assigned to the corresponding contact in the [contacts](../mdtranslator/contacts.md) object.
 
 __role:__ *string* - the function of the contact in the current context.
-
----
-[base](../mdtranslator/internal_object.md) <br>
-<a href="#" onclick="history.go(-1)">parent</a>
