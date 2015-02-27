@@ -1,8 +1,8 @@
-# contacts:
+# contact:
 
-The *contacts:* array holds the information about individual contacts that will be used throughout the metadata.  Placing contacts in an array allows reuse of a contact multiple times in the metadata without respecifying the contacts information each time it is used.
+The *contact:* object holds the information about an individual contact that may be used multiple times throughout the metadata record.
 
-Contacts can be for an individual an organization, or both.
+A contact object may describe an individual, an organization, or both.
 
 __contact:__
 ````ruby

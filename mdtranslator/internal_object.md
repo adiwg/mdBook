@@ -26,11 +26,11 @@ The base object has 4 sections:
 
 **schema:** *object* (required) - contains the schema name and version for the metadata input file submitted to the reader.
 
-[**contacts:**](../mdtranslator/contacts.md) *array* - holds an array of contact objects.  The internal object stores information about a contact in an array so the contact can be stored once and reused multiple times throughout the metadata record.
+__contacts:__ *array* - holds an array of [contact](../mdtranslator/contact.md) objects.  The internal object stores information about a contact in an array so the contact can be stored once and reused multiple times throughout the metadata record.
 
 [**metadata:**](../mdtranslator/metadata.md) *object* - holds a hash object containing the metadata for the resource being described, generally a project or data resource.
 
-[**dataDictionary:**](../mdtranslator/dataDictionary.md) *array* - an array of dataDictionary descriptions.
+__dataDictionary__ *array* - an array of [dataDictionary](../mdtranslator/dataDictionary.md) objects describing the collection of physical objects or items in a data resource (schema)..
 
 
 
