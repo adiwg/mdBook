@@ -92,7 +92,7 @@ __environmentDescription:__ *string* - a description of the producer's processin
 
 __extent:__ *array* - an array of [extent](../mdtranslator/extent.md) objects describing the spatial, temporal, and vertical boundaries of the project or data resource.
 
-__dataQualityInfo:__ *array* - an array of [dataQuality](../mdtranslator/dataQuality.md) objects describing the data quality, lineage, and/or processing steps applied to the data resource.
+__dataQualityInfo:__ *array* - an array of [dataQuality](../mdtranslator/dataQuality.md) objects describing the data quality, lineage, and/or processing steps applied to the whole or part of the data resource.
 
 __supplementalInfo:__ *string* - any additional descriptive information about the project or data resource that is covered elsewhere.
 
