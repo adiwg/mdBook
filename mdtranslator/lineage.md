@@ -16,4 +16,4 @@ __statement:__ *string* - a general statement of the actions taken to verify, tr
 
 __processingSteps:__ *array* - an array of [dataProcessingStep](../mdtranslator/dataProcessingStep.md) objects a contain a brief statement describing an individual, non-trivial process or methodology step taken in development of the resource data described in the [dataScope](../mdtranslator/dataQuality.md).
 
-__dataSources:__ *array* - an array of [dataSource](../mdtranslator/dataSource.md) objects providing a reference to an existing datasets used in creating the data described in the [dataScope](../mdtranslator/dataQuality.md).
+__dataSources:__ *array* - an array of [dataSource](../mdtranslator/dataSource.md) objects providing a references to an existing datasets used in creating the data described in the [dataScope](../mdtranslator/dataQuality.md).
