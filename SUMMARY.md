@@ -43,7 +43,7 @@
            * [dataSource:](mdtranslator/datasource.md)
            * [dataUsage:](mdtranslator/datausage.md)
            * [dateTime:](mdtranslator/datetime.md)
-           * [dictionaryDomain:](mdtranslator/dictionarydomain)
+           * [dictionaryDomain:](mdtranslator/dictionarydomain.md)
            * [dictionaryInfo: ](mdtranslator/dictionaryinfo.md)
            * [distributor:](mdtranslator/distributor.md)
            * [domainItem:](mdtranslator/domainitem.md)
