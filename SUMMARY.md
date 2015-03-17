@@ -50,7 +50,7 @@
            * [distributor:](mdtranslator/distributor.md)
            * [domainItem:](mdtranslator/domainitem.md)
            * [entity:](mdtranslator/entity.md)
-           * [entityAttribute:](mdtranslator/entityattribute)
+           * [entityAttribute:](mdtranslator/entityattribute.md)
            * [entityForeignKey:](mdtranslator/entityforeignkey.md)
            * [entityIndex:](mdtranslator/entityindex.md)
            * [extent:](mdtranslator/extent.md)

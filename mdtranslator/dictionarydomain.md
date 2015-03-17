@@ -22,4 +22,4 @@ __domainCode:__ *string* - the code or 'lookup table' name for the domin used in
 
 __domainDescription:__ *string* - a brief description of the domain including identification of any established sources used in creating the list of domain items.
 
-__domainItems:__ *array* (required) - an array of [domainItem](../mdtranslator/domainItem.md) objects defining the allowed values of the domain.
+__domainItems:__ *array* (required) - an array of [domainItem](../mdtranslator/domainItem.md) objects that enumerate and define the valid values for a domain.
