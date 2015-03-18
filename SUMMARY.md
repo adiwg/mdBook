@@ -64,6 +64,7 @@
            * [metadataInfo:](mdtranslator/metadatainfo.md)
            * [onlineResource:](mdtranslator/onlineresource.md)
            * [phone:](mdtranslator/phone.md)
+           * [polygonSet:](mdtranslator/polygonset.md)
            * [resolution:](mdtranslator/resolution.md)
            * [resourceFormat:](mdtranslator/resourceformat.md)
            * [resourceId:](mdtranslator/resourceid.md)

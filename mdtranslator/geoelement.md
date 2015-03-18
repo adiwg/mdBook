@@ -40,4 +40,4 @@ __elementAcquisition:__ *string* - a brief statement of the method used to deter
 
 __elementSrs:__ *object* - an [SRS](../mdtranslator/SRS.md) object describing the spatial reference system for the geographic element
 
-__elementGeometry:__ *object* (required) - a [geometry](../mdtranslator/geometry.md) object that can describe a boundingBox, point, lineString, or polygon.  
+__elementGeometry:__ *object* (required) - a [geometry](../mdtranslator/geometry.md) object that can describe a boundingBox, point, lineString, or polygon.
