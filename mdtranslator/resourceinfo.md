@@ -79,7 +79,7 @@ __securityConstraints:__ *array* an array of [securityCon](../mdtranslator/secur
 
 __taxonomy:__ *object* - an instance of the [taxonSystem](../mdtranslator/taxonSystem.md) object defining one or more species and the system of taxonomy classification system.
 
-__spatialReferenceSystem:__ *object* - an instance of the [SRS](../mdtranslator/SRS.md) that defines the spatial references system used for the geospatial data in this resource.
+__spatialReferenceSystem:__ *object* - an instance of the [spatialReferenceSystem](../mdtranslator/spatialReferenceSystem.md) object that defines the system used for geospatial data in this resource.
 
 __spatialRepresentationTypes:__ *array* - an array of quoted strings stating the digital mechanism used to
 represent spatial information, such as 'vector', 'grid', 'text table' etc.

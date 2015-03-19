@@ -1,6 +1,6 @@
 # legalCon:
 
-The *legalCon* object containing the various legal constraints regarding access and use of the resource.
+The *legalCon* object containing the legal constraints regarding access and use of the resource.
 
 ````ruby
     def newLegalCon
