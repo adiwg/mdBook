@@ -1,6 +1,6 @@
 # geoElement:
 
-The *geoElement* object
+The *geoElement* object describes a geographic object that comprises all or part of the extent.  The geographic object may be a bounding box, point, linestring, polygon, or textual description.  The *geoElement* also allows for multi-point, multi-line, and multi-polygon definitions.
 
 ````ruby
     def newGeoElement
@@ -40,4 +40,4 @@ __elementAcquisition:__ *string* - a brief statement of the method used to deter
 
 __elementSrs:__ *object* - an [SRS](../mdtranslator/SRS.md) object describing the spatial reference system for the geographic element
 
-__elementGeometry:__ *object* (required) - a [geometry](../mdtranslator/geometry.md) object that can describe a boundingBox, point, lineString, or polygon.
+__elementGeometry:__ *object* (required) - can be either a [boundingBox](../mdtranslator/boundingBox.md) or [geometry](../mdtranslator/geometry.md) object that describes a point, lineString, or polygon.
