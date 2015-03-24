@@ -2,7 +2,7 @@
 
 The mdTranslator's work flow is logically divided into the following six processes:
 ![](../resources/images/architecture_flow.png)
-After invoking the mdTranslator via one of the methods described in the [Usage](usage.md) section of mdBook, the mdTranslator examines the parameters passed in and turns control over to the requested *reader*.
+After invoking the mdTranslator via one of the methods described in the [Usage](../mdcodes/usage.md) section of mdBook, the mdTranslator examines the parameters passed in and turns control over to the requested *reader*.
 
 The *reader* manages the next two processes (Validate and Read) and if these processes and returns control to mdTranslatora  If the reader processes were successful mdTranslator will call the requested writer.
 

@@ -14,6 +14,10 @@ Additionally, ADIwg metadata supports several additional pieces of information t
 
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 
+#### Key Differences / Conceptual Differences between ADIwg and FGDC-CSDGM
+
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
 #### Understanding 'Parallel' Elements between the ADIwg and FGDC-CSDGM Metadata Standards
 
 "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
