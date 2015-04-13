@@ -4,7 +4,7 @@ The mdTranslator's work flow is logically divided into the following six process
 ![](../resources/images/architecture_flow.png)
 After invoking the mdTranslator via one of the methods described in the [Usage](../mdcodes/usage.md) section of mdBook, the mdTranslator examines the parameters passed in and turns control over to the requested *reader*.
 
-The *reader* manages the next two processes (Validate and Read) and if these processes and returns control to mdTranslatora  If the reader processes were successful mdTranslator will call the requested writer.
+The *reader* manages the next two processes (Validate and Read) and if these processes and returns control to mdTranslator.  If the reader processes were successful, mdTranslator will call the requested writer.
 
 The *writer* then manages the Write process and hands the result back to mdTranslator to handle output of the package in whatever form the user requested.  Each of these primary processes are described in more detail on the following pages.
 
