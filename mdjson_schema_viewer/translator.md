@@ -16,12 +16,12 @@ The input metadata record does not need to be fully completed, but needs to be i
 ###Reader
 A Reader reads the input and validates that the input is properly formed relative to the Reader schema. If valid, the input is passed to the Translator.
 
-Use the drop down box "Choose a Reader..." to specify which Reader you wish to use. The Reader should match the particular metadata format of the input file.
+Use the drop down box "Choose a Reader..." to specify which Reader you wish to use. The selected Reader should match the format of the input metadata file.
 
 ###Writer
 A Writer takes the input that has been "read" into the Translator and outputs the content as XML, relative to the schema of the specified Writer.
 
-Use the drop down box "Choose a Writer..." to specify which Writer you wish to use.
+Use the drop down box "Choose a Writer..." to specify which Writer you wish to use. The selected Writer will dictate the format of the output metadata file.
 
 ###Validation
 Three modes of validation are available, Normal, Strict and None.
@@ -36,14 +36,14 @@ All fields must be populated with valid content. This mode is primarily used for
 This mode turns off validation, allowing the Translator to accept whatever input is provided. Note that this mode may cause the translation to fail or the output to be non-compliant with the specified standard.
 
 ###Options
-The Output Empty Tags option will direct the Translator to include blank elements in the output. The default behaviour is to filter blank elements in the output for compactness.
+The Output Empty Tags option will direct the Translator to include blank elements in the output. The default behavior is to filter blank elements in the output for compactness.
 
-The Translate button will provide directions on what information is needed as input to the Translator, through informative text displayed on the button. Once the button displays "Translate!", then all required input has been provided, click on the button to procede with translation.
+The Translate button will provide directions on what information is needed as input to the Translator, through informative text displayed on the button. Once the button displays "Translate!", then all required input has been provided, click on the button to proceed with translation.
 
 ###Output
 If the input was successfully translated, then the output XML will display below the "Translate!" button. The output can be perused for verification.
 
-An "Open in New Window" button is available immediately below the "Translate!" button. Clicking on this button will display the ouput in a separate browser window.
+An "Open in New Window" button is available immediately below the "Translate!" button. Clicking on this button will display the output in a separate browser window.
 
 ###Errors
 If any errors are encountered by the Translator, a display of the errors are listed. If the JSON could not be parsed, indicating improperly formed JSON, then a popup window will indicate invalid syntax and identify the syntax problem. Click outside the popup to continue.
