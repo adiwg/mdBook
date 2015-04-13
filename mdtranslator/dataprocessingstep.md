@@ -1,6 +1,6 @@
 # dataProcessingStep:
 
-The *dataProcessingStep* object provides a brief statement about an discrete non-trivial event or transformation in the life of a dataset including process used to manage the quality of the data.
+The *dataProcessingStep* object provides a brief statement about a discrete non-trivial event or transformation in the life of a dataset including processes used to manage the quality of the data.
 
 ````ruby
     def newDataProcessStep
