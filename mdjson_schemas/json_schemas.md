@@ -47,19 +47,19 @@ This schema references the citation.json schema and is referenced by the resourc
 
 ### [maintInfo](https://github.com/adiwg/mdJson-schemas/blob/master/schema/schema/maintInfo)
 
-The maintInfo.json schema defines the structure of the maintenance info block of ADIwg metadata in its native JSON format. This schema describes the structure of the objects describing the maintenance frequency of the resource, a maintenance note for providing any descriptive text about the maintenance of the resource, and for referencing the point of contact repsonsible for maintaining the resource.
+The maintInfo.json schema defines the structure of the maintenance info block of ADIwg metadata in its native JSON format. This schema describes the structure of the objects describing the maintenance frequency of the resource, a maintenance note for providing any descriptive text about the maintenance of the resource, and for referencing the point of contact responsible for maintaining the resource.
 
 This schema references the contact.json schema and is referenced by the metadata.json and resourceInfo.json schemas.
 
 ### [metadata](https://github.com/adiwg/mdJson-schemas/blob/master/schema/schema/metadata.json)
 
-The metadata.json schema defines the structure of the metadata block of ADIwg metadata in its native JSON format. This schema defines the structure of the main body of the metadata. This section references other schemas and describes the metadata itself. The metadata <i>about the metadata</i> defined in this schema includes the unique identifier for the metadata record, the date of last update of the metadata, references to related metadata record(s), points of contact for metadata creation and maintenance, and the character set in which the metadata is encoded.
+The metadata.json schema defines the structure of the metadata block of ADIwg metadata in its native JSON format. This schema defines the structure of the main body of the metadata. This section references other schemas and describes the metadata record itself. The metadata <i>about the metadata</i> defined in this schema includes the unique identifier for the metadata record, the date of last update of the metadata, references to related metadata record(s), points of contact for metadata creation and maintenance, and the character set in which the metadata is encoded.
 
 This schema references the citation.json, contact.json, schema.json, maintInfo.json, resourceInfo.json, and distributor.json schemas, and the MD_CharacterSetCode, DS_AssociationTypeCode, and the DS_InitiativeTypeCode codelists.
 
 ### [onlineResource](https://github.com/adiwg/mdJson-schemas/blob/master/schema/schema/onlineResource.json)
 
-The onlineResource.json schema defines the structure of the online resource block of ADIwg metadata in its native JSON format. This schema defines the metadata elements that contain names, URIs, protocol names, and text descriptions of functions performedby the online resource.
+The onlineResource.json schema defines the structure of the online resource block of ADIwg metadata in its native JSON format. This schema defines the metadata elements that contain names, URIs, protocol names, and text descriptions of functions performed by the online resource.
 
 This schema references definitions from schema.json and the CI_OnlineFunctionCode codelist.
 
@@ -89,6 +89,6 @@ This schema references the citation.json and contact.json schemas, and is refere
 
 ### [usage](https://github.com/adiwg/mdJson-schemas/blob/master/schema/schema/usage)
 
-The usage.json schema defines the structure of the usage block of ADIwg metadata in its native JSON format. This section of the metadata describes the inteded and prohibited uses of the resource, and provides contact information for the the person(s) and organization(s) using the resource.
+The usage.json schema defines the structure of the usage block of ADIwg metadata in its native JSON format. This section of the metadata describes the intended and prohibited uses of the resource, and provides contact information for the the person(s) and organization(s) using the resource.
 
 This schema references contact.json and is referenced by resourceInformation.json.
