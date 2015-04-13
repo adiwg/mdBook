@@ -1,6 +1,6 @@
 # associatedResource:
 
-The *associatedResource* object contains informatino on resources which have some direct lineage to the central resource of this metadata such as parent or child datasets or projects.
+The *associatedResource* object contains information on resources which have some direct lineage to the central resource of this metadata such as parent or child datasets or projects.
 
 ````ruby
     def newAssociatedResource
@@ -18,7 +18,7 @@ __associationType:__ *string* - identifies how the associated resource is relate
 
 __initiativeType:__ *string* - identifies type of initiative under which the resource was produced such as 'study', 'task', 'experiment', 'sensor'.
 
-__resourceType:__ *string* - identifies the type of  resource described by this object. E.g. 'project', 'dataset', 'study', 'publication'.
+__resourceType:__ *string* - identifies the type of  resource described by this object (e.g., 'project', 'dataset', 'study', 'publication').
 
 __resourceCitation:__ *object* - a [citation](../mdtranslator/citation.md) object identifying the resource including its location.
 
