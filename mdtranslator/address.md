@@ -21,7 +21,7 @@ __city:__ *string* - name of the city
 
 __adminArea:__ *string* - name of the state or province.  Postal abbreviations for a state or province are also permissable.
 
-__postalCode:__ *string* - postal district code; e.g. zip code in the U.S.
+__postalCode:__ *string* - postal district code; e.g., zip code in the U.S.
 
 __country:__ *string* - name of the country or internationally accepted country code.
 
