@@ -30,10 +30,10 @@ Note that strict validation will likely cause your input file to fail pointing t
 
 **writer:** *string* (optional)
 
-Provides a writer name to mdTranlator.  If no writer is provided processing will stop after the input metadata file has been validated and parsed into the *internal object*.
+Provides a writer name to mdTranslator.  If no writer is provided, processing will stop after the input metadata file has been validated and parsed into the *internal object*.
 
-**showAllTages:** *Boolean* (optional)
+**showAllTags:** *Boolean* (optional)
 
-The action taken will be dependent on the metadata standard being written.  For example if the metadata standard is writing to XML empty or missing elements can either be eliminated from the output or shown as empty XML tags (e.g. < /myTag\>).
+The action taken will be dependent on the metadata standard being written.  For example if the metadata standard is writing to XML, empty or missing elements can either be eliminated from the output or shown as empty XML tags (e.g. < /myTag\>).
 
 
