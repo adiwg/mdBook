@@ -11,20 +11,20 @@ Three methods of input for translation are provided.
 + Paste the input into the Translator text box
 + Directly write input into the Translator text box
 
-The input metadata record does not need to be fully completed, but needs to be in a valid structure and contain the minimum elements. To see an example of minimal valid input, click on the "Load Example" link imemdiately below the Translator text box. This is an example of ADIwg JSON intended for the ISO 19115-2 writer. Note, the input must be valid relative to the JSON reader you intend to use.
+The input metadata record does not need to be fully completed, but needs to be in a valid structure and contain the minimum elements. To see an example of minimal valid input, click on the "Load Example" link immediately below the Translator text box. This is an example of ADIwg JSON intended for the ISO 19115-2 writer. Note, the input must be valid relative to the JSON reader you intend to use.
 
 ###Reader
 A Reader reads the input and validates that the input is properly formed relative to the Reader schema. If valid, the input is passed to the Translator.
 
-Use the drop down box "Choose a Reader..." to specifiy which Reader you wish to use.
+Use the drop down box "Choose a Reader..." to specify which Reader you wish to use. The Reader should match the particular metadata format of the input file.
 
 ###Writer
 A Writer takes the input that has been "read" into the Translator and outputs the content as XML, relative to the schema of the specified Writer.
 
-Use the drop down box "Choose a Writer..." to specifiy which Writer you wish to use.
+Use the drop down box "Choose a Writer..." to specify which Writer you wish to use.
 
 ###Validation
-Three modes of validation are available, Normal, Srict and None.
+Three modes of validation are available, Normal, Strict and None.
 
 ####Normal
 Optional elements left blank are ignored and not output.
