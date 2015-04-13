@@ -1,6 +1,6 @@
 # contact:
 
-The *contact:* object holds the information about an individual contact that may be used multiple times throughout the metadata record.
+The *contact:* object holds the information about a discrete contact that may be used multiple times throughout the metadata record.
 
 A contact object may describe an individual, an organization, or both.
 
