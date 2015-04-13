@@ -38,7 +38,7 @@ This mode turns off validation, allowing the Translator to accept whatever input
 ###Options
 The Output Empty Tags option will direct the Translator to include blank elements in the output. The default behavior is to filter blank elements in the output for compactness.
 
-The Translate button will provide directions on what information is needed as input to the Translator, through informative text displayed on the button. Once the button displays "Translate!", then all required input has been provided, click on the button to proceed with translation.
+The Translate button will provide directions on what information is needed as input to the Translator, through informative text displayed on the button. Once the button displays "Translate!", then all required input has been provided. Click on the button to proceed with translation.
 
 ###Output
 If the input was successfully translated, then the output XML will display below the "Translate!" button. The output can be perused for verification.
@@ -62,5 +62,5 @@ Note that an error location in the input is not highlighted in the Translator te
 
 The error may contain "sub-errors". These are secondary errors that were encountered in relation to the primary error. These errors may provide more clues as to the source of the problem.
 
-Common errors may include improper pairing of brackets. For instance, a missing bracket or invalid bracket type (See the mdJSON topic for more information).
+Common errors may include improper pairing of brackets. For instance, a missing bracket or invalid bracket type (see the mdJSON topic for more information).
 
