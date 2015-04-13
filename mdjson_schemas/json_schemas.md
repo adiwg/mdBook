@@ -1,8 +1,10 @@
 # JSON Schemas
 
+Please note: clicking on any of the individual components below will route a user to an online example JSON file.
+
 ### [citation](https://github.com/adiwg/mdJson-schemas/blob/master/schema/schema/citation.json)
 
-The citation.json schema file defines the structure of the citation block of ADIwg metadata in its native JSON format. This section of the metadata is used to reference a published or unpublished data and information products about the data or effort described by the metadata record. Uses of the citation schema in ADIwg metadata typically include one or more citations for the dataset or sampling effort described by the metadata; references to authorities responsible for any taxonomies or controlled vocabularies used in the metadata; and to provide a reference to a data or processing-step source in the dataset lineage.
+The citation.json schema file defines the structure of the citation block of ADIwg metadata in its native JSON format. This section of the metadata is used to reference published or unpublished data and informational products that pertain to the data or effort described in the metadata record. Uses of the citation schema in ADIwg metadata typically include one or more citations for the dataset or sampling effort described by the metadata; references to authorities responsible for any taxonomies or controlled vocabularies used in the metadata; and to provide a reference to a data or processing-step source in the dataset lineage.
 
 The citation schema is referenced by the dataQuality.json, keyword.json, metadata.json, and taxonomy.json schemas. This schema references the contact.json schema and definitions from schema.json.
 
@@ -39,7 +41,7 @@ This schema is referenced by the resourceInfo.json schema.
 
 ### [keyword](https://github.com/adiwg/mdJson-schemas/blob/master/schema/schema/eyword.json)
 
-The keyword.json schema defines the structure of the keyword block of ADIwg metadata in its native JSON format. This schema defines the seciton of ADIwg metadata used to provide keywords, describe keyword types, and to provide references to authorities responsible for the controlled vocaularies used for keywords.
+The keyword.json schema defines the structure of the keyword block of ADIwg metadata in its native JSON format. This schema defines the seciton of ADIwg metadata used to provide keywords, describe keyword types, and to provide references to authorities responsible for the controlled vocabularies used for keywords.
 
 This schema references the citation.json schema and is referenced by the resourceInfo.json schema.
 
