@@ -1,7 +1,7 @@
 # Validator
 
 ##Purpose
-ADIwg mdJSON Validator is a tool to test a metadata file written in the ADIwg JSON standard for valid input. The validator tests for valid JSON format and conformance to the ADIwg JSON schema. The Validator is handy for testing your metadata file before running the Translator.
+ADIwg mdJSON Validator is a tool to test a metadata file written in the ADIwg JSON standard for valid input. The validator tests for valid JSON format and conformance to the ADIwg JSON schema. The Validator can be a useful resource to run on a metadata file before attempting to run the Translator.
 
 ##Interface
 The simple interface allows for different means of providing ADIwg JSON for testing.
@@ -20,7 +20,7 @@ The input metadata record does not need to be fully completed, but needs to be i
 The Validator can be run with the following options:
 
 ####Strict
-Clicking on Strict runs the JSON input validating that all content is valid. Non-Strict mode is more permissive, ignoring unrecongizable content.
+Clicking on Strict will check to ensure that all JSON input is valid, as outlined in the schema. Non-Strict mode is more permissive, ignoring unrecognizable content.
 
 ####Stop at First Error
 Tells the Validator to cease processing at the first error encountered. In this manner, one may step through errors, making corrections along the way. Without the Stop option, the Validator will process the entire input.
@@ -44,4 +44,4 @@ Note that an error location in the input is not highlighted in the Validator tex
 
 The error may contain "sub-errors". These errors are secondary errors that were encountered in relation to the primary error. These errors may provide more clues as to the source of the problem.
 
-Common errors may include improper pairing of brackets. For instance, a missing bracket or invalid bracket type (See the mdJSON topic for more information).
+Common errors may include improper pairing of brackets. For instance, a missing bracket or invalid bracket type (see the mdJSON topic for more information).
