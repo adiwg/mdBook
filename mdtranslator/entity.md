@@ -22,7 +22,7 @@ __entityId:__ *string* (required) - a user provided unique ID for this entity.  
 
 __entityName:__ *string* (required) - the name commonly used to identify this entity
 
-__entityCode:__ *string* - the code name used to identify this entity in a database schema or application software. For spreasheets this would likely be the sheet name. This items may not be applicable to datasets represented as a file.
+__entityCode:__ *string* - the code name used to identify this entity in a database schema or application software. For spreadsheets this would likely be the sheet name. This items may not be applicable to datasets represented as a file.
 
 __entityAlias:__ *array* - an array of quoted strings providing alternalte names used to identify this entity
 
