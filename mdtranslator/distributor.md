@@ -1,6 +1,6 @@
 # distributor:
 
-The *distributor* object provides about a distributor of and options for obtaining the information resource.
+The *distributor* object provides information about a distributor and options for obtaining the information resource.
 
 ````ruby
     def newDistributor
