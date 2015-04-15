@@ -17,6 +17,6 @@ __fees:__ *string* - fees and terms for retrieving the resource, including monet
 
 __plannedDateTime:__ *dateTime* - a [dateTime](../mdtranslator/dateTime.md) object providing the date and time after which the resource will be available
 
-__orderInstructions:__ *string* - general instrucions, terms, and servicesprovided by the distributor
+__orderInstructions:__ *string* - general instrucions, terms, and services provided by the distributor
 
 __turnaround:__ *string* - typical turnaround time for the filling of an order
