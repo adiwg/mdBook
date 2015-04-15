@@ -19,4 +19,4 @@ __dictDescription:__ *string* - a brief description of the data dictionary.
 
 __dictResourceType:__ *string* - identifies the scope of the data dictionary. E.g. 'database', 'dataset', 'table'.
 
-__dictLanguage:__ *string* - defines the language and counrty of origin in which the data dictionary is written.  E.g. 'eng; USA', 'eng; UK', 'esp; MEX'.
+__dictLanguage:__ *string* - defines the language and country of origin in which the data dictionary is written (e.g., 'eng; USA', 'eng; UK', 'esp; MEX').
