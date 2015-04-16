@@ -27,11 +27,11 @@ __attributeAlias:__ *array* - an array of quoted strings providing alternate nam
 
 __attributeDefinition:__ *string* (required) - a succinct but comprehensive definition for the attribute
 
-__dataType:__ *string* - the datatype for the attribute.  Names for datatypes vary widely by database management system.  Use the datatype name associated with the database system that implemented the entity.  E.g. 'integer', 'boolean', 'decimal(8,5)', 'varchar(200)'
+__dataType:__ *string* - the datatype for the attribute.  Names for datatypes vary widely by database management system.  Use the datatype name associated with the database system that implemented the entity (e.g., 'integer', 'boolean', 'decimal(8,5)', 'varchar(200)').
 
 __allowNull:__ *boolean* - indicates whether null values are allowed for the attribute
 
-__unitOfMeasure:__ *string* - a unit-of-measure for the attribute.  E.g. 'meters', 'atmospheres', 'liters'
+__unitOfMeasure:__ *string* - a unit-of-measure for the attribute (e.g., 'meters', 'atmospheres', 'liters').
 
 __domainId:__ *string* - provides the domain ID for the [dictionaryDomain](../mdtranslator/dictionaryDomain.md) containing the list of permissable values for this attribute
 
