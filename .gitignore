@@ -18,3 +18,6 @@ _book
 
 # Windows junk to ignore
 Thumbs.db
+
+#Other stuff
+.project
