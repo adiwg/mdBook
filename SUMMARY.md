@@ -97,5 +97,5 @@
        * [Creating Static Codelists](mdcodes/creating_static_codelists.md)
 * [mdEditor](mdeditor/README.md)
 * Appendix
-   * mdJSON Data DIctionary
+   * [mdJSON Data DIctionary](mdjson_data_dictionary.md)
 
