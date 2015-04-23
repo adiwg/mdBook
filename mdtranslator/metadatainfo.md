@@ -29,8 +29,8 @@ The *metadataInfo:* object contains information about the metadata record itself
 
 __metadataURI:__ *string* - Uniform Resource Identifier (URI) of this metadata record.
 
-__metadataStatus:__ *string* - The status of the metadata record; e.g. complete, ammended, provisional.
+__metadataStatus:__ *string* - The status of the metadata record; e.g. complete, amended, provisional.
 
 [__mainInfo:__](../mdtranslator/resourceMaint.md) *object* - Provides information about the frequency of metadata updates, and the scope of those updates.
 
-__extensions__ *array* - Information about metadata extensions.  This objects is automatically populated for ISO writers requiring the biological extension.
+__extensions__ *array* - Information about metadata extensions.  This object is automatically populated for ISO writers requiring the biological extension.
