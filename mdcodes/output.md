@@ -145,7 +145,7 @@ note: The list has been truncated for purposes of examples.  The hash example is
 #### Call:
 From Ruby
 ````Ruby
-codeList = ADIWG::Mdcodes.getAllCodeistsDetail('json')
+codeList = ADIWG::Mdcodes.getAllCodelistsDetail('json')
 ````
 
 From API:
