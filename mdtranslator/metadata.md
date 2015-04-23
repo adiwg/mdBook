@@ -18,7 +18,7 @@ The *metadata:* object holds the body of the metadata for the resource.  It is o
 
 [__resourceInfo:__](../mdtranslator/resourceInfo.md) *object* - contains metadata for the resource being described by this metadata record.
 
-__distributorInfo:__ *array* - an array of  [distributor](../mdtranslator/distributor.md) objects information about distributors or distribution points for the data or service described by this metadata record.
+__distributorInfo:__ *array* - an array of  [distributor](../mdtranslator/distributor.md) objects containing information about distributors or distribution points for the data or service described by this metadata record.
 
 __associatedResources:__ *array* - an array of [associatedResources](../mdtransator/associatedResource.md) objects referencing resources which have some direct lineage to the central resource of this metadata such as parent or child datasets or projects.
 
