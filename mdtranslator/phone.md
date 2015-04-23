@@ -13,8 +13,8 @@ __phone:__
     end
 ````
 
-__phoneServiceType:__ *string* - a user provided description of the phone service e.g. voice, fax, or sms.
+__phoneServiceType:__ *string* - a user provided description of the phone service  (e.g., voice, fax, or sms).
 
-__phoneName:__ *string* - an open text field to describe the phone e.g. 'main office' or 'Joe's mobile'.
+__phoneName:__ *string* - an open text field to describe the phone (e.g., 'main office' or 'Joe's mobile').
 
 __phoneNumber:__ *alphaNumeric* - the phone number.  No format for the phone number is enforced.
