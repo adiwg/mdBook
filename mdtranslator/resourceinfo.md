@@ -1,6 +1,6 @@
 # resourceInfo:
 
-The *resourceInfo* object contains the metadata that describes the principal resource for this metadata record.  This recource can be a project, dataset, presentation, or any other resource that needs to be described by metadata.
+The *resourceInfo* object contains the metadata that describes the principal resource for this metadata record.  This resource can be a project, dataset, presentation, or any other resource that needs to be described by metadata.
 
 ````ruby
         intObj = {
@@ -43,11 +43,11 @@ __resourceType:__ *string* - identifies the type of resource described by this m
 
 [__timePeriod:__](../mdtranslator/timePeriod.md) *object* - the time span of the resource.  For a project this might the start and end dates.  For a dataset it may be the time span of the data.
 
-__abstract:__ *string* (required) - the brief narrative describing the content of the resource.
+__abstract:__ *string* (required) - a brief narrative describing the content of the resource.
 
-__shortAbstract:__ *string* - a short (one or two sentense) version of the abstract which may be used on website popups or lists to introduce the resource.
+__shortAbstract:__ *string* - a short (one or two sentence) version of the abstract which may be used on website popups or lists to introduce the resource.
 
-__hasMapLocation?:__ *true/false* - indicates if the project or resource is tied to a geographic position or area (true).
+__hasMapLocation?:__ *true/false* - indicates if the project or resource is tied to a geographic location or area (true).
 
 __hasDataAvailable?:__ *true/false* - indicates if a project has produced data which is available for distribution.
 
@@ -55,7 +55,7 @@ __purpose:__ *string* - a summary of intentions for which the resource was creat
 
 __credits:__ *array* - an array of quoted names of individuals or organizations that made significant contributions to this resource but are not listed in other *responsibleParty* references.
 
-__status:__ *string* - the status of the resource at the time this metadata record was published.  E.g. 'complete', 'onGoing', 'suspended'.
+__status:__ *string* - the status of the resource at the time this metadata record was published (e.g., 'complete', 'onGoing', 'suspended').
 
 __pointsOfContact:__ *array* - an array of [responsibleParty](../mdtranslator/responsibleParty.md) objects to identify person(s) and organization(s) that may be contacted for acquiring knowledge about or acquisition of the resource.
 
@@ -65,7 +65,7 @@ __graphicOverview:__ *array* - an array of [browseGraphic](../mdtranslator/brows
 
 __resourceFormats:__ *array* - an array of [resourceFormat](../mdtranslator/resourceFormat.md) objects that describe the format(s) in which the resource is available.
 
-__resourceLanguages:__ *array* - an array of quoted strings to define the language(s) and counrty(ies) of origin used within the resource.  E.g. 'eng; USA', 'eng; UK', 'esp; MEX'.
+__resourceLanguages:__ *array* - an array of quoted strings to define the language(s) and counrty(ies) of origin used within the resource (e.g., 'eng; USA', 'eng; UK', 'esp; MEX').
 
 __descriptiveKeywords:__ *array* - an array of [keyword](../mdtranslator/keyword.md) objects to list relevant keywords and cite the source thesaurus for the keywords.
 
@@ -82,11 +82,11 @@ __taxonomy:__ *object* - an instance of the [taxonSystem](../mdtranslator/taxonS
 __spatialReferenceSystem:__ *object* - an instance of the [spatialReferenceSystem](../mdtranslator/spatialReferenceSystem.md) object that defines the system used for geospatial data in this resource.
 
 __spatialRepresentationTypes:__ *array* - an array of quoted strings stating the digital mechanism used to
-represent spatial information, such as 'vector', 'grid', 'text table' etc.
+represent spatial information, such as 'vector', 'grid', 'text table,' etc.
 
 __spatialResolutions:__ *array* - an array of [resolution](../mdtranslator/resolution.md) objects providing the geographic scale(s) of the spatial information.
 
-__topicCategories:__ *array* - an array of quotes strings specifying the general theme keyword of the resource, such as 'oceans', 'biota', 'atmosphere'.  Note: for ISO metadata this is controlled vocabulary codeList.
+__topicCategories:__ *array* - an array of quotes strings specifying the general theme keyword of the resource, such as 'oceans', 'biota', 'atmosphere'.  Note: for ISO metadata this is a controlled vocabulary codeList.
 
 __environmentDescription:__ *string* - a description of the producer's processing environment, including items such as the software, the computer, and the computer operating system in which the data resource was created.
 
