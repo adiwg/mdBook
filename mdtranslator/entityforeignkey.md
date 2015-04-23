@@ -16,4 +16,4 @@ __fkLocalAttributes:__ *array* (required) - an array of quoted strings listing t
 
 __fkReferencedEntity:__ *string* (required) - the entityID for the referenced (or parent) entity for this foreign key
 
-__fkReferencedAttributes:__ *array* (required) - an array of quoted strings listing the referenced (or parent) attribute code names for this foreign key.  If the foreign key is compound key (more than one attribute compose the key) the order of the referenced attributes must allign precicely with the order and number of local attributes.
+__fkReferencedAttributes:__ *array* (required) - an array of quoted strings listing the referenced (or parent) attribute code names for this foreign key.  If the foreign key is a compound key (more than one attribute compose the key) the order of the referenced attributes must align precicely with the order and number of local attributes.
