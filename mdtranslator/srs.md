@@ -1,6 +1,6 @@
 # SRS:
 
-The *SRS* (Spatial Reference System) object defines a specific reference system within a [geoElement](../mdtranslator/geoElement.md).  Note that the [spatialReferenceSystem](../mdtranslator/spatialReferenceSystem.md) object is used to describe the overall spatial and temporal extent of the resource.
+The *SRS* (Spatial Reference System) object defines a specific reference system within a specific [geoElement](../mdtranslator/geoElement.md).  Note that when describing the overall spatial and temporal extent of the larger resource itself, the [spatialReferenceSystem](../mdtranslator/spatialReferenceSystem.md) object should be used instead.
 
 ````ruby
     def newSRS
