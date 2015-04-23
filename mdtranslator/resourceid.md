@@ -1,6 +1,6 @@
 # resourceId:
 
-The *resourceId* object contains information about identifiers associated with a resource. Identifiers can be in many forms including acronyms, uuids, alternate names, or database keys.  They can be used to include any names or codes which a project or data resources may be known by.
+The *resourceId* object contains information about identifiers associated with a resource. Identifiers can be in many forms including acronyms, uuids, alternate names, or database keys.  They can be used to include any names or codes by which a project or data resources may be known.
 
 ````ruby
     def newResourceId
