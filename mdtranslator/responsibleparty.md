@@ -1,6 +1,6 @@
 # responsibleParty:
 
-The *responsibleParty* object contains information about the identification of, and means of communication with, person(s) and organization(s) associated with the cited resource. The *responsibleParty* object is used many places throughout the metadata record, so the resource being identified is always dependent on context in which the responsible party was placed.
+The *responsibleParty* object contains information about the identification of, and means of communication with, person(s) and organization(s) associated with the cited resource. The *responsibleParty* object is used many places throughout the metadata record, so the resource being identified is always dependent on the context in which the responsible party was placed.
 
 The *resonsibleParty* in the internal object is just a contactId and a role for the contact.  This allows for the reuse of contact information throughout the metadata without respecification of the contact's information.
 
