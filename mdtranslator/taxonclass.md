@@ -36,4 +36,4 @@ __taxRankName:__ *string* (required) - name of the taxonomic rank for which the 
  * "Species"
  * "Subspecies"
 
-__taxRankValue:__ *string* (required) - the latin name, taxonomic rank value of the taxon being described
+__taxRankValue:__ *string* (required) - the latin name or taxonomic rank value of the taxon being described
