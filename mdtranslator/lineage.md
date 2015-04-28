@@ -12,8 +12,8 @@ The *lineage* object contains procedural (non-quantitative) data quality informa
     end
 ````
 
-__statement:__ *string* - a general statement of the actions taken to verify, transform, repair, and integrate the data described in the [dataScope](../mdtranslator/dataQuality.md).
+__statement:__ *string* - a general statement of the actions taken to verify, transform, repair, and integrate the data described in the dataScope attribute of the [dataQuality](../mdtranslator/dataQuality.md) object.
 
-__processingSteps:__ *array* - an array of [dataProcessingStep](../mdtranslator/dataProcessingStep.md) objects a contain a brief statement describing an individual, non-trivial process or methodology step taken in development of the resource data described in the [dataScope](../mdtranslator/dataQuality.md).
+__processingSteps:__ *array* - an array of [dataProcessingStep](../mdtranslator/dataProcessingStep.md) objects a contain a brief statement describing an individual, non-trivial process or methodology step taken in development of the resource data described in the dataScope attribute of the [dataQuality](../mdtranslator/dataQuality.md) object.
 
 __dataSources:__ *array* - an array of [dataSource](../mdtranslator/dataSource.md) objects providing a references to an existing datasets used in creating the data described in the dataScope attribute of the [dataQuality](../mdtranslator/dataQuality.md) object.
