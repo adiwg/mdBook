@@ -1,6 +1,6 @@
 # Internal Object
 
-The *internal object* is implemented in a Ruby hash and contains all the metadata from the input file and built up by the Reader. The internal object is flexible in that not all elements, arrays and objects must be populated, but changing the basic structure will likely break any Readers or Writers developed against the original hash structure, so this should be done with care. New items can be added without breaking a Writer, but changing element names or deleting an element will require changes to all Writers.
+The *internal object* is implemented in a Ruby hash and contains all the metadata from the input file and built up by the Reader. The internal object is flexible in that not all elements, arrays and objects must be populated, but changing the basic structure is likely to break many Readers or Writers developed against the original structure, so this should be done with care. New items can be added without breaking a Writer, but changing element names or deleting an element will require changes to all Writers.
 
 The *internal object* is a collection of nested hash objects assembled in the Reader by instancing and loading hash objects as they are required by the Reader.  All the hash objects are defined in the 'internal_metadata_obj.rb' file.  A newly instanced hash object always sets initial string and numeric values to nil, arrays to empty [], and objects to empty {}.
 
