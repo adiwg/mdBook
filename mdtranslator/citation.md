@@ -18,7 +18,7 @@ The *citation:* object contains information that identifies the project, data, p
 
 __citTitle:__ *string* (required) - a name for the resource described.
 
-[__citDate:__](../mdtranslator/datetime.md) *object* - the date when the citation was valid for the resource.
+[__citDate:__](../mdtranslator/datetime.html) *object* - the date when the citation was valid for the resource.
 
 __citEdition:__ *string* - edition or version of the resource.
 
