@@ -32,7 +32,6 @@
    * [Usage](mdtranslator/usage.md)
        * [CLI](mdtranslator/cli.md)
        * [Ruby](mdtranslator/ruby_gem.md)
-       * [Installation](mdtranslator/installation.md)
        * RoR API
    * [Development](mdtranslator/development.md)
        * [Architecture](mdtranslator/architecture.md)
