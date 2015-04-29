@@ -24,6 +24,7 @@
        * in Rails
        * Fork the Repository
    * Architecture
+       * mdTranslator
    * [Usage](mdtranslator/usage.md)
        * [Installation](mdtranslator/installation.md)
        * [Ruby](mdtranslator/ruby_gem.md)
