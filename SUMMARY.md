@@ -78,7 +78,6 @@
                * [timeInstant](mdtranslator/timeinstant.md)
                * [timePeriod](mdtranslator/timeperiod.md)
                * [verticalElement](mdtranslator/verticalelement.md)
-           * Internal Metadata Store
            * Return Hash
        * Command Line Interface
        * RoR API
