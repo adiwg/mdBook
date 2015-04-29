@@ -25,6 +25,7 @@
        * Fork the Repository
    * Architecture
        * mdTranslator
+           * Internal Metadata Store
        * Command Line Interface
        * RoR API
    * [Usage](mdtranslator/usage.md)
