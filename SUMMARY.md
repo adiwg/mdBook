@@ -26,6 +26,7 @@
    * Architecture
        * mdTranslator
        * Command Line Interface
+       * RoR API
    * [Usage](mdtranslator/usage.md)
        * [Installation](mdtranslator/installation.md)
        * [Ruby](mdtranslator/ruby_gem.md)
