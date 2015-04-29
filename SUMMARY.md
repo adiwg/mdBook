@@ -20,6 +20,7 @@
    * [Development](mdjson_schema_viewer/development.md)
 * [mdTranslator](mdtranslator/README.md)
    * Installation
+       * in Ruby
    * [Usage](mdtranslator/usage.md)
        * [Installation](mdtranslator/installation.md)
        * [Ruby](mdtranslator/ruby_gem.md)
