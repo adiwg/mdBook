@@ -23,6 +23,7 @@
        * [in Ruby](mdtranslator/installInRuby.md)
        * [in Rails](mdtranslator/installInRails.md)
        * [Fork the Repository](mdtranslator/forkRepository.md)
+       * RubyGem dependencies 
    * [Architecture](mdtranslator/architecture.md)
        * [mdTranslator](mdtranslator/translatorArchitecture.md)
            * [Internal Object](mdtranslator/internal_object.md)
