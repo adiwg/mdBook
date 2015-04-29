@@ -90,6 +90,7 @@
            * [Reader Functions](mdtranslator/read.md)
            * [Rules for Readers](mdtranslator/readerRules.md)
        * [Writer Functions](mdtranslator/write.md)
+       * Creating Writers
 * [mdCodes](mdcodes/README.md)
    * [Usage](mdcodes/usage.md)
        * [Installation](mdcodes/installation.md)
