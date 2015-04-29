@@ -10,4 +10,4 @@ With Ruby 2.1 or higher install, run the following gem command from the command 
 $ gem install adiwg-mdtranslator
 ````
 
-The adiwg-mdtranslator and its [dependent Ruby gems](../mdtranslator/dependentGems.md) will install. mdTranslator will now be available to all your Ruby programs. 
+The adiwg-mdtranslator gem and its [dependent Ruby gems](../mdtranslator/dependentGems.md) will install. mdTranslator will now be available to all your Ruby programs. 
