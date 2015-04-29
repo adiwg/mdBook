@@ -23,6 +23,7 @@
        * in Ruby
        * in Rails
        * Fork the Repository
+   * Architecture
    * [Usage](mdtranslator/usage.md)
        * [Installation](mdtranslator/installation.md)
        * [Ruby](mdtranslator/ruby_gem.md)
@@ -89,7 +90,6 @@
            * [verticalElement](mdtranslator/verticalelement.md)
        * [Creating Readers](mdtranslator/creating_readers.md)
        * [Creating Writers](mdtranslator/creating_writers.md)
-   * Architecture
 * [mdTranslator RoR API](mdtranslator_ror_api/README.md)
 * [mdCodes](mdcodes/README.md)
    * [Usage](mdcodes/usage.md)
