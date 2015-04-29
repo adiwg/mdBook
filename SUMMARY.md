@@ -26,6 +26,7 @@
    * Architecture
        * mdTranslator
            * Internal Metadata Store
+           * Return Hash 
        * Command Line Interface
        * RoR API
    * [Usage](mdtranslator/usage.md)
