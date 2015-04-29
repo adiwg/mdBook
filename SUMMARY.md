@@ -81,7 +81,6 @@
            * Return Hash
        * Command Line Interface
        * RoR API
-   * [Architecture](mdtranslator/architecture.md)
    * [Usage](mdtranslator/usage.md)
        * [CLI](mdtranslator/cli.md)
        * [Ruby](mdtranslator/ruby_gem.md)
