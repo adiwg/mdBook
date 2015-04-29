@@ -88,7 +88,6 @@
    * [Development](mdtranslator/development.md)
        * [Creating Readers](mdtranslator/creating_readers.md)
            * [Reader Functions](mdtranslator/read.md)
-               * [Validate](mdtranslator/validate.md)
                * [Load Internal Object](mdtranslator/load_internal_object.md)
        * [Creating Writers](mdtranslator/creating_writers.md)
        * [Writer Functions](mdtranslator/write.md)
