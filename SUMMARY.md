@@ -19,6 +19,7 @@
        * [Translator](mdjson_schema_viewer/translator.md)
    * [Development](mdjson_schema_viewer/development.md)
 * [mdTranslator](mdtranslator/README.md)
+   * Installation
    * [Usage](mdtranslator/usage.md)
        * [Installation](mdtranslator/installation.md)
        * [Ruby](mdtranslator/ruby_gem.md)
@@ -85,7 +86,6 @@
            * [verticalElement](mdtranslator/verticalelement.md)
        * [Creating Readers](mdtranslator/creating_readers.md)
        * [Creating Writers](mdtranslator/creating_writers.md)
-   * Installation
 * [mdTranslator RoR API](mdtranslator_ror_api/README.md)
 * [mdCodes](mdcodes/README.md)
    * [Usage](mdcodes/usage.md)
