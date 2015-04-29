@@ -24,7 +24,7 @@
        * [in Rails](mdtranslator/installInRails.md)
        * [Fork the Repository](mdtranslator/forkRepository.md)
    * [Architecture](mdtranslator/architecture.md)
-       * [mdTranslator](mdtranslatorArchitecture.md)
+       * [mdTranslator](mdtranslator/translatorArchitecture.md)
            * [Internal Object](mdtranslator/internal_object.md)
                * [additionalDocumentation](mdtranslator/additionaldocumentation.md)
                * [address](mdtranslator/address.md)
