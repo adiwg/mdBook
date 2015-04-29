@@ -19,7 +19,7 @@
        * [Translator](mdjson_schema_viewer/translator.md)
    * [Development](mdjson_schema_viewer/development.md)
 * [mdTranslator](mdtranslator/README.md)
-   * [Installation](installTranslator.md)
+   * [Installation](mdtranslator/installTranslator.md)
        * [in Ruby](installInRuby.md)
        * [in Rails](installInRails.md)
        * [Fork the Repository](fork_the_repository.md)
