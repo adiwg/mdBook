@@ -21,6 +21,7 @@
 * [mdTranslator](mdtranslator/README.md)
    * Installation
        * in Ruby
+       * in Rails
    * [Usage](mdtranslator/usage.md)
        * [Installation](mdtranslator/installation.md)
        * [Ruby](mdtranslator/ruby_gem.md)
