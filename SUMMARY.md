@@ -20,9 +20,9 @@
    * [Development](mdjson_schema_viewer/development.md)
 * [mdTranslator](mdtranslator/README.md)
    * [Installation](mdtranslator/installTranslator.md)
-       * [in Ruby](installInRuby.md)
-       * [in Rails](installInRails.md)
-       * [Fork the Repository](fork_the_repository.md)
+       * [in Ruby](mdtranslator/installInRuby.md)
+       * [in Rails](mdtranslator/installInRails.md)
+       * [Fork the Repository](mdtranslator/forkRepository.md)
    * Architecture
        * [mdTranslator](mdtranslatorArchitecture.md)
            * [Internal Object](mdtranslator/internal_object.md)
