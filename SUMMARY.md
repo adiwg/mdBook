@@ -22,6 +22,7 @@
    * Installation
        * in Ruby
        * in Rails
+       * Fork the Repository
    * [Usage](mdtranslator/usage.md)
        * [Installation](mdtranslator/installation.md)
        * [Ruby](mdtranslator/ruby_gem.md)
