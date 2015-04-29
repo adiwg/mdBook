@@ -1,2 +1,6 @@
-# in Rails
+#mdTranslator
+
+## Installation
+
+### in Rails
 
