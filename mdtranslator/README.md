@@ -1,1 +1,3 @@
 # mdTranslator
+
+The *mdTranslator* is the heart of the ISO Metadata Developer's Toolkit. The mdtranslator translates metadata content from any supported reader format into any fo the supported writer formats.  The mdTranslator supports standard-to-standard translation by organizing all metadata content into its own [internal metadata content standard](../mdtranslator/internalObject.md).  Each reader   
