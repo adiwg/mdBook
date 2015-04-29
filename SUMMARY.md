@@ -26,12 +26,12 @@
    * Architecture
        * mdTranslator
            * Internal Metadata Store
-           * Return Hash 
+           * Return Hash
        * Command Line Interface
        * RoR API
    * [Usage](mdtranslator/usage.md)
-       * [Installation](mdtranslator/installation.md)
        * [Ruby](mdtranslator/ruby_gem.md)
+       * [Installation](mdtranslator/installation.md)
        * [CLI](mdtranslator/cli.md)
    * [Development](mdtranslator/development.md)
        * [Architecture](mdtranslator/architecture.md)
