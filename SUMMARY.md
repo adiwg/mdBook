@@ -81,17 +81,17 @@
            * Return Hash
        * Command Line Interface
        * RoR API
+   * [Architecture](mdtranslator/architecture.md)
+       * [Calling the mdTranslator](mdtranslator/call_the_mdtranslator.md)
+       * [Reader Functions](mdtranslator/read.md)
+           * [Validate](mdtranslator/validate.md)
+           * [Load Internal Object](mdtranslator/load_internal_object.md)
+       * [Writer Functions](mdtranslator/write.md)
    * [Usage](mdtranslator/usage.md)
        * [CLI](mdtranslator/cli.md)
        * [Ruby](mdtranslator/ruby_gem.md)
        * [RoR API](ror_api.md)
    * [Development](mdtranslator/development.md)
-       * [Architecture](mdtranslator/architecture.md)
-           * [Calling the mdTranslator](mdtranslator/call_the_mdtranslator.md)
-           * [Reader Functions](mdtranslator/read.md)
-               * [Validate](mdtranslator/validate.md)
-               * [Load Internal Object](mdtranslator/load_internal_object.md)
-           * [Writer Functions](mdtranslator/write.md)
        * [Creating Readers](mdtranslator/creating_readers.md)
        * [Creating Writers](mdtranslator/creating_writers.md)
 * [mdCodes](mdcodes/README.md)
