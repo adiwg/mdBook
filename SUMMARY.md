@@ -90,7 +90,6 @@
            * [Reader Functions](mdtranslator/read.md)
                * [Validate](mdtranslator/validate.md)
                * [Load Internal Object](mdtranslator/load_internal_object.md)
-           * temp
        * [Creating Writers](mdtranslator/creating_writers.md)
        * [Writer Functions](mdtranslator/write.md)
 * [mdCodes](mdcodes/README.md)
