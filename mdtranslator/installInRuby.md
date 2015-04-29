@@ -4,6 +4,7 @@
 
 ### in Ruby
 
+With Ruby 2.1 or higher install, run the following gem command from the command line: 
 
 ````
 $ gem install adiwg-mdtranslator
@@ -17,3 +18,4 @@ The adiwg-mdtranslator and its dependencies will install.  The following depende
 * "json-schema", "~> 2.4.0", "< 2.5.0"
 * "adiwg-mdjson_schemas", "~> 1.0.0"
 
+mdTranslator will be available to all your Ruby programs. 
