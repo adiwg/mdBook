@@ -20,7 +20,7 @@
    * [Development](mdjson_schema_viewer/development.md)
 * [mdTranslator](mdtranslator/README.md)
    * Installation
-       * in Ruby
+       * [in Ruby](installInRuby.md)
        * in Rails
        * Fork the Repository
    * Architecture
