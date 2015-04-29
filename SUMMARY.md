@@ -91,7 +91,6 @@
            * [Rules for Readers](mdtranslator/readerRules.md)
        * Creating Writers
            * [Writer Functions](mdtranslator/write.md)
-           * temp
 * [mdCodes](mdcodes/README.md)
    * [Usage](mdcodes/usage.md)
        * [Installation](mdcodes/installation.md)
