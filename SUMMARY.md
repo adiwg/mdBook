@@ -79,7 +79,7 @@
                * [timePeriod](mdtranslator/timeperiod.md)
                * [verticalElement](mdtranslator/verticalelement.md)
            * [Return Hash](returnHash.md)
-       * Command Line Interface
+       * [Command Line Interface](command_line_interface.md)
        * RoR API
    * [Usage](mdtranslator/usage.md)
        * [CLI](mdtranslator/cli.md)
