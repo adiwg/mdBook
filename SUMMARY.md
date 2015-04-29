@@ -24,7 +24,7 @@
        * in Rails
        * Fork the Repository
    * Architecture
-       * mdTranslator
+       * [mdTranslator](mdtranslatorArchitecture.md)
            * [Internal Object](mdtranslator/internal_object.md)
                * [additionalDocumentation](mdtranslator/additionaldocumentation.md)
                * [address](mdtranslator/address.md)
