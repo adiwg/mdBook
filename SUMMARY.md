@@ -95,7 +95,6 @@
            * [verticalElement](mdtranslator/verticalelement.md)
        * [Creating Readers](mdtranslator/creating_readers.md)
        * [Creating Writers](mdtranslator/creating_writers.md)
-* [mdTranslator RoR API](mdtranslator_ror_api/README.md)
 * [mdCodes](mdcodes/README.md)
    * [Usage](mdcodes/usage.md)
        * [Installation](mdcodes/installation.md)
