@@ -18,7 +18,7 @@
        * [Validator](mdjson_schema_viewer/validator.md)
        * [Translator](mdjson_schema_viewer/translator.md)
    * [Development](mdjson_schema_viewer/development.md)
-* [mdTranslator](mdtranslator/README.md)
+* [mdTranslator](mdtranslator/mdtranslatorOverview.md)
    * [Installation](mdtranslator/installTranslator.md)
        * [in Ruby](mdtranslator/installInRuby.md)
        * [in Rails](mdtranslator/installInRails.md)
