@@ -23,7 +23,7 @@
        * [in Ruby](mdtranslator/installInRuby.md)
        * [in Rails](mdtranslator/installInRails.md)
        * [Fork the Repository](mdtranslator/forkRepository.md)
-   * Architecture
+   * [Architecture](mdtranslator/architecture.md)
        * [mdTranslator](mdtranslatorArchitecture.md)
            * [Internal Object](mdtranslator/internal_object.md)
                * [additionalDocumentation](mdtranslator/additionaldocumentation.md)
