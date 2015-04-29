@@ -83,7 +83,7 @@
        * [RoR API](mdtranslator/rorApi.md)
    * [Usage](mdtranslator/usage.md)
        * [Ruby](mdtranslator/useRubyGem.md)
-       * [CLI](mdtranslator/useCli.md)
+       * [Command Line Interface](mdtranslator/useCli.md)
        * [Ruby on Rails API](mdtranslator/useRorApi.md)
    * [Development](mdtranslator/development.md)
        * [Creating Readers](mdtranslator/creating_readers.md)
