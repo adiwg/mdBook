@@ -78,7 +78,7 @@
                * [timeInstant](mdtranslator/timeinstant.md)
                * [timePeriod](mdtranslator/timeperiod.md)
                * [verticalElement](mdtranslator/verticalelement.md)
-           * Return Hash
+           * [Return Hash](returnHash.md)
        * Command Line Interface
        * RoR API
    * [Usage](mdtranslator/usage.md)
