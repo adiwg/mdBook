@@ -83,7 +83,6 @@
        * RoR API
    * [Architecture](mdtranslator/architecture.md)
        * [Calling the mdTranslator](mdtranslator/call_the_mdtranslator.md)
-       * [Writer Functions](mdtranslator/write.md)
    * [Usage](mdtranslator/usage.md)
        * [CLI](mdtranslator/cli.md)
        * [Ruby](mdtranslator/ruby_gem.md)
@@ -94,6 +93,7 @@
            * [Validate](mdtranslator/validate.md)
            * [Load Internal Object](mdtranslator/load_internal_object.md)
        * [Creating Writers](mdtranslator/creating_writers.md)
+* [Writer Functions](mdtranslator/write.md)
 * [mdCodes](mdcodes/README.md)
    * [Usage](mdcodes/usage.md)
        * [Installation](mdcodes/installation.md)
