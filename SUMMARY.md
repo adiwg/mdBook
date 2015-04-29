@@ -30,9 +30,9 @@
        * Command Line Interface
        * RoR API
    * [Usage](mdtranslator/usage.md)
+       * [CLI](mdtranslator/cli.md)
        * [Ruby](mdtranslator/ruby_gem.md)
        * [Installation](mdtranslator/installation.md)
-       * [CLI](mdtranslator/cli.md)
    * [Development](mdtranslator/development.md)
        * [Architecture](mdtranslator/architecture.md)
            * [Calling the mdTranslator](mdtranslator/call_the_mdtranslator.md)
