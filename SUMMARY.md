@@ -80,7 +80,7 @@
                * [verticalElement](mdtranslator/verticalelement.md)
            * [Return Hash](mdtranslator/returnHash.md)
        * [Command Line Interface](mdtranslator/commandLineInterface.md)
-       * [RoR API](mdtranslator/rorApi.md)
+       * [Ruby on Rails API](mdtranslator/rorApi.md)
    * [Usage](mdtranslator/usage.md)
        * [Ruby](mdtranslator/useRubyGem.md)
        * [Command Line Interface](mdtranslator/useCli.md)
