@@ -25,6 +25,7 @@
        * Fork the Repository
    * Architecture
        * mdTranslator
+       * Command Line Interface
    * [Usage](mdtranslator/usage.md)
        * [Installation](mdtranslator/installation.md)
        * [Ruby](mdtranslator/ruby_gem.md)
