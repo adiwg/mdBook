@@ -16,5 +16,5 @@ From the command line update the Rails gem bundle.
 $ bundle update
 ````
 
-The adiwg-mdtranslator and all dependent gems will install. Remember to restart the Rails server for the need gems to be recognized by the server.  
+The adiwg-mdtranslator gem and its [dependent Ruby gems](../mdtranslator/dependentGems.md) will install.  Remember to restart the Rails server for the need gems to be recognized by the server.  
 
