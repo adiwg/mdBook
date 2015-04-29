@@ -21,7 +21,7 @@
 * [mdTranslator](mdtranslator/README.md)
    * Installation
        * [in Ruby](installInRuby.md)
-       * in Rails
+       * [in Rails](installInRails.md)
        * Fork the Repository
    * Architecture
        * [mdTranslator](mdtranslatorArchitecture.md)
