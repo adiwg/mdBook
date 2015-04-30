@@ -2,6 +2,10 @@
 
 ## Architecture
 
+### Ruby on Rails API
+
+The *Ruby on Rails API* is a separate GitHub project and installed separately from 'adiwg-mdtranslator'.  
+
 ### GET verb
 
  * __.../api/v1/translator?{options}__ # returns metadata from the mdTranslator according to options specified
