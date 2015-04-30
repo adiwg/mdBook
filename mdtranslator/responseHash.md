@@ -6,7 +6,6 @@
 
 
 ````ruby
-# load and return this hash
 $response = {
     readerFormat: nil,
     readerStructurePass: nil,
@@ -29,4 +28,9 @@ $response = {
 }
 ````
 
+__readerFormat:__ (string) - 
+
+__readerStructurePass:__ (boolean) - 
+
+__readerStructureMessages:__ (array) 
 
