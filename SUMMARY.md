@@ -79,7 +79,7 @@
                * [timeInstant](mdtranslator/timeinstant.md)
                * [timePeriod](mdtranslator/timeperiod.md)
                * [verticalElement](mdtranslator/verticalelement.md)
-           * [Return Hash](mdtranslator/returnHash.md)
+           * [Response Hash](mdtranslator/responseHash.md)
        * [Command Line Interface](mdtranslator/commandLineInterface.md)
        * [Ruby on Rails API](mdtranslator/rorApi.md)
    * [Usage](mdtranslator/usage.md)
