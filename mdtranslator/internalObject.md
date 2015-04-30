@@ -1,4 +1,8 @@
-# Internal Object
+# mdTranslator
+
+## Architecture
+
+### Internal Object
 
 The *internal object* is implemented in a Ruby hash and contains all the metadata from the input file and built up by the Reader. The internal object is flexible in that not all elements, arrays and objects must be populated, but changing the basic structure is likely to break many Readers or Writers developed against the original structure, so this should be done with care. New items can be added without breaking a Writer, but changing element names or deleting an element will require changes to all Writers.
 
