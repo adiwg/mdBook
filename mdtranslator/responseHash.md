@@ -28,9 +28,40 @@ $response = {
 }
 ````
 
-__readerFormat:__ (string) - 
+__readerFormat:__ *string* - 
 
-__readerStructurePass:__ (boolean) - 
+__readerStructurePass:__ *boolean* - 
 
-__readerStructureMessages:__ (array) 
+__readerStructureMessages:__ *string[]* - an array of quoted string 
+
+__readerRequested:__ *string* - 
+
+__readerFound:__ *string* - 
+
+__readerVersionFound:__ *string* - 
+
+__readerVersionUsed:__ *string* - 
+
+__readerValidationLevel:__ *string* - 
+
+__readerValidationPass:__ *string* -
+
+__readerValidationMessages:__ *string[]* - 
+
+__readerExecutionPass:__ *boolean* - 
+
+__readerExecutionMessages:__ *string[]* - 
+
+__writerName:__ *string* - 
+
+__writerVersion:__ *string* - 
+
+__writerFormat:__ *string* - 
+
+__writerPass:__ *boolean* - 
+
+__writerMessages:__ *string[]* - 
+
+__writerOutput:__ *string* - 
+
 
