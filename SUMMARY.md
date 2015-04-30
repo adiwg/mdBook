@@ -26,7 +26,7 @@
        * [RubyGem dependencies](mdtranslator/dependentGems.md)
    * [Architecture](mdtranslator/architecture.md)
        * [mdTranslator](mdtranslator/translatorArchitecture.md)
-           * [Internal Object](mdtranslator/internal_object.md)
+           * [Internal Object](mdtranslator/internalObject.md)
                * [additionalDocumentation](mdtranslator/additionaldocumentation.md)
                * [address](mdtranslator/address.md)
                * [associatedResource](mdtranslator/associatedresource.md)
