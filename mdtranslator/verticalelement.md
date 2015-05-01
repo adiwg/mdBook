@@ -1,4 +1,10 @@
-# verticalElement:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### verticalElement:
 
 The *verticalElement* object describes a vertical range within the extent.
 
