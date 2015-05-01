@@ -1,4 +1,10 @@
-# timeInstant:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### timeInstant:
 
 The *timeInstant* object is a dateTime associated with an ID and description.
 
