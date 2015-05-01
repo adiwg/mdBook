@@ -1,4 +1,10 @@
-# resolution:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### resolution:
 
 The *resolution* object factor which provides a general understanding of the density of spatial data in the dataset.  Either the equivalent scale is required or the distance/distanceUOM is required, but not both.  Although both are allowed in the resolution object.
 
