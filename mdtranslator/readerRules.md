@@ -44,4 +44,4 @@ class Option
 
  : Alaska Data Integration working group JSON metadata format
 ````
-.3. mdTranslator-rails handles response types for metadata files generated in XML, JSON, HTML, and plain text.  If you are preparing metadata output in another format the translators_controller.rb will need to be extened to handle the new file type.   (mdtranslatorRails/app/controllers/api/v1/translators_controller.rb)
+
