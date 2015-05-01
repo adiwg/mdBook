@@ -1,2 +1,6 @@
-# CLI
+#mdTranslator
+
+## Usage
+
+### CLI
 
