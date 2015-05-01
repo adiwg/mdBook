@@ -1,4 +1,10 @@
-# resourceFormat:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### resourceFormat:
 
 The *resourceFormat* object that describes the computer language construct that specifies the representation of data objects in a record, file, message, storage device or transmission.
 
