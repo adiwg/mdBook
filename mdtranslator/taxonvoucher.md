@@ -1,4 +1,10 @@
-# taxonVoucher:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### taxonVoucher:
 
 The *taxonVoucher* object is used to provide information on the types of specimen(s), the repository, and the individuals who identified the vouchers.
 
