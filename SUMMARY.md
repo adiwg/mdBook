@@ -87,7 +87,7 @@
        * [Command Line Interface](mdtranslator/useCli.md)
        * [Ruby on Rails](mdtranslator/useRor.md)
    * [Extending the mdTranslator](mdtranslator/development.md)
-       * [Creating Readers](mdtranslator/creating_readers.md)
+       * [Creating Readers](mdtranslator/creatingReaders.md)
            * [Reader Functions](mdtranslator/readerFunctions.md)
            * [Rules for Readers](mdtranslator/readerRules.md)
        * [Creating Writers](mdtransltor/creatingWriters.md)
