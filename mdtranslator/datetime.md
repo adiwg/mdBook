@@ -1,4 +1,10 @@
-# dateTime:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### dateTime:
 
 The *dateTime* object holds a date and time in Ruby format.
 
