@@ -1,4 +1,10 @@
-# entity:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### entity:
 
 The *entity* object provides the definition and schema for a discrete data object within the data resource.  The data object may be a table, dataset, or single sheet of a spreadsheet.
 
