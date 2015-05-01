@@ -1,4 +1,10 @@
-# entityIndex:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### entityIndex:
 
 The *entityIndex* object that defines an alternate index for the entity - an index other than the primary key.  In SQL this would be implemented using a CREATE INDEX statement.
 
