@@ -1,4 +1,10 @@
-# dataDictionary:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### dataDictionary:
 
 The *dataDictionary* object contains a description objects describing the collection of physical objects or items in a data resource (schema). This is a description of the physical structure of the data rather than its meaning.
 
