@@ -1,4 +1,10 @@
-# distOrder:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### distOrder:
 
 The *distOrder* object provides information about how the resource may be obtained including related instructions and fee information.
 
