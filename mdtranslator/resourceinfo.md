@@ -1,4 +1,10 @@
-# resourceInfo:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### resourceInfo:
 
 The *resourceInfo* object contains the metadata that describes the principal resource for this metadata record.  This resource can be a project, dataset, presentation, or any other resource that needs to be described by metadata.
 
