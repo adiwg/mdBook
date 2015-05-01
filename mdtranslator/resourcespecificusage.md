@@ -1,4 +1,10 @@
-# resourceSpecificUsage:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### resourceSpecificUsage:
 
 The *resourceSpecificUsage* object provides basic information about specific application(s) for which the resource(s) has been or is being used by different users.
 
