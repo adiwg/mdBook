@@ -1,4 +1,10 @@
-# entityAttribute:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### entityAttribute:
 
 The *entityAttribute* object defines a unique member of the entity.  Entity attributes correspond to the columns of database tables and columns of a spreadsheets. Both the entity attribute and its properties are described by this object.
 
