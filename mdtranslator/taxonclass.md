@@ -1,4 +1,10 @@
-# taxonClass:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### taxonClass:
 
 The *taxonClass* object provides a specification for the range of taxa addressed in the data set or collection. It is recommended that one provide information starting from the taxonomic rank of kingdom, to a level which reflects the data set or collection being documented. The levels of Kingdom, Division/Phylum, class, Order, Family, Genus, and Species should be included as ranks as appropriate.
 
