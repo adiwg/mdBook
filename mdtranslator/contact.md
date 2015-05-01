@@ -1,4 +1,10 @@
-# contact:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### contact:
 
 The *contact:* object holds the information about a discrete contact that may be used multiple times throughout the metadata record.
 
