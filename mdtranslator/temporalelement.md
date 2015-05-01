@@ -1,4 +1,10 @@
-# temporalElement:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### temporalElement:
 
 The *temporalElement* object provides the temporal context for the extent.  The *temporalElement* can be either a date, time instant, or time period.
 
