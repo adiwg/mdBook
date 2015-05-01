@@ -1,4 +1,10 @@
-# resourceMaint:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### resourceMaint:
 
 The *resourceMaint* object contains information about the maintenance of the resource being described.  The *resourceMaint* object is used many places throughout the metadata record, so the maintenance being described is always dependent on context in which the maintenance object was placed.
 
