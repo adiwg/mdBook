@@ -1,4 +1,10 @@
-# dataSource:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### dataSource:
 
 The *dataSource* object provides information about the source data used in creating the data specified in the [dataScope](../mdtranslator/dataQuality.md).
 
