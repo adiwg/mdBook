@@ -1,4 +1,10 @@
-# onlineResource:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### onlineResource:
 
 The *onlineResource:* array holds links and other information to a contact's (indiviual or organization) resources exposed on the internet.
 
