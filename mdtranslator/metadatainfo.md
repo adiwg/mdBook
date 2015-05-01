@@ -1,4 +1,10 @@
-# metadataInfo:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### metadataInfo:
 
 The *metadataInfo:* object contains information about the metadata record itself. This is not the metadata for the resource, that metadata can be found in the [resourceInfo](../mdtranslator/resourceInfo.md) section.
 ````ruby
