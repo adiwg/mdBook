@@ -1,4 +1,10 @@
-# associatedResource:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### associatedResource:
 
 The *associatedResource* object contains information on resources which have some direct lineage to the central resource of this metadata such as parent or child datasets or projects.
 
