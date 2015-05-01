@@ -4,39 +4,18 @@
 
 ### Reader Functions
 
-New readers can be added with little to no impact on the base mdTranslator code. All code for a reader should be placed in folder structure with its root folder having the same name as given the reader.  The base mdTranslator code will transfer processing to the reader based on the name of the reader provided in the reader: parameter.  
+A reader receives a global [response hash](../mdtranslator/responseHash.md) from the mdTranslator.  The hash is used to communication status and pass messages to the user.  The Reader will populate the response hash as it performs its functions.
 
-A developer of a new reader should start by gaining an understanding of the [mdTranslator architecture](../mdtranslator/translatorArchitecture.md) and in particular the structure of the [internal object](../mdtranslator/internalObject.md) which the reader is responsible for loading properly so that all writers have access to the metadata content.
+An mdTranslator Reader performs these function: 
+1. Set the $response[:readerFormat] to the anticipated format of the input file.  
+2. Determine if the input file received is in the anticipated format and syntactically correct so that its content can be accurately read. Set $response[:readerStructurePass] to true or false.
+3. If the input file failed to pass its structural tests add one or more messages to the $response[:readerStructureMessages] array to help the user correct the problems.  
+4. If the Reader name and version are imbeded in content file check these match values expected by the Reader.  Set $response[:readerFound] and $response[:readerVersionFound] to the values found in the input file. 
+5. Set $response[:readerVersionUsed] to the actual version of the reader used to process the input file. 
+6. The reader should validate the schema of the input file.  The validation should check that all required fields are populated, numbers are in numeric fileds, dates are valid, etc.  The mdTranslator parameter 'validate:' can be checked in $response[:readerValidationLevel] to determine level of validation the user has requested of the Reader.  It is left to the Reader to deterine the implications of the validation level.  Set $response[:readerValidationPass] to true or false depending on the outcome of the schema validation. 
+7. If the schema validation failed add one or more messages to the $response[:readerValidationMessages] array to help the user correct any problems.
+8. The reader should next unload the input file and build a *metadata content hash* in the structure defined by the [internal object](../mdtranslator/internalObject.md). The Reader must begin this process by creating an instance of the internal object's 'base object'.  The Reader should then instance other objects as defined by the *internal object* as they are needed to build up the metadata content hash. 
+9. Set the $response[:readerExecutionPass] to true or false depending on the success of building the metadata content hash.
+10. If errors or processing problems were encountered while the building the metadata content hash add one or more messages to the $response[:readerExecutionMessages] array.
 
-[__Reader Functions__](../mdtranslator/readerFunctions.md) - lists functions the reader is expected to perform on its own. 
-
-[__Rules for Readers__](../mdtranslator/readerRules.md) - lists rules to follow when writing readers. 
-Reader Functions
-
-# Reader Functions
-
-An mdTranslator Reader performs two basic function: 1) to validate the input file meets the standards for the Reader specification; and 2) load the contents of the input file into the translator's internal object.
-
-How these tasks are accomplished by a Reader are dependent on the format and organization of the input metadata file.  The next sections will discuss how the mdJson Reader embedded in mdTranslator meets these objectives.
-
-## Validate
-
-Validation of the input metadata file is one of two Reader responsibilities.  How a Reader performs this responsibility and what constitutes 'valid' is totally dependent on the file format and metadata standard of the input file.
-
-As an example of what a Reader could do to determine the validity of an input file, we can look at the actions taken by the mdJson Reader which is imbedded in mdTranslator.
-
-1. The input file is passed through a JSON parser to validate it meets the basic structure and syntax for any JSON file.  All discernable errors detected by the parser are reported back to the mdTranslator and forward on to the requestor.
-2. If the basic JSON structure is valid, the Ruby Gem json-schema is used along with our schema definition for mdJson to test if the input file meets all the syntax requirements for mdJson metadata files.  The mdJson file is checked to see if elements are organized into their proper JSON sturctures, if element values have the proper datatype, and if all required elements are present.  Again, any discernable errors detected by json-schema are reported back to the mdTranslator and passed along to the requestor.
-
-If the mdJson file passes the above tests the reader will load it into the mdTranslator's internal object.  See next section.
-
-## Load Internal Object
-
-Once an input metadata file is determined to be valid it can be read into the mdTranslator's internal object.  The internal object is a Ruby hash which uses keys as symbols rather than the implicit form which uses strings as keys.
-
-````ruby
-schema = { name: 'mdJson', version: '1.0.1' }
-schema[:name] #=> mdJson
-````
-
-All mdTranslator writers will access their metadata content from this hash.  See the [Internal Object](Internal Object) section for information on the structure of the internal hash.
+All mdTranslator writers will use metadata content hash as their source data.  
