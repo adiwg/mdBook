@@ -1,4 +1,10 @@
-# phone:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### phone:
 
 The *phone* object contains information about an individual phone and service.  Note that only one service is allowed per phone; so if multiple services are available on a number (e.g. mobile, sms, message) the phone object will need to be repeated.
 
