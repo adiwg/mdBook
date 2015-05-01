@@ -1,4 +1,10 @@
-# lineage:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### lineage:
 
 The *lineage* object contains procedural (non-quantitative) data quality information about the portion of the data resource identified in the dataScope.  The procedural steps can document the steps taken to verify, transform, repair, integrate, and produce data for subsequent use.
 
