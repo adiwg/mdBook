@@ -1,4 +1,10 @@
-# dictionaryInfo:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### dictionaryInfo:
 
 The *dictionaryInfo* object contains identification, descriptive, and contact information for the data dictionary.
 
