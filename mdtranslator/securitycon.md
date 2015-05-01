@@ -1,4 +1,10 @@
-# securityCon:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### securityCon:
 
 The *securityCon* object contains handling restrictions imposed on the resource or metadata for
 national security or similar security concerns.
