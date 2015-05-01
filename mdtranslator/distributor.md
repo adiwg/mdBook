@@ -1,4 +1,10 @@
-# distributor:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### distributor:
 
 The *distributor* object provides information about a distributor and options for obtaining the information resource.
 
