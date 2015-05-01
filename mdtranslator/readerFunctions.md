@@ -4,7 +4,7 @@
 
 ### Reader Functions
 
-A reader receives a global [response hash](../mdtranslator/responseHash.md) from the mdTranslator.  The hash is used to communication status and pass messages to the user.  The Reader will populate the response hash as it performs its functions.
+A reader receives a global [response hash](../mdtranslator/responseHash.md) from the mdTranslator.  The hash is used to communicate status and pass messages to the user.  The Reader will need to populate the response hash as it performs its functions.
 
 An mdTranslator Reader performs these function: 
 1. Set the $response[:readerFormat] to the anticipated format of the input file.  
