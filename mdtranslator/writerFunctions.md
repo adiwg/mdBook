@@ -4,10 +4,11 @@
 
 ### Writer Functions
 
-A Writer receives a global [response hash](../mdtranslator/responseHash.md) from the mdTranslator.  The hash is used to communicate status and pass messages to the user.  The Writer will need populate the response hash as it performs its functions.
+A Writer receives a global [response hash](../mdtranslator/responseHash.md) from the mdTranslator.  The hash is used to communicate status and pass messages to the user.  The Writer will need to populate the response hash as it performs its functions.
 
-An mdTranslator Reader performs these function: 
-1. Set the $response[:readerFormat] to the anticipated format of the input file.  
+An mdTranslator Writer performs these function: 
+1. Set the $response[:writerFormat] to the format of the output metadata created by the Writer.
+2. Set the $response[:writerVersion] to the version of the Writer creating the metadata output. 
 2. Determine if the input file received is in the anticipated format and syntactically correct so that its content can be accurately read. Set $response[:readerStructurePass] to true or false.
 
 An mdTranslator Writer formats the metadata content placed in the internal object by the Reader into a properly formatted metadata record.
