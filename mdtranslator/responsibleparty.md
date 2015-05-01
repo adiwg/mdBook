@@ -1,4 +1,10 @@
-# responsibleParty:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### responsibleParty:
 
 The *responsibleParty* object contains information about the identification of, and means of communication with, person(s) and organization(s) associated with the cited resource. The *responsibleParty* object is used in many places throughout the metadata record, so the resource being identified is always dependent on the context in which the responsible party was placed.
 
