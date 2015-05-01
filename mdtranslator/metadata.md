@@ -1,4 +1,10 @@
-# metadata:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### metadata:
 
 The *metadata:* object holds the body of the metadata for the resource.  It is organized into the 5 major sections defined below.
 
