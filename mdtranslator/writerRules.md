@@ -37,12 +37,12 @@ class Option
 			readers: %w[mdJson],
 			writers: %w[iso19115_2 iso19110 html {new writer}],
 ````
-.2. Add a link to the new Reader's web page.  The page will be dynamically built by the Rails application.  It's content will be the content of the readme.md file placed in the Reader's root folder (see step 7 above). Below is the example for Reader mdJson.
+.2. Add a link to the new Writer's web page.  The page will be dynamically built by the Rails application.  It's content will be the content of the readme.md file placed in the Writer's root folder (see step 7 above). Below is the example for Writer iso19115_2.
 
 ````md
- [mdJson](./readers/mdJson)
+ [mdJson](./writers/iso19115_2)
 
- : Alaska Data Integration working group JSON metadata format
+ : International Standards Organization Geographic Information - Metadata 19115-2:2009
 ````
 .3. mdTranslator-rails handles response types for metadata files generated in XML, JSON, HTML, and plain text.  If you are preparing metadata output in another format the translators_controller.rb will need to be extened to handle the new file type.   (mdtranslatorRails/app/controllers/api/v1/translators_controller.rb)
 
