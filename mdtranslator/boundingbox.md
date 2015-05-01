@@ -1,4 +1,10 @@
-# boundingBox:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### boundingBox:
 
 The *boundingBox* object provides a rectangle that geographically encompasses that extent of the resource. The bounding box is primarily used to locate resources within a geographic region.
 
