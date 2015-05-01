@@ -1,8 +1,10 @@
-# Development
+# mdTranslator
 
-New readers and writers can and should be written with little to no impact on the base mdTranslator code.  New readers and writers also should not interfere with any existing reader or writer.
+## Extending the mdTranslator
 
-A developer of a new reader of writer should start by gaining an understanding of the mdTranslator architecture and in particular the structure of the 'internal object' which all readers will write to and all writers will read from.
+New readers and writers can be added with little to no impact on the base mdTranslator code.  New readers and writers also should be written in a way that will not interfere with existing reades and writers.
 
-And of course, a reasonable understanding of the Ruby development language is required.
+A developer of a new reader of writer should start by gaining an understanding of the mdTranslator architecture and in particular the structure of the [internal object](../mdtranslator/internalObject.md) which all readers will write to and all writers will read from.
+
+And of course, a reasonable understanding of the Ruby development language is required. 
 
