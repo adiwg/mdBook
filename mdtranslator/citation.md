@@ -1,4 +1,10 @@
-# citation:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### citation:
 
 The *citation:* object contains information that identifies the project, data, publication or other resource being described by the metadata. The *citation* object is used many places throughout the metadata record, so the resource being identified is always dependent on the context in which the citation was placed.
 
