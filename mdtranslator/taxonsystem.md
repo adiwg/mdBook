@@ -1,4 +1,10 @@
-# taxonSystem:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### taxonSystem:
 
 The *taxonSystem* object provides information about the taxa (1 or more) included in the data set, including keywords, taxonomic system and coverage information, and taxonomic classification system.
 
