@@ -1,4 +1,10 @@
-# legalCon:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### legalCon:
 
 The *legalCon* object containing the legal constraints regarding access and use of the resource.
 
