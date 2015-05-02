@@ -184,7 +184,7 @@
 | entityId |string | A user provided unique ID for this entity.   | true | [link](http://www.adiwg.org/mdTools/#viewer-page?v=3-0-2-0-0) |
 | commonName |string | The name commonly used to identify this entity | false | [link](http://www.adiwg.org/mdTools/#viewer-page?v=3-0-2-0-1) |
 | codeName |string | The code name used to identify this entity in a database schema or application software. For spreasheets this would likely be the sheet name.  | true | [link](http://www.adiwg.org/mdTools/#viewer-page?v=3-0-2-0-2) |
-| alias |array | An array of quoted strings providing alternalte names used to identify this entity | false | [link](http://www.adiwg.org/mdTools/#viewer-page?v=3-0-2-0-3) |
+| alias |array | An array of quoted strings providing alternate names used to identify this entity | false | [link](http://www.adiwg.org/mdTools/#viewer-page?v=3-0-2-0-3) |
 | definition |string | A brief definition for the entity | true | [link](http://www.adiwg.org/mdTools/#viewer-page?v=3-0-2-0-4) |
 | primaryKeyAttributeCodeName |array | An array of quoted attribute code names that together compose the primary key set for the entity | false | [link](http://www.adiwg.org/mdTools/#viewer-page?v=3-0-2-0-5) |
 | index |array | An array of objects describing alternate indexes for the entity | false | [link](http://www.adiwg.org/mdTools/#viewer-page?v=3-0-2-0-6) |
