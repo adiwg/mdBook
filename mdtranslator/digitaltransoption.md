@@ -1,4 +1,10 @@
-# digitalTransOption:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### digitalTransOption:
 
 The *digitalTransOption* object identifies a technical means and media by which a resource can be obtained from the associated distributor.  Note that there is some confusion in naming caused by the ISO 19115 naming of this object.  The ISO name for this class is 'MD_digitalTransferOptions' and the ISO wrapper is 'distributorTransferOptions'.  *distributor* was used in the mdJson schema and *digital* was used in the mdTranslator internal object.
 

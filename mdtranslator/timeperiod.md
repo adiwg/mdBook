@@ -1,4 +1,10 @@
-# timePeriod:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### timePeriod:
 
 The *timePeriod* object identifies a period of time relevant to the extent.  The nature of the relevancy is provided in the description element of the *timePeriod*.
 

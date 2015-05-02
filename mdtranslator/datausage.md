@@ -1,4 +1,10 @@
-# dataUsage:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### dataUsage:
 
 The *dataUsage* provides basic information about specific applications for which the resource has/have been or is being used.
 

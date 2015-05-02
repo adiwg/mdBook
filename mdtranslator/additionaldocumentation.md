@@ -1,4 +1,10 @@
-# additionalDocumentation:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### additionalDocumentation:
 
 The *additionalDocumentation* object holds information about other references related to, but not defining, the resource such as  factsheets, data catalog pages, award documents, proposals, and informational websites.
 

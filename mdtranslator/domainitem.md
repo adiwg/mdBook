@@ -1,4 +1,10 @@
-# domainItem:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### domainItem:
 
 The *domainItem* object enumerates and defines the valid values for a domain.
 

@@ -14,13 +14,13 @@
 * **codelistType**
    String (Required): for static codelists this must be "staticList"
 * **codelistName**
-   String (Required): name you assign to the codelist.  This will also be the file name of the YAMLfile (e.g. codelistname.yml).
+   String (Required): name you assign to the codelist.  This will also be the file name of the YAMLfile (e.g., codelistname.yml).
 * **source**
    String: name of the primary organization to established the codelist codes, codenames, and definitions.
 * **sourceName**
    String: name the source organization has assigned to the codelist.
 * **extensible**
-   Boolean: can the codelist be extended? i.e. can new items be added to the codelist or items be removed?
+   Boolean: can the codelist be extended? (i.e., can new items be added to the codelist or items be removed?)
 * **description**
    String: definition for the codelist.
 * **codelist**

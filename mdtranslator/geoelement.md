@@ -1,4 +1,10 @@
-# geoElement:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### geoElement:
 
 The *geoElement* object describes a geographic object that comprises all or part of the extent.  The geographic object may be a bounding box, point, linestring, polygon, or textual description.  The *geoElement* also allows for multi-point, multi-line, and multi-polygon definitions.
 
@@ -28,7 +34,7 @@ __elementName:__ *string* - a user assigned name for the geographic element
 
 __elementDescription:__ *string* - a brief description of the geographic element
 
-__teporalElements:__ *array* - an array of [temporalElement](../mdtranslator/temporalElement.md) objects each describing a temporal boundary comprising all or portion of the geographic element
+__temporalElements:__ *array* - an array of [temporalElement](../mdtranslator/temporalElement.md) objects each describing a temporal boundary comprising all or portion of the geographic element
 
 __verticalElements:__ *array* - an array of [verticalElement](../mdtranslator/verticalElement.md) objects each describing a vertical boundary comprising all or portion of the geographic element
 

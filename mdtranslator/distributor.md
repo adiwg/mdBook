@@ -1,6 +1,12 @@
-# distributor:
+# mdTranslator
 
-The *distributor* object provides about a distributor of and options for obtaining the information resource.
+## Architecture
+
+### Internal Object
+---
+#### distributor:
+
+The *distributor* object provides information about a distributor and options for obtaining the information resource.
 
 ````ruby
     def newDistributor

@@ -1,6 +1,12 @@
-# boundingBox:
+# mdTranslator
 
-The *boundingBox* object provides a rectangle that geographicly encompasses that extent of the resource. The bounding box is primarily used to locate resources within a geographic region.
+## Architecture
+
+### Internal Object
+---
+#### boundingBox:
+
+The *boundingBox* object provides a rectangle that geographically encompasses that extent of the resource. The bounding box is primarily used to locate resources within a geographic region.
 
 ````ruby
     def newBoundingBox

@@ -1,4 +1,10 @@
-# medium:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### medium:
 
 The *medium* object provides information about the offline media on which the resource can be obtained.
 

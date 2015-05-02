@@ -1,4 +1,10 @@
-# resourceFormat:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### resourceFormat:
 
 The *resourceFormat* object that describes the computer language construct that specifies the representation of data objects in a record, file, message, storage device or transmission.
 
@@ -13,4 +19,4 @@ The *resourceFormat* object that describes the computer language construct that 
 
 __formatName:__ *string* (required) - name of the data transfer format
 
-__formatVersion:__ *string* - version of the format, i.e. number, date, or other
+__formatVersion:__ *string* - version of the format, (e.g., number, date, or other).

@@ -1,4 +1,10 @@
-# browseGraphic:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### browseGraphic:
 
 The *browseGraphic* object provides a link to an image, map, flow chart, data model, etc. that visually help to understand the resource.
 

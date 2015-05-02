@@ -1,4 +1,10 @@
-# entity:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### entity:
 
 The *entity* object provides the definition and schema for a discrete data object within the data resource.  The data object may be a table, dataset, or single sheet of a spreadsheet.
 
@@ -22,9 +28,9 @@ __entityId:__ *string* (required) - a user provided unique ID for this entity.  
 
 __entityName:__ *string* (required) - the name commonly used to identify this entity
 
-__entityCode:__ *string* - the code name used to identify this entity in a database schema or application software. For spreasheets this would likely be the sheet name. This items may not be applicable to datasets represented as a file.
+__entityCode:__ *string* - the code name used to identify this entity in a database schema or application software. For spreadsheets this would likely be the sheet name. This items may not be applicable to datasets represented as a file.
 
-__entityAlias:__ *array* - an array of quoted strings providing alternalte names used to identify this entity
+__entityAlias:__ *array* - an array of quoted strings providing alternate names used to identify this entity
 
 __entityDefinition:__ *string* (required) - a brief definition for the entity
 

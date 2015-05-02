@@ -1,4 +1,10 @@
-# dictionaryDomain:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### dictionaryDomain:
 
 The *dictionaryDomain* object contains a list of permissable values used to constrain an attribute's value.  A single domain list may be assigned to multiple attributes in a database or even in a single table.
 

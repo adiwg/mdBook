@@ -1,4 +1,10 @@
-# dataQuality:
+# mdTranslator
+
+## Architecture
+
+### Internal Object
+---
+#### dataQuality:
 
 The *dataQuality* object describes the data quality, lineage, and/or processing steps that were applied to the data resource.
 

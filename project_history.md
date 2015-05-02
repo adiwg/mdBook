@@ -1,6 +1,6 @@
 # Project History
 
-In last few years the ISO 19115 family of metadata standards has become the predominantly accepted
+In last few years the International Organization for Standardization (ISO) 19115 family of metadata standards has become the predominantly accepted
 worldwide standard for sharing information about the availability and usability of scientific datasets
 among researchers.  US interests in the ISO standard have also been growing as global-scale science
 demands participation with the broader international community.  Yet, due to the complexity and rigor of
@@ -10,8 +10,7 @@ implementations of the standard has been minimal.
 In 2009 the Alaska Data Integration working group members (ADIwg) mobilized to jointly address the
 common data integration efforts.  Beginning in 2012, ADIwg started to focus on difficulties associated
 with generating and exchanging ISO 19115-2 metadata among its partners which vary in size, from small
-NGO research groups to state offices, universities, and large federal bureaus.  This differential in size and technical capabilities among its membership brings with it the predictable diversity in metadata
-requirements and ability to provide the necessary technical support to its researchers.
+NGO research groups to state offices, universities, and large federal bureaus.  This differential in size and technical capabilities among its membership brings with it a diversity in metadata requirements and the ability to provide the necessary technical support to its researchers.
 The ISO 19115 metadata standard is not a single standard but a family of ISO and GML (Geography
 Markup Language Encoding Standard published and maintained by the Open Geospatial Consortium,
 Inc.) standards.  Understanding this amalgamation of standards to a degree sufficient to generate a valid
@@ -27,7 +26,7 @@ architecture that has the flexibility to achieve the following goals:
  - Isolate the complexity, rigor, formatting, and terminology of the ISO standards from the user.  Users should not be required to know anything about the ISO standards.
  - Provide clear developer and user documentation.
  - Design a layered architecture so developers will have access to each layer. Developers should be
-able to enter the toolbox at whatever layer best fits their needs; e.g. download the code library to
+able to enter the toolkit at whatever layer best fits their needs; e.g. download the code library to
 do some custom programming or post JSON metadata to a hosted JSON to ISO translator.
  - Design the architecture to accommodate incremental development cycles. Add features without
 disrupting previous implementations.

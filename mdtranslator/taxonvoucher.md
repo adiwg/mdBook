@@ -1,6 +1,12 @@
-# taxonVoucher:
+# mdTranslator
 
-The *taxonVoucher* object providing information on the types of specimen, the repository, and the individuals who identified the vouchers.
+## Architecture
+
+### Internal Object
+---
+#### taxonVoucher:
+
+The *taxonVoucher* object is used to provide information on the types of specimen(s), the repository, and the individuals who identified the vouchers.
 
 ````ruby
     def newTaxonVoucher
@@ -11,6 +17,6 @@ The *taxonVoucher* object providing information on the types of specimen, the re
     end
 ````
 
-__specimen:__ *string* (required) - a word or phrase describing the type of specimen collected.  e.g. 'herbarium specimens', 'blood samples', 'photographs', 'individuals'
+__specimen:__ *string* (required) - a word or phrase describing the type of specimen collected (e.g., 'herbarium specimens', 'blood samples', 'photographs', 'individuals').
 
 __repository:__ *object* (required) - a [responsibleParty](../mdtranslator/responsibleParty.md) object
