@@ -45,9 +45,9 @@ The *resourceInfo* object contains the metadata that describes the principal res
 
 __resourceType:__ *string* - identifies the type of resource described by this metadata. E.g. 'project', 'dataset', 'study', 'publication'.
 
-[__citation:__](../mdtranslator/citation.md) *object* - the main citation which identifies the resource for this metadata record.
+__citation:__ *object* - a [citation](../mdtranslator/citation.md) object which is the main citation identifying the resource for this metadata record.
 
-[__timePeriod:__](../mdtranslator/timePeriod.md) *object* - the time span of the resource.  For a project this might the start and end dates.  For a dataset it may be the time span of the data.
+__timePeriod:__ *object* - a [time period](../mdtranslator/timePeriod.md) object defining the time span of the resource.  For a project this might the start and end dates.  For a dataset it may be the time span of the data.
 
 __abstract:__ *string* (required) - a brief narrative describing the content of the resource.
 
