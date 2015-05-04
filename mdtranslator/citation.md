@@ -28,9 +28,9 @@ __citTitle:__ *string* (required) - a name for the resource described.
 
 __citEdition:__ *string* - edition or version of the resource.
 
-[__citResourceIds:__](../mdtranslator/resourceId.md) *array* - an array of identifiers for the resource.
+[__citResourceIds:__] *array* - an array of [resource identifiers](../mdtranslator/resourceId.md) for the resource. 
 
-[__citResponsibleParty:__](../mdtranslator/responsibleParty.md) *array* - an array of people and/or organizations that play a role in the creation, maintenance, or administration of the resource that is of particular interest to the users of this metadata record.
+[__citResponsibleParty:__] *array* - an array of [responsible party](../mdtranslator/responsibleParty.md) objects identifying people and/or organizations that play a role in the creation, maintenance, or administration of the resource that is of particular interest to the users of this metadata record.
 
 __citResourceForms:__ *array* - an array of strings that describe the forms in which the resource is available (e.g., digitalText, image, or video).
 
