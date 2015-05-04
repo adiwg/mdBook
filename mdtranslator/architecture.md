@@ -2,7 +2,7 @@
 
 ## Architecture
 
-This section covers the architecture of mdTranslator and two software wrappers that are generally used to interface directly with the mdTranslator. 
+This section covers the architecture of mdTranslator and two software wrappers used to interface directly with the mdTranslator. 
 
 [__mdTranslator__](../mdtranslator/translatorArchitecture.md) - covers the internal architecture of the mdTranslator.
 
