@@ -34,4 +34,4 @@ __citEdition:__ *string* - edition or version of the resource.
 
 __citResourceForms:__ *array* - an array of strings that describe the forms in which the resource is available (e.g., digitalText, image, or video).
 
-[__citOlResource:__](../mdtranslator/onlineResource.md) *array* - an array of online references related to the resource.
+__citOlResource:__ *array* - an array of [online reference](../mdtranslator/onlineResource.md) objects related to the resource.
