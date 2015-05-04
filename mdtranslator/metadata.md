@@ -20,9 +20,9 @@ The *metadata:* object holds the body of the metadata for the resource.  It is o
     end
 ````
 
-[__metadataInfo:__](../mdtranslator/metadataInfo.md) *object* - contains information about the metadata record itself.
+__metadataInfo:__ *object* - an object containing information about the [metadata record](../mdtranslator/metadataInfo.md) itself.
 
-[__resourceInfo:__](../mdtranslator/resourceInfo.md) *object* - contains metadata for the resource being described by this metadata record.
+__resourceInfo:__ *object* - an object containg the metadata for the [resource](../mdtranslator/resourceInfo.md) being described by this metadata record.
 
 __distributorInfo:__ *array* - an array of  [distributor](../mdtranslator/distributor.md) objects containing information about distributors or distribution points for the data or service described by this metadata record.
 
