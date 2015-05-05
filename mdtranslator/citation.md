@@ -24,14 +24,14 @@ The *citation:* object contains information that identifies the project, data, p
 
 __citTitle:__ *string* (required) - a name for the resource described.
 
-[__citDate:__](../mdtranslator/datetime.md) *object* - the date when the citation was valid for the resource.
+__citDate:__ *object* - a [dateTime](../mdtranslator/datetime.md) object for the date when the citation was valid for the resource.
 
 __citEdition:__ *string* - edition or version of the resource.
 
-[__citResourceIds:__] *array* - an array of [resource identifiers](../mdtranslator/resourceId.md) for the resource. 
+__citResourceIds:__ *array* - an array of [resourceId](../mdtranslator/resourceId.md) objects containing identifier for the resource. 
 
-[__citResponsibleParty:__] *array* - an array of [responsible party](../mdtranslator/responsibleParty.md) objects identifying people and/or organizations that play a role in the creation, maintenance, or administration of the resource that is of particular interest to the users of this metadata record.
+__citResponsibleParty:__ *array* - an array of [responsibleParty](../mdtranslator/responsibleParty.md) objects identifying people and/or organizations that play a role in the creation, maintenance, or administration of the resource that is of particular interest to the users of this metadata record.
 
 __citResourceForms:__ *array* - an array of strings that describe the forms in which the resource is available (e.g., digitalText, image, or video).
 
-__citOlResource:__ *array* - an array of [online reference](../mdtranslator/onlineResource.md) objects related to the resource.
+__citOlResource:__ *array* - an array of [onlineResource](../mdtranslator/onlineResource.md) objects related to the resource.
