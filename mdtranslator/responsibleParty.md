@@ -19,6 +19,6 @@ The *responsibleParty* in the internal object is just a contactId and a role for
     end
 ````
 
-__contactId:__ *string* - the unique ID assigned by the metadata author to the given contact in the [contacts](../mdtranslator/contacts.md) object.
+__contactId:__ *string* - the unique ID assigned by the metadata author to the given contact in the [contact](../mdtranslator/contact.md) object.
 
 __role:__ *string* - the function of the contact in the current context.

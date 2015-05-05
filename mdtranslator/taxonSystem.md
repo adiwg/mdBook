@@ -21,7 +21,7 @@ The *taxonSystem* object provides information about the taxa (1 or more) include
     end
 ````
 
-__taxClassSys:__ *array* (required) - an array of [citation](../mdtranlator/citation.md) citation objects describing the taxonomic classification system or authority used to specify the taxonomy
+__taxClassSys:__ *array* (required) - an array of [citation](../mdtranslator/citation.md) citation objects describing the taxonomic classification system or authority used to specify the taxonomy
 
 __taxGeneralScope:__ *string* - a brief description of the range of taxa addressed in the data set or collection. For example, "all vascular plants were identified to family or species, mosses and lichens were identified as moss or lichen".
 

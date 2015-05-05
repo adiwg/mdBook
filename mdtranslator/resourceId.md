@@ -21,4 +21,4 @@ __identifier:__ *string* (required) - the identifier.
 
 __identifierType:__ *string* - the type of identifier such as uuid, acronym, or something specific like 'Global Terrestrial Permafrost Network ID'.
 
-[__citation:__](../mdtranslator/citation.md) *object* - an optional citation to cite the source or issuing agency of a particular identifier.
+__citation:__ *object* - a [citation](../mdtranslator/citation.md) object to cite the source or issuing agency of a particular identifier.

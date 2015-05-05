@@ -4,7 +4,7 @@
 
 ### Command Line Interface 
 
-The mdTranslator *command line interface* (CLI) is installed with the 'adiwg-mdtranslator' RubyGem. It listens at the command line for any commands addressed to 'mdtranslator'.  Command line options allow specification of the input metadata file, reader, writer, and other mdTranslator parameters.  The CLI handles the interface with the mdTranslator.  It passes the file and options in and catches the mdTranslator response and returns it to the user.  The mdTranslator result can be assigned to an applicationi variable or piped to a file as required by the user.  The CLI output may be wrapped in JSON or XML or if desired the entire [response hash](../mdtranslator/responseHash.rb) can be returned. 
+The mdTranslator *command line interface* (CLI) is installed with the 'adiwg-mdtranslator' RubyGem. It listens at the command line for any commands addressed to 'mdtranslator'.  Command line options allow specification of the input metadata file, reader, writer, and other mdTranslator parameters.  The CLI handles the interface with the mdTranslator.  It passes the file and options in and catches the mdTranslator response and returns it to the user.  The mdTranslator result can be assigned to an applicationi variable or piped to a file as required by the user.  The CLI output may be wrapped in JSON or XML or if desired the entire [responseHash](../mdtranslator/responseHash.md) can be returned. 
 
 The Command Line Interface uses the RubyGem 'thor' to deliver its functionality.
 
@@ -34,4 +34,4 @@ __--showAllTags__ (alias -s, default false) - include tags in the output for unu
 
 __--messages__ (alias -m, default text) - on error, return messages as formatted test ofr JSON object.
 
-__--returnObject__ (alias -o, default false) - return the full [response hash](../mdtranslator/responseHash.rb) in a JSON object.
+__--returnObject__ (alias -o, default false) - return the full [responseHash](../mdtranslator/responseHash.md) in a JSON object.
