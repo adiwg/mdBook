@@ -34,7 +34,7 @@ The base object has 4 sections:
 >
 > __version:__ *string* (required) - version of the encoding schema used
 
-__contacts:__ *array* - holds an array of [contact](mdtranslator/contact.md) objects.  The internal object stores information about a contact in an array so the contact can be stored once and reused multiple times throughout the metadata record.
+__contacts:__ *array* - holds an array of [contact](../mdtranslator/contact.md) objects.  The internal object stores information about a contact in an array so the contact can be stored once and reused multiple times throughout the metadata record.
 
 __metadata:__ *object* - an object that holds the [metadata](../mdtranslator/metadata.md) for the resource being described, generally a project or data resource.
 
