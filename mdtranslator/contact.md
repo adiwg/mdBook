@@ -34,10 +34,10 @@ __orgName:__ *string* - name of the organization.
 
 __position:__ *string* - the position or title of the individual within the organization.
 
-[__phones:__](../mdtranslator/phone.md) *array* - an array of phone numbers associated with the individual and/or organization.
+__phones:__ *array* - an array of [phone](../mdtranslator/phone.md) objects associated with the individual and/or organization.
 
-[__address:__](../mdtranslator/address.md) *object* - a mailing or physical address for the individual or organization.
+__address:__ *object* - an [address](../mdtranslator/address.md) object with the mailing or physical address for the individual or organization.
 
-[__onlineRes:__](../mdtranslator/onlineResource.md) *array* - and array of online resources associated with the individual or organization.
+__onlineRes:__ *array* - an array of [online resource](../mdtranslator/onlineResource.md) objects associated with the individual or organization.
 
 __contactInstructions:__ *text* - an open text field to provide any specific information about contacting the individual or organization.

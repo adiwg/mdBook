@@ -19,4 +19,4 @@ The *additionalDocumentation* object holds information about other references re
 
 __resourceType:__ *string* - identifies the type of  documentation described by this object. E.g. 'project', 'dataset', 'study', 'publication'.
 
-[__citation:__](../mdtranslator/citation.md) *object* - the citation identifying the document including its location.
+__citation:__ *object* - a [citation](../mdtranslator/citation.md) object identifying the document including its location.
