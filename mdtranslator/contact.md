@@ -38,6 +38,6 @@ __phones:__ *array* - an array of [phone](../mdtranslator/phone.md) objects asso
 
 __address:__ *object* - an [address](../mdtranslator/address.md) object with the mailing or physical address for the individual or organization.
 
-__onlineRes:__ *array* - an array of [online resource](../mdtranslator/onlineResource.md) objects associated with the individual or organization.
+__onlineRes:__ *array* - an array of [onlineResource](../mdtranslator/onlineResource.md) objects associated with the individual or organization.
 
 __contactInstructions:__ *text* - an open text field to provide any specific information about contacting the individual or organization.
