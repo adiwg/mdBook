@@ -6,7 +6,7 @@
 ---
 #### spatialReferenceSystem:
 
-The *spatialReferenceSystem* object describes the geospatial referencing system associated with the spatial extent of the data resource. The referencing can be provided indirectly by an EPSG number, a named reference, or providing the parameters in a well known text (WKT) format. Note that this object is used to describe the overall spatial and extent of the entire resource.  When defining a specific reference system within a [geoElement](../mdtranslator/geoElement.md), the [SRS](../mdtranslator/SRS.md) object should be used instead.
+The *spatialReferenceSystem* object describes the geospatial referencing system associated with the spatial extent of the data resource. The referencing can be provided indirectly by an EPSG number, a named reference, or providing the parameters in a well known text (WKT) format. Note that this object is used to describe the overall spatial and extent of the entire resource.  When defining a specific reference system within a [geoElement](../mdtranslator/geoElement.md), the [SRS](../mdtranslator/srs.md) object should be used instead.
 
 ````ruby
     def newSpatialReferenceSystem
