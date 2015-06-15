@@ -15,6 +15,7 @@ The *metadataInfo:* object contains information about the metadata record itself
             metadataCustodians: [],
             metadataCreateDate: {},
             metadataUpdateDate: {},
+            metadataCharacterSet: nil,
             metadataURI: nil,
             metadataStatus: nil,
             maintInfo: {},
@@ -32,6 +33,8 @@ __metadataCustodians:__ *array* - an array of [responsibleParty](../mdtranslator
 __metadataCreateDate:__ *object* - a [dateTime](../mdtranslator/dateTime.md) object for the date this metadata record was created.
 
 __metadataUpdateDate:__ *object* - a [dateTime](../mdtranslator/dateTime.md) object for the date the metadata content was last updated.
+
+__metadataCharacterSet:__ *string* - the language in which the metadata record in written.
 
 __metadataURI:__ *string* - Uniform Resource Identifier (URI) of this metadata record.
 
