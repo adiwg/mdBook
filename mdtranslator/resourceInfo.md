@@ -25,6 +25,7 @@ The *resourceInfo* object contains the metadata that describes the principal res
             graphicOverview: [],
             resourceFormats: [],
             resourceLanguages: [],
+            resourceCharacterSets: [],
             descriptiveKeywords: [],
             resourceUses: [],
             useConstraints: [],
@@ -71,7 +72,9 @@ __graphicOverview:__ *array* - an array of [browseGraphic](../mdtranslator/brows
 
 __resourceFormats:__ *array* - an array of [resourceFormat](../mdtranslator/resourceFormat.md) objects that describe the format(s) in which the resource is available.
 
-__resourceLanguages:__ *array* - an array of quoted strings to define the language(s) and counrty(ies) of origin used within the resource (e.g., 'eng; USA', 'eng; UK', 'esp; MEX').
+__resourceLanguages:__ *array* - an array of quoted strings to identify the language(s) and counrty(ies) of origin used within the resource (e.g., 'eng; USA', 'eng; UK', 'esp; MEX').
+
+__resourceCharacterSets:__ *array* - an array of quoted strings to identify the character sets used by the resource (e.g. utf8, utf16, ebcdic).
 
 __descriptiveKeywords:__ *array* - an array of [keyword](../mdtranslator/keyword.md) objects to list relevant keywords and cite the source thesaurus for the keywords.
 
