@@ -34,7 +34,6 @@
                * [browseGraphic](mdtranslator/browseGraphic.md)
                * [citation](mdtranslator/citation.md)
                * [contact](mdtranslator/contact.md)
-               * [coverageInfo](mdtranslator/coverageInfo.md)
                * [dataDictionary](mdtranslator/dataDictionary.md)
                * [dataProcessingStep](mdtranslator/dataProcessingStep.md)
                * [dataQuality](mdtranslator/dataQuality.md)
