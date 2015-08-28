@@ -42,7 +42,6 @@
                * [dataUsage](mdtranslator/dataUsage.md)
                * [dateTime](mdtranslator/dateTime.md)
                * [dictionaryDomain](mdtranslator/dictionaryDomain.md)
-               * [dictionaryInfo](mdtranslator/dictionaryInfo.md)
                * [digitalTransOption](mdtranslator/digitalTransOption.md)
                * [dimensionInfo](mdtranslator/dimensionInfo.md)
                * [distOrder](mdtranslator/distOrder.md)
