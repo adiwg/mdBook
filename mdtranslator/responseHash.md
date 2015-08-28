@@ -7,26 +7,29 @@
 The *response hash* object is constructed by mdTranslator and available to reader and writer during its run. This is the object returned to the user at the completion of the run.  The reader and writer fill in object as they process the metadata content. 
 
 ````ruby
-$response = {
+responseObj =  {
     readerFormat: nil,
     readerStructurePass: nil,
     readerStructureMessages: [],
-    readerRequested: reader,
-    readerFound: nil,
-    readerVersionFound: nil,
+    readerRequested: nil,
+    readerVersionRequested: nil,
     readerVersionUsed: nil,
-    readerValidationLevel: validate,
+    readerValidationLevel: nil,
     readerValidationPass: nil,
     readerValidationMessages: [],
     readerExecutionPass: nil,
     readerExecutionMessages: [],
-    writerName: writer,
+    writerName: nil,
     writerVersion: nil,
     writerFormat: nil,
     writerPass: nil,
     writerMessages: [],
-    writerOutput: nil
+    writerOutput: nil,
+    writerShowTags: false,
+    writerMissingIdCount: '_000',
+    translatorVersion: nil
 }
+
 ````
 
 __readerFormat:__ *string* - the anticipated format of the input file, parsing by the reader will proceed assuming this format.  Set by reader.
@@ -38,9 +41,7 @@ to assist the user in fixing file structure problems.  Set by reader.
 
 __readerRequested:__ *string* - name of the reader requested by the user. Set from the translate parameter list.
 
-__readerFound:__ *string* - name of the reader used by the reader. Set by reader.  This will be same as readerRequested if the readerRequested name is valid. 
-
-__readerVersionFound:__ *string* - version of the reader requested by the input file. Set by reader.
+__readerVersionRequested:__ *string* version of the reader requested by the input file, set by reader.
 
 __readerVersionUsed:__ *string* - version of the reader the reader method decided to use in processing the input file.  Set by  reader.  Default 'normal'.
 
@@ -65,5 +66,12 @@ __writerPass:__ *boolean* - 'true' if the writer completes the creation of the o
 __writerMessages:__ *string[]* - an array of quoted string messages.  If writerPass is 'false', set one or more messages to assist user in fixing file data problems.  Set by writer.
 
 __writerOutput:__ *string* - output file returned from the writer.  Set by writer.
+
+__writerShowTags:__ *Boolean* If 'true' tags are indluced in the XML output for empty elements.
+
+__writerMissingIdCount:__ *string* counter for creating unique elements IDs for ISO elements that require an ID but one was not provide in the input metadata file.
+
+__translatorVersion:__ *string* current version of the mdTranslator. 
+
 
 
