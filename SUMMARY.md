@@ -81,6 +81,7 @@
                * [timeInstant](mdtranslator/timeInstant.md)
                * [timePeriod](mdtranslator/timePeriod.md)
                * [verticalElement](mdtranslator/verticalElement.md)
+               * coverageInfo.md
            * [Response Hash](mdtranslator/responseHash.md)
        * [Command Line Interface](mdtranslator/commandLineInterface.md)
        * [Ruby on Rails API](mdtranslator/rorApi.md)
