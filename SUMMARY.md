@@ -43,7 +43,6 @@
                * [dateTime](mdtranslator/dateTime.md)
                * [dictionaryDomain](mdtranslator/dictionaryDomain.md)
                * [digitalTransOption](mdtranslator/digitalTransOption.md)
-               * [dimensionInfo](mdtranslator/dimensionInfo.md)
                * [dimensionInfo](dimensioninfo.md)
                * [distOrder](mdtranslator/distOrder.md)
                * [distributor](mdtranslator/distributor.md)
