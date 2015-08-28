@@ -53,6 +53,7 @@
                * [extent](mdtranslator/extent.md)
                * [geoElement](mdtranslator/geoElement.md)
                * [geometry](mdtranslator/geometry.md)
+               * [gridInfo](mdtranslator/gridInfo.md)
                * [keyword](mdtranslator/keyword.md)
                * [legalCon](mdtranslator/legalCon.md)
                * [lineage](mdtranslator/lineage.md)
