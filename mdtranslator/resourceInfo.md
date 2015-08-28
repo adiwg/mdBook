@@ -9,6 +9,7 @@
 The *resourceInfo* object contains the metadata that describes the principal resource for this metadata record.  This resource can be a project, dataset, presentation, or any other resource that needs to be described by metadata.
 
 ````ruby
+    def newResourceInfo
         intObj = {
             resourceType: nil,
             citation: {},
@@ -26,6 +27,7 @@ The *resourceInfo* object contains the metadata that describes the principal res
             resourceFormats: [],
             resourceLanguages: [],
             resourceCharacterSets: [],
+            resourceLocales: [],
             descriptiveKeywords: [],
             resourceUses: [],
             useConstraints: [],
@@ -38,6 +40,8 @@ The *resourceInfo* object contains the metadata that describes the principal res
             topicCategories: [],
             environmentDescription: nil,
             extents: [],
+            gridInfo: [],
+            coverageInfo: [],
             dataQualityInfo: [],
             supplementalInfo: nil
         }
@@ -76,6 +80,8 @@ __resourceLanguages:__ *array* - an array of quoted strings to identify the lang
 
 __resourceCharacterSets:__ *array* - an array of quoted strings to identify the character sets used by the resource (e.g. utf8, utf16, ebcdic).
 
+__resourceLocales:__ *array* - an array of [locale](../mdtranslator/locale.md) object that describe both a language, country, and character encoding system.
+
 __descriptiveKeywords:__ *array* - an array of [keyword](../mdtranslator/keyword.md) objects to list relevant keywords and cite the source thesaurus for the keywords.
 
 __resourceUses:__ *array* - an array of [resourceSpecificUsage](../mdtranslator/resourceSpecificUsage.md) objects describing ways in which the resource is currently or has been used, it's limitations, and contact information about a specific usage.
@@ -100,6 +106,10 @@ __topicCategories:__ *array* - an array of quotes strings specifying the general
 __environmentDescription:__ *string* - a description of the producer's processing environment, including items such as the software, the computer, and the computer operating system in which the data resource was created.
 
 __extent:__ *array* - an array of [extent](../mdtranslator/extent.md) objects describing the spatial, temporal, and vertical boundaries of the project or data resource.
+
+__gridInfo:__ *array* an array of [gridInfo](../mdtranslator/gridInfo.md) objects describing characteristics of gridded data files. 
+
+__coverageInfo:__ *array* an array of [coverageInfo](../mdtranslator/coverageInfo.md) objects describing characteristics of images, classified data, aerial protography, satellite imagery, and spectral content.
 
 __dataQualityInfo:__ *array* - an array of [dataQuality](../mdtranslator/dataQuality.md) objects describing the data quality, lineage, and/or processing steps applied to the whole or part of the data resource.
 
