@@ -107,9 +107,9 @@ __environmentDescription:__ *string* - a description of the producer's processin
 
 __extent:__ *array* - an array of [extent](../mdtranslator/extent.md) objects describing the spatial, temporal, and vertical boundaries of the project or data resource.
 
-__gridInfo:__ *array* an array of [gridInfo](../mdtranslator/gridInfo.md) objects describing characteristics of gridded data files. 
+__gridInfo:__ *array* - an array of [gridInfo](../mdtranslator/gridInfo.md) objects describing characteristics of gridded data files. 
 
-__coverageInfo:__ *array* an array of [coverageInfo](../mdtranslator/coverageInfo.md) objects describing characteristics of images, classified data, aerial protography, satellite imagery, and spectral content.
+__coverageInfo:__ *array* - an array of [coverageInfo](../mdtranslator/coverageInfo.md) objects describing characteristics of images, classified data, aerial protography, satellite imagery, and spectral content.
 
 __dataQualityInfo:__ *array* - an array of [dataQuality](../mdtranslator/dataQuality.md) objects describing the data quality, lineage, and/or processing steps applied to the whole or part of the data resource.
 
