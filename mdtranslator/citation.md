@@ -12,6 +12,7 @@ The *citation:* object contains information that identifies the project, data, p
     def newCitation
         intObj = {
             citTitle: nil,
+            citAltTitle: nil,
             citDate: [],
             citEdition: nil,
             citResourceIds: [],
@@ -22,7 +23,9 @@ The *citation:* object contains information that identifies the project, data, p
     end
 ````
 
-__citTitle:__ *string* (required) - a name for the resource described.
+__citTitle:__ *string* (required) - a name for the resource being described.
+
+__citAltTitle:__ *string* - an alternate or more descriptive title for the resource being rescribed.
 
 __citDate:__ *object* - a [dateTime](../mdtranslator/datetime.md) object for the date when the citation was valid for the resource.
 
