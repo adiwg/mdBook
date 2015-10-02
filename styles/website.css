@@ -1,0 +1,7 @@
+td ul li {
+    font-size: .9em;
+}
+
+tr:hover td {
+    background-color: #F1FFF1;
+}
