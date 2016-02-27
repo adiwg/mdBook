@@ -2,7 +2,7 @@
     "gitbook": ">=2.0.0",
     "plugins": [
         "toc",
-        "image-captions"
+        "-image-captions"
     ],
     "pluginsConfig": {},
     "styles": {
