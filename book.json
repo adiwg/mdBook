@@ -1,7 +1,8 @@
 {
     "gitbook": ">=2.0.0",
     "plugins": [
-        "toc"
+        "toc",
+        "image-captions"
     ],
     "pluginsConfig": {},
     "styles": {
