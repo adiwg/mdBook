@@ -23,6 +23,6 @@ __distContact:__ *object* - a [responsibleParty](../mdtranslator/responsiblePart
 
 __distOrderProcs:__ *array* - an array of [distOrder](../mdtranslator/distOrder.md) providing information about how the resource may be obtained and related instructions
 
-__distFormats:__ *array* - an array of [resourceFormat](../mdtranslator/resourceFormat.md) objects describing the resource formats available through the distributor
+__distFormats*(deprecated)*:__ *array* - an array of [resourceFormat](../mdtranslator/resourceFormat.md) objects describing the resource formats available through the distributor
 
 __distTransOptions:__ *array* - an array of [digitalTransOption](../mdtranslator/digitalTransOption.md) objects identifying the technical means and media by which a resource can be obtained from the distributor
