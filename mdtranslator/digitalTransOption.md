@@ -19,6 +19,7 @@ The *digitalTransOption* object identifies a technical means and media by which 
         }
     end
 ````
+__distFormats:__ *array* - an array of [resourceFormat](../mdtranslator/resourceFormat.md) objects describing the resource formats available through the distributor
 
 __online:__ *array* - an array of [onlineResource](../mdtranslator/onlineResource.md) objects that provide information about online sources from which the resource can be obtained.
 
