@@ -11,6 +11,9 @@ The *digitalTransOption* object identifies a technical means and media by which 
 ````ruby
     def newDigitalTransOption
         intObj = {
+            distFormats: [],
+            transferSize: nil,
+            transferSizeUnits: nil,
             online: [],
             offline: {}
         }
