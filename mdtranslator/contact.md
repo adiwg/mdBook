@@ -18,6 +18,7 @@ __contact:__
             indName: nil,
             orgName: nil,
             position: nil,
+            primaryRole: nil,
             phones: [],
             address: {},
             onlineRes: [],
@@ -33,6 +34,8 @@ __indName:__ *string* - name of the contact.  A format for the name is enforced.
 __orgName:__ *string* - name of the organization.
 
 __position:__ *string* - the position or title of the individual within the organization.
+
+__primaryRole:__ *string* - the main role of the contact in relation to the resource.
 
 __phones:__ *array* - an array of [phone](../mdtranslator/phone.md) objects associated with the individual and/or organization.
 
