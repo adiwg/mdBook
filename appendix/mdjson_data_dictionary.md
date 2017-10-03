@@ -140,22 +140,6 @@
 | [onlineResource](#onlineresource) |array | On-line information related to the citation. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>CI_Citation &gt; citedResponsibleParty &gt; CI_ResponsibleParty &gt; contact &gt; CI_Contact &gt; onlineResource &gt; CI_OnlineResource</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-5-0-1-0-9) |
 | [graphic](#graphic) |array | Online graphic associated with the citation | false | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-5-0-1-0-10) |
 
-## citation
-| Name | Type | Description | Required | Translation | Viewer Link|
-| --- | --- | --- | --- | --- | --- |
-| **citation** | object | Citation for the dictionary. |   | <ul class="md-translation"><li>FGDC CSDGM<ul><li>idinfo &gt; citation &gt; citeinfo</li></ul></li><li>ISO 19115-2<ul><li>CI_Citation</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=4-0-0) |
-| title |string | Name by which the cited resource is known. | true | <ul class="md-translation"><li>ISO 19115-2<ul><li>CI_Citation &gt; title</li><li>FC_FeatureCatalogue &gt; name</li></ul></li><li>FGDC CSDGM<ul><li>idinfo &gt; citation &gt; citeinfo &gt; title</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=4-0-0-0) |
-| alternateTitle |array | Alias by which the cited resource is known. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>CI_Citation &gt; alternateTitle</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=4-0-0-1) |
-| [date](#date) |array | Date referenced to the cited resource. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>CI_Citation &gt; date &gt; CI_Date</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=4-0-0-2) |
-| edition |string | Version identifier for the resource. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>CI_Citation &gt; edition</li><li>FC_FeatureCatalogue &gt; versionNumber</li></ul></li><li>FGDC CSDGM<ul><li>idinfo &gt; citation &gt; edition</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=4-0-0-3) |
-| [responsibleParty](#responsibleparty) |array | Identification of, and means of communication with, person(s) and organization(s) associated with the cited resource. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>CI_Citation &gt; citedResponsibleParty &gt; CI_ResponsibleParty</li><li>FC_FeatureCatalogue &gt; producer &gt; CI_ResponisbleParty</li></ul></li><li>FGDC CSDGM<ul><li>idinfo &gt; ptcontac &gt; cntinfo</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=4-0-0-4) |
-| presentationForm |array | The form that the resource is presented, such as: digital map, digital document, etc. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>CI_Citation &gt; presentationForm [CI_PresentationFormCode]</li></ul></li><li>FGDC CSDGM<ul><li>idinfo &gt; citation &gt; geoform</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=4-0-0-5) |
-| [identifier](#identifier) |array | Identifier for the resource in the context of the citation. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>CI_Citation &gt; identifier</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=4-0-0-6) |
-| [series](#series) |object | Information about the series, or aggregate resource, to which a resource belongs. | false | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=4-0-0-7) |
-| otherCitationDetails |array | Other information required to complete the citation that is not recorded elsewhere. | false | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=4-0-0-8) |
-| [onlineResource](#onlineresource) |array | On-line information related to the citation. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>CI_Citation &gt; citedResponsibleParty &gt; CI_ResponsibleParty &gt; contact &gt; CI_Contact &gt; onlineResource &gt; CI_OnlineResource</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=4-0-0-9) |
-| [graphic](#graphic) |array | Online graphic associated with the citation | false | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=4-0-0-10) |
-
 ## constraint
 | Name | Type | Description | Required | Translation | Viewer Link|
 | --- | --- | --- | --- | --- | --- |
@@ -169,14 +153,6 @@
 | [responsibleParty](#responsibleparty) |array | Entity responsible for the resource constraint | false | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-1-22-6) |
 | [legal](#legal) |object | Restrictions and legal prerequisites for accessing and using the resource or metadata. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>MD_LegalConstraints</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-1-22-7) |
 | [security](#security) |object | Handling restrictions imposed on the resource or metadata for national security or similar security concerns. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>MD_SecurityConstraints</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-1-22-8) |
-
-## contact
-| Name | Type | Description | Required | Translation | Viewer Link|
-| --- | --- | --- | --- | --- | --- |
-| **contact** | array | Contact information for the maintainer of the resource. |   | <ul class="md-translation"><li>ISO 19115-2<ul><li>MD_MaintenanceInformation &gt; contact &gt; CI_Contact</li></ul></li><li>FGDC CSDGM<ul><li>metainfo &gt; metc</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-1-25-0-4) |
-| role |string | Function performed by the contact in the current context. | true | <ul class="md-translation"><li>ISO 19115-2<ul><li>MI_Metadata &gt; Contact &gt; CI_Contact &gt; role [CI_RoleCode]</li></ul></li><li>FGDC CSDGM<ul><li>metainfo &gt; cntinfo &gt; cntpos</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-1-25-0-4-0-0) |
-| [roleExtent](#roleextent) |array | The area or period of time for which the role is valid. | false | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-1-25-0-4-0-1) |
-| [party](#party) |array | Identifies all the contacts associated with the role. | true | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-1-25-0-4-0-2) |
 
 ## contact
 | Name | Type | Description | Required | Translation | Viewer Link|
@@ -195,14 +171,6 @@
 | hoursOfService |array |  | false | No translation available. | [link](http://www.adiwg.org/mdTools/#viewer-page?v=1-0-10) |
 | contactInstructions |string | Supplemental instructions on how or when to contact the individual or organization. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>CI_Contact &gt; contactInstructions</li></ul></li><li>FGDC CSDGM<ul><li>cntinfo &gt; cntinst</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=1-0-11) |
 | contactType |string | User defined contact type. | false | No translation available. | [link](http://www.adiwg.org/mdTools/#viewer-page?v=1-0-12) |
-
-## contact
-| Name | Type | Description | Required | Translation | Viewer Link|
-| --- | --- | --- | --- | --- | --- |
-| **contact** | object | Party from whom the resource may be obtained. Note: This list need not be exhaustive. |   | <ul class="md-translation"><li>ISO 19115-2<ul><li>MD_Distribution &gt; distributor &gt; MD_Distributor &gt; distributorContact &gt; CI_ResponsibleParty</li></ul></li><li>FGDC CSDGM<ul><li>distinfo &gt; distrib &gt; cntinfo</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-3-0-1-0-0) |
-| role |string | Function performed by the contact in the current context. | true | <ul class="md-translation"><li>ISO 19115-2<ul><li>MI_Metadata &gt; Contact &gt; CI_Contact &gt; role [CI_RoleCode]</li></ul></li><li>FGDC CSDGM<ul><li>metainfo &gt; cntinfo &gt; cntpos</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-3-0-1-0-0-0) |
-| [roleExtent](#roleextent) |array | The area or period of time for which the role is valid. | false | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-3-0-1-0-0-1) |
-| [party](#party) |array | Identifies all the contacts associated with the role. | true | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-3-0-1-0-0-2) |
 
 ## cornerPoints
 | Name | Type | Description | Required | Translation | Viewer Link|
@@ -284,7 +252,7 @@
 | Name | Type | Description | Required | Translation | Viewer Link|
 | --- | --- | --- | --- | --- | --- |
 | **distributor** | array | Information about the distributor of and options for obtaining the resource. |   | <ul class="md-translation"><li>ISO 19115-2<ul><li>MD_Distribution</li></ul></li><li>FGDC CSDGM<ul><li>distinfo</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-3-0-1) |
-| [contact](#contact) |object | Party from whom the resource may be obtained. Note: This list need not be exhaustive. | true | <ul class="md-translation"><li>ISO 19115-2<ul><li>MD_Distribution &gt; distributor &gt; MD_Distributor &gt; distributorContact &gt; CI_ResponsibleParty</li></ul></li><li>FGDC CSDGM<ul><li>distinfo &gt; distrib &gt; cntinfo</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-3-0-1-0-0) |
+| [contact](#responsibleparty) |object | Party from whom the resource may be obtained. Note: This list need not be exhaustive. | true | <ul class="md-translation"><li>ISO 19115-2<ul><li>MD_Distribution &gt; distributor &gt; MD_Distributor &gt; distributorContact &gt; CI_ResponsibleParty</li></ul></li><li>FGDC CSDGM<ul><li>distinfo &gt; distrib &gt; cntinfo</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-3-0-1-0-0) |
 | [orderProcess](#orderprocess) |array | Provides information about how the resource may be obtained and related instructions and fee information. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>MD_Distribution &gt; distributor &gt; MD_Distributor &gt; distributionOrderProcess</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-3-0-1-0-1) |
 | [transferOption](#transferoption) |array | Describes method and media by which a resource is obtained from the distributor. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>MD_Distributor &gt; distributorTransferOptions</li></ul></li><li>FGDC CSDGM<ul><li>distinfo &gt; stdorder &gt; digform &gt; digtopt</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-3-0-1-0-2) |
 
@@ -497,16 +465,6 @@
 | description |string | A natural language description of the meaning of the identifier value. | false | No translation available. | [link](http://www.adiwg.org/mdTools/#viewer-page?v=4-0-4-1-0-3-0-0-1-0-2-4-10-0-3-4-0-6-0-3) |
 | [authority](#authority) |object | Citation for the authority issuing the identifier. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>MD_Identifier &gt; authority &gt; CI_Citation</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=4-0-4-1-0-3-0-0-1-0-2-4-10-0-3-4-0-6-0-4) |
 
-## identifier
-| Name | Type | Description | Required | Translation | Viewer Link|
-| --- | --- | --- | --- | --- | --- |
-| **identifier** | object | Identifier for the timePeriod. |   | <ul class="md-translation"><li>ISO 19115-2<ul><li>MD_Identifier</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=4-0-4-1-0-3-0-0-1-0-2-4-4-0-1-0-3-0-0-1-0-2) |
-| identifier |string | A name that is used to identify the resource. | true | <ul class="md-translation"><li>ISO 19115-2<ul><li>MD_Identifier &gt; code</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=4-0-4-1-0-3-0-0-1-0-2-4-4-0-1-0-3-0-0-1-0-2-0) |
-| namespace |string | A string which unambiguously defines the namespace for the identifier. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>RS_Identifier &gt; codeSpace</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=4-0-4-1-0-3-0-0-1-0-2-4-4-0-1-0-3-0-0-1-0-2-1) |
-| version |string | The version of the identifier. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>RS_Identifier &gt; version</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=4-0-4-1-0-3-0-0-1-0-2-4-4-0-1-0-3-0-0-1-0-2-2) |
-| description |string | A natural language description of the meaning of the identifier value. | false | No translation available. | [link](http://www.adiwg.org/mdTools/#viewer-page?v=4-0-4-1-0-3-0-0-1-0-2-4-4-0-1-0-3-0-0-1-0-2-3) |
-| [authority](#authority) |object | Citation for the authority issuing the identifier. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>MD_Identifier &gt; authority &gt; CI_Citation</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=4-0-4-1-0-3-0-0-1-0-2-4-4-0-1-0-3-0-0-1-0-2-4) |
-
 ## imageDescription
 | Name | Type | Description | Required | Translation | Viewer Link|
 | --- | --- | --- | --- | --- | --- |
@@ -615,22 +573,6 @@
 | [onlineResource](#onlineresource) |array | On-line information related to the citation. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>CI_Citation &gt; citedResponsibleParty &gt; CI_ResponsibleParty &gt; contact &gt; CI_Contact &gt; onlineResource &gt; CI_OnlineResource</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-2-0-4-0-2-0-9) |
 | [graphic](#graphic) |array | Online graphic associated with the citation | false | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-2-0-4-0-2-0-10) |
 
-## metadataCitation
-| Name | Type | Description | Required | Translation | Viewer Link|
-| --- | --- | --- | --- | --- | --- |
-| **metadataCitation** | object | Citation for the associated resource metadata. |   | <ul class="md-translation"><li>FGDC CSDGM<ul><li>idinfo &gt; citation &gt; citeinfo</li></ul></li><li>ISO 19115-2<ul><li>CI_Citation</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-4-0-4) |
-| title |string | Name by which the cited resource is known. | true | <ul class="md-translation"><li>ISO 19115-2<ul><li>CI_Citation &gt; title</li><li>FC_FeatureCatalogue &gt; name</li></ul></li><li>FGDC CSDGM<ul><li>idinfo &gt; citation &gt; citeinfo &gt; title</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-4-0-4-0) |
-| alternateTitle |array | Alias by which the cited resource is known. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>CI_Citation &gt; alternateTitle</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-4-0-4-1) |
-| [date](#date) |array | Date referenced to the cited resource. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>CI_Citation &gt; date &gt; CI_Date</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-4-0-4-2) |
-| edition |string | Version identifier for the resource. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>CI_Citation &gt; edition</li><li>FC_FeatureCatalogue &gt; versionNumber</li></ul></li><li>FGDC CSDGM<ul><li>idinfo &gt; citation &gt; edition</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-4-0-4-3) |
-| [responsibleParty](#responsibleparty) |array | Identification of, and means of communication with, person(s) and organization(s) associated with the cited resource. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>CI_Citation &gt; citedResponsibleParty &gt; CI_ResponsibleParty</li><li>FC_FeatureCatalogue &gt; producer &gt; CI_ResponisbleParty</li></ul></li><li>FGDC CSDGM<ul><li>idinfo &gt; ptcontac &gt; cntinfo</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-4-0-4-4) |
-| presentationForm |array | The form that the resource is presented, such as: digital map, digital document, etc. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>CI_Citation &gt; presentationForm [CI_PresentationFormCode]</li></ul></li><li>FGDC CSDGM<ul><li>idinfo &gt; citation &gt; geoform</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-4-0-4-5) |
-| [identifier](#identifier) |array | Identifier for the resource in the context of the citation. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>CI_Citation &gt; identifier</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-4-0-4-6) |
-| [series](#series) |object | Information about the series, or aggregate resource, to which a resource belongs. | false | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-4-0-4-7) |
-| otherCitationDetails |array | Other information required to complete the citation that is not recorded elsewhere. | false | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-4-0-4-8) |
-| [onlineResource](#onlineresource) |array | On-line information related to the citation. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>CI_Citation &gt; citedResponsibleParty &gt; CI_ResponsibleParty &gt; contact &gt; CI_Contact &gt; onlineResource &gt; CI_OnlineResource</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-4-0-4-9) |
-| [graphic](#graphic) |array | Online graphic associated with the citation | false | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-4-0-4-10) |
-
 ## metadataContact
 | Name | Type | Description | Required | Translation | Viewer Link|
 | --- | --- | --- | --- | --- | --- |
@@ -680,7 +622,7 @@
 | [date](#date) |array | Date related to resource maintenance. | false | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-0-9-1) |
 | [scope](#scope) |array | Type of resource to which the maintenance information applies. | false | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-0-9-2) |
 | note |array | Notes regarding the maintenance of the resource. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>MD_MaintenanceInformation &gt; maintenanceNote</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-0-9-3) |
-| [contact](#contact) |array | Contact information for the maintainer of the resource. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>MD_MaintenanceInformation &gt; contact &gt; CI_Contact</li></ul></li><li>FGDC CSDGM<ul><li>metainfo &gt; metc</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-0-9-4) |
+| [contact](#responsibleparty) |array | Contact information for the maintainer of the resource. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>MD_MaintenanceInformation &gt; contact &gt; CI_Contact</li></ul></li><li>FGDC CSDGM<ul><li>metainfo &gt; metc</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-0-9-4) |
 
 ## metadataOnlineResource
 | Name | Type | Description | Required | Translation | Viewer Link|
@@ -1008,7 +950,7 @@ General theme keyword of the resource, such as: oceans, biota atmosphere, etc. |
 | [date](#date) |array | Date related to resource maintenance. | false | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-1-25-0-1) |
 | [scope](#scope) |array | Type of resource to which the maintenance information applies. | false | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-1-25-0-2) |
 | note |array | Notes regarding the maintenance of the resource. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>MD_MaintenanceInformation &gt; maintenanceNote</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-1-25-0-3) |
-| [contact](#contact) |array | Contact information for the maintainer of the resource. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>MD_MaintenanceInformation &gt; contact &gt; CI_Contact</li></ul></li><li>FGDC CSDGM<ul><li>metainfo &gt; metc</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-1-25-0-4) |
+| [contact](#responsibleparty) |array | Contact information for the maintainer of the resource. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>MD_MaintenanceInformation &gt; contact &gt; CI_Contact</li></ul></li><li>FGDC CSDGM<ul><li>metainfo &gt; metc</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-1-25-0-4) |
 
 ## resourceType
 | Name | Type | Description | Required | Translation | Viewer Link|
@@ -1028,14 +970,6 @@ General theme keyword of the resource, such as: oceans, biota atmosphere, etc. |
 | [documentedIssue](#documentedissue) |object | Citation of a description of known issues associated with the resource along with proposed solutions if available. | false | <ul class="md-translation"><li>FGDC CSDGM<ul><li>idinfo &gt; citation &gt; citeinfo</li></ul></li><li>ISO 19115-2<ul><li>CI_Citation</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-1-21-0-4) |
 | [additionalDocumentation](#additionaldocumentation) |array | Publications that describe usage of data. | false | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-1-21-0-5) |
 | [userContactInfo](#usercontactinfo) |array | Identification of the persons and/or organizations that are using the resource. | false | <ul class="md-translation"><li>ISO 19115-2<ul><li>MD_Usage &gt; userContactInfo</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-1-21-0-6) |
-
-## responsibleParty
-| Name | Type | Description | Required | Translation | Viewer Link|
-| --- | --- | --- | --- | --- | --- |
-| **responsibleParty** | array | Entity responsible for the resource constraint |   | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=4-0-4-1-0-3-0-0-1-0-2-4-10-0-3-6) |
-| role |string | Function performed by the contact in the current context. | true | <ul class="md-translation"><li>ISO 19115-2<ul><li>MI_Metadata &gt; Contact &gt; CI_Contact &gt; role [CI_RoleCode]</li></ul></li><li>FGDC CSDGM<ul><li>metainfo &gt; cntinfo &gt; cntpos</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=4-0-4-1-0-3-0-0-1-0-2-4-10-0-3-6-0-0) |
-| [roleExtent](#roleextent) |array | The area or period of time for which the role is valid. | false | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=4-0-4-1-0-3-0-0-1-0-2-4-10-0-3-6-0-1) |
-| [party](#party) |array | Identifies all the contacts associated with the role. | true | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=4-0-4-1-0-3-0-0-1-0-2-4-10-0-3-6-0-2) |
 
 ## responsibleParty
 | Name | Type | Description | Required | Translation | Viewer Link|
@@ -1086,14 +1020,6 @@ General theme keyword of the resource, such as: oceans, biota atmosphere, etc. |
 | scopeCode |string | Class of information to which the resource applies. | true | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-1-25-0-2-0-0) |
 | [scopeDescription](#scopedescription) |array | Detailed description/listing of the items specified by the scope. | false | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-1-25-0-2-0-1) |
 | [scopeExtent](#scopeextent) |array | Information about the horizontal, vertical and temporal extent of the resource specified by the scope. | false | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-1-25-0-2-0-2) |
-
-## scope
-| Name | Type | Description | Required | Translation | Viewer Link|
-| --- | --- | --- | --- | --- | --- |
-| **scope** | object | temporal extent and or level of the application of the constraint restrictions. |   | No translation available. | [link](http://www.adiwg.org/mdTools/#viewer-page?v=4-0-4-1-0-3-0-0-1-0-2-4-10-0-3-3-0-3-2) |
-| scopeCode |string | Class of information to which the resource applies. | true | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=4-0-4-1-0-3-0-0-1-0-2-4-10-0-3-3-0-3-2-0) |
-| [scopeDescription](#scopedescription) |array | Detailed description/listing of the items specified by the scope. | false | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=4-0-4-1-0-3-0-0-1-0-2-4-10-0-3-3-0-3-2-1) |
-| [scopeExtent](#scopeextent) |array | Information about the horizontal, vertical and temporal extent of the resource specified by the scope. | false | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=4-0-4-1-0-3-0-0-1-0-2-4-10-0-3-3-0-3-2-2) |
 
 ## security
 | Name | Type | Description | Required | Translation | Viewer Link|
@@ -1167,14 +1093,6 @@ General theme keyword of the resource, such as: oceans, biota atmosphere, etc. |
 | [vectorRepresentation](#vectorrepresentation) |object | Information about the vector spatial objects in the resource | true | No translation available. | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-1-12-0-0-1-0) |
 | [georectifiedRepresentation](#georectifiedrepresentation) |object | A grid whose cells are regularly spaced in a geographic (i.e. lat/long) or map coordinate system defined in the SpatialReferencing System (SRS) so that any cell in the grid can be geolocated given its grid coordinates and the grid origin, cell spacing, and orientation. | true | No translation available. | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-1-12-0-0-2-0) |
 | [georeferenceableRepresentation](#georeferenceablerepresentation) |object | Grid with cells irregularly spaced in any given geographic/map projection coordinate system, whose individual cells can be geolocated using geolocation information supplied with the data but cannot be geolocated from the grid properties alone. | true | No translation available. | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-1-12-0-0-3-0) |
-
-## spatialResolution
-| Name | Type | Description | Required | Translation | Viewer Link|
-| --- | --- | --- | --- | --- | --- |
-| **spatialResolution** | ambiguous | The number below the line in a vulgar fraction |   | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-2-0-4-0-3) |
-| scaleFactor |number | Scale of geographic extent expressed in a hardcopy map scale fraction (denominator). | true | <ul class="md-translation"><li>ISO 19115-2<ul><li>MD_Resolution &gt; equivalentScale &gt; MD_RepresentativeFraction &gt; denominator &gt; Integer</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-2-0-4-0-3-0-0-0) |
-| [measure](#measure) |object | Scale of geographic extent expressed in ground distance parameters or angle. | true | No translation available. | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-2-0-4-0-3-0-1-0) |
-| levelOfDetail |string | A brief textual description of the spatial resolution of the resource | true | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-2-0-4-0-3-0-2-0) |
 
 ## spatialResolution
 | Name | Type | Description | Required | Translation | Viewer Link|
