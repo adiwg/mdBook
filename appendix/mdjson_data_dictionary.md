@@ -5,7 +5,7 @@
 ## additionalDocumentation
 | Name | Type | Description | Required | Translation | Viewer Link|
 | --- | --- | --- | --- | --- | --- |
-| **additionalDocumentation** | array | Other documents related to, but not defining, the resource such as factsheets, data catalog pages, award documents, proposals, and informational websites. |   | <ul class="md-translation"><li>ISO 19115-2<ul><li>MD_DataIdentification &gt; aggregationInfo &gt; MD_AggregateInformation &gt; aggregateDataSetName &gt; CI_Citation</li></ul></li><li>FGDC CSDGM<ul><li>idinfo &gt; crossref </li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-5) |
+| **additionalDocumentation** | array | Other documents related to, but not defining, the resource such as factsheets, data catalog pages, award documents, proposals, and informational websites. |   |<ul class="md-translation"><li>ISO 19115-2<ul><li>MD_DataIdentification &gt; aggregationInfo &gt; MD_AggregateInformation &gt; aggregateDataSetName &gt; CI_Citation</li></ul></li><li>FGDC CSDGM<ul><li>idinfo &gt; crossref </li></ul></li></ul>| [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-5) |
 | [resourceType](#resourcetype) |array | Identifies the type of resource, such as: userGuide, website, report, etc. | true | <ul class="md-translation"><li>ISO 19115-2<ul><li>[MD_ScopeCode]</li></ul></li></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-5-0-0) |
 | [citation](#citation) |array | Citation for the additional resource. | true | <ul class="md-translation"></ul> | [link](http://www.adiwg.org/mdTools/#viewer-page?v=2-5-0-1) |
 
