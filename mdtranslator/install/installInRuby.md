@@ -1,10 +1,8 @@
 #mdTranslator
 
-## Installation
+## Installation in Ruby Environment
 
-### in Ruby
-
-With Ruby 2.1 or higher install, run the following gem command from the command line: 
+With Ruby 2.3 or higher install, run the following gem command from the command line: 
 
 ````
 $ gem install adiwg-mdtranslator

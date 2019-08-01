@@ -8,6 +8,8 @@ A developer of a new reader or writer should start by gaining an understanding o
 
 And of course, a reasonable understanding of the Ruby development language is required. 
 
+[__Fork the Reposotory__](forkRepository.md) - covers creating a personal copy fo the mdTranslator code library for your use or to develop extensions.
+
 [__Creating Readers__](../mdtranslator/creatingReaders.md) - lists functions of the reader and rules to follow when writing them. 
 
 [__Creating Writers__](../mdtranslator/creatingWriters.md) - lists functions of the writer and rules to follow when writing them. 

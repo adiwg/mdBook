@@ -1,77 +1,98 @@
 # mdTranslator
 
-## Architecture
-
 ### Response Hash
 
 The *response hash* object is constructed by mdTranslator and available to reader and writer during its run. This is the object returned to the user at the completion of the run.  The reader and writer fill in object as they process the metadata content. 
 
 ````ruby
-responseObj =  {
-    readerFormat: nil,
-    readerStructurePass: nil,
-    readerStructureMessages: [],
+ hResponseObj = {
     readerRequested: nil,
     readerVersionRequested: nil,
     readerVersionUsed: nil,
+    readerStructurePass: true,
+    readerStructureMessages: [],
     readerValidationLevel: nil,
-    readerValidationPass: nil,
+    readerValidationPass: true,
     readerValidationMessages: [],
-    readerExecutionPass: nil,
+    readerExecutionPass: true,
     readerExecutionMessages: [],
-    writerName: nil,
+    writerRequested: nil,
     writerVersion: nil,
-    writerFormat: nil,
-    writerPass: nil,
+    writerPass: true,
     writerMessages: [],
+    writerOutputFormat: nil,
     writerOutput: nil,
+    writerForceValid: true,
     writerShowTags: false,
+    writerCSSlink: nil,
     writerMissingIdCount: '_000',
     translatorVersion: nil
-}
+ }
 
 ````
-
-__readerFormat:__ *string* - the anticipated format of the input file, parsing by the reader will proceed assuming this format.  Set by reader.
-
-__readerStructurePass:__ *boolean* - 'true' if input file structure is determined to be valid.  Set by the reader.
-
-__readerStructureMessages:__ *string[]* - an array of quoted string messages. If readerStructurePass is 'false', set one or more messages 
-to assist the user in fixing file structure problems.  Set by reader. 
-
-__readerRequested:__ *string* - name of the reader requested by the user. Set from the translate parameter list.
-
-__readerVersionRequested:__ *string* version of the reader requested by the input file, set by reader.
-
-__readerVersionUsed:__ *string* - version of the reader the reader method decided to use in processing the input file.  Set by  reader.  Default 'normal'.
-
-__readerValidationLevel:__ *string* - validation level requested to be applied to the input file.  Set from the parameter list.
-
-__readerValidationPass:__ *string* - 'true' if the input file passes the level of validation requested.  Set by reader.
-
-__readerValidationMessages:__ *string[]* - an array of quoted string messages. If readerValidationPass is 'false', set one or more messages to assist user fixing file schema validation problems.  Set by reader.
-
-__readerExecutionPass:__ *boolean* - 'true' if the reader completes the import of the input file into the internal object without errors.  Set by the reader. 
-
-__readerExecutionMessages:__ *string[]* - an array of quoted string messages. If readerExecutionPass is 'false', set one or more messages to assist user in fixing file data problems.  Set by reader.
-
-__writerName:__ *string* - name of the writer requested by the user, set from the translate parameter list.  if nil, no write was requested and only validation of the input file will be performed.
-
-__writerVersion:__ *string* - current version of the writer requested.  Set by writer.
-
-__writerFormat:__ *string* - format of the output from the writer.  Set by writer.
-
-__writerPass:__ *boolean* - 'true' if the writer completes the creation of the output file without errors.  Set by writer.
-
-__writerMessages:__ *string[]* - an array of quoted string messages.  If writerPass is 'false', set one or more messages to assist user in fixing file data problems.  Set by writer.
-
-__writerOutput:__ *string* - output file returned from the writer.  Set by writer.
-
-__writerShowTags:__ *Boolean* If 'true' tags are indluced in the XML output for empty elements.
-
-__writerMissingIdCount:__ *string* counter for creating unique elements IDs for ISO elements that require an ID but one was not provide in the input metadata file.
-
-__translatorVersion:__ *string* current version of the mdTranslator. 
-
-
-
+         # the reader and writer specified in the translate module parameter string will load and
+         #     return this hash ...
+         # ====================================================================================
+         # readerRequested: name of the reader requested by the user
+         #   - set from the parameter list (reader) (default = 'mdJson')
+         # ------------------------------------------------------------------------------------
+         # readerVersionRequested: version of the reader requested in input file
+         #   - set in reader
+         # ------------------------------------------------------------------------------------
+         # readerVersionUsed: actual reader version use in processing the input file
+         #   - set by the reader
+         # ------------------------------------------------------------------------------------
+         # readerStructurePass: false if input file structure is determined to be invalid
+         #   - set by the reader
+         # ------------------------------------------------------------------------------------
+         # readerStructureMessages: an array of parser warning and error messages
+         #   - set by the reader
+         # ------------------------------------------------------------------------------------
+         # readerValidationLevel: validation level requested to be applied to the input file, set
+         #   - set from the parameter list (reader)
+         # ------------------------------------------------------------------------------------
+         # readerValidationPass: false if fails requested level of validation
+         #   - set by the reader
+         # ------------------------------------------------------------------------------------
+         # readerValidationMessages: an array of schema warning and error messages
+         #   - set by the reader
+         # ------------------------------------------------------------------------------------
+         # readerExecutionPass: false if the reader finds fatal errors in input file
+         #   - set by the reader
+         # ------------------------------------------------------------------------------------
+         # readerExecutionMessages: an array of reader warning and error messages
+         #   - set by the reader
+         # ------------------------------------------------------------------------------------
+         # writerRequested: name of the writer requested by the user
+         #   - set from the parameter list (writer)
+         # ------------------------------------------------------------------------------------
+         # writerVersion: version of the writer used within mdTranslator
+         #   - set by the writer
+         # ------------------------------------------------------------------------------------
+         # writerPass: false if the writer fails to complete creation of output file
+         #   - set by the writer
+         # ------------------------------------------------------------------------------------
+         # writerMessages: an array of writer warning and error messages
+         #   - set by the writer
+         # ------------------------------------------------------------------------------------
+         # writerOutputFormat: format of writer output
+         #   - set by the writer
+         # ------------------------------------------------------------------------------------
+         # writerOutput: the output file returned by the writer
+         #   - set by the writer
+         # ------------------------------------------------------------------------------------
+         # writerForceValid: when required elements are missing from input add placeholder
+         #   - set from the parameter list (forceValid)
+         # ------------------------------------------------------------------------------------
+         # writerShowTags: include tags in XML output for any empty elements
+         #   - set from the parameter list (showAllTags)
+         # ------------------------------------------------------------------------------------
+         # writerCSSlink: CSS link to append to HTML writer output
+         #   - set from the parameter list (cssLink)
+         # ------------------------------------------------------------------------------------
+         # writerMissingIdCount: counter for creating unique element IDs as needed
+         #   - set by the writer
+         # ------------------------------------------------------------------------------------
+         # translatorVersion: current version of the mdTranslator
+         #   - set by the translator
+         # ------------------------------------------------------------------------------------
