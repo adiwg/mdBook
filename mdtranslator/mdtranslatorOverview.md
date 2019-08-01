@@ -11,4 +11,4 @@ The following sections will describe the mdTranslator in greater detail and incl
 
 [__Usage__](use/usage.md) - covers accessing mdTranslator from Ruby code, the command line interface (CLI), and Ruby on Rails (RoR).
 
-[__Extending the mdTranslator__](extend/development.md) - covers extending mdTranslator by writing your own reader or writer. 
+[__Extending the mdTranslator__](extend/extendTranslator.md) - covers extending mdTranslator by writing your own reader or writer. 
