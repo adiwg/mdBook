@@ -1,4 +1,0 @@
-# mdTranslator
-
-## Base Architecture
-

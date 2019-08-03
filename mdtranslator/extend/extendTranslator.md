@@ -42,7 +42,7 @@ New development should always be done in a remote branch of mdTranslator.  So st
 
 [__Fork the Reposotory__](forkRepository.md) - covers creating a personal copy fo the mdTranslator code library for your personal use or to develop new extensions, readers, and/or writers.
 
-[__mdTranslator base Architecture__](baseArchitecture.md) - covers the mdTranslator methods and work flow.  
+[__mdTranslator base Architecture__](folderStructure.md) - covers the mdTranslator methods and work flow.  
 
 [__Adding Readers__](creatingReaders.md) - how to add a new mdTranslator reader. 
 
