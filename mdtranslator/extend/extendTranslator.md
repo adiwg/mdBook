@@ -44,6 +44,6 @@ New development should always be done in a remote branch of mdTranslator.  So st
 
 [__mdTranslator base Architecture__](folderStructure.md) - covers the mdTranslator methods and work flow.  
 
-[__Adding Readers__](creatingReaders.md) - how to add a new mdTranslator reader. 
+[__Adding Readers__](addReadWrite.md) - how to add a new mdTranslator reader. 
 
 [__Adding Writers__](creatingWriters.md) - how to add a new mdTranslator writer. 

@@ -1,43 +1,22 @@
 # mdTranslator
 
-## Architecture
+## Internal Object
 
-### Internal Object
+The *internal object* is mdTranslator's internal data store and is implemented as a Ruby hash. The internal object is dynamically constructed in that arrays and objects are inserted into the hash only as the reader requires them.  
 
-The *internal object* is implemented in a Ruby hash and contains all the metadata from the input file and built up by the Reader. The internal object is flexible in that not all elements, arrays and objects must be populated, but changing the basic structure is likely to break many Readers or Writers developed against the original structure, so this should be done with care. New items can be added without breaking a Writer, but changing element names or deleting an element will require changes to all Writers.
+This does not mean the internal object is freely assembled.  The [mdJSON schema](https://mdtools.adiwg.org) website shows the current schema for mdJSON.  The internal object structure follows this schema very closely and only differs in a few element names.  The website thus becomes a good reference for the internal object as well as the mdJSON schema.
 
-The *internal object* is a collection of nested hash objects assembled in the Reader by instancing and loading hash objects as they are required by the Reader.  All the hash objects are defined in the 'internal_metadata_obj.rb' file.  A newly instanced hash object always sets initial string and numeric values to nil, arrays to empty [], and objects to empty {}.
-
-When building or reading an internal object, start with the base object 'newBase'.
-
-**base object:**
+The "/lib/adiwg/mdtranslator/internal/internal_metadata_obj.rb" file has approximately 100 methods to construct each object supported by the mdJSON schema.  The objects are instanced by the reader, loaded with data, and inserted into their proper position in the internal object hash.  When building or reading an internal object, always start with the base object 'newBase()'.  The code for newBase() is shown below as an example of internal object construction methods.
 
 ````ruby
-    def newBase
-        intObj = {
-            schema: {
-                name: nil,
-                version: nil
-            },
-            contacts: [],
-            metadata: {},
-            dataDictionary: []
-        }
-    end
+def newBase
+      {
+         schema: {},
+         contacts: [],
+         metadata: {},
+         dataDictionaries: [],
+         metadataRepositories: []
+      }
+   end
 ````
-
-The base object has 4 sections:
-
-**schema:** *object* (required) - contains the schema name and version for the metadata input file submitted to the reader.
-
-> __name:__ *string* (required) - name of the encoding schema used by the input metadata file submitted to the reader.
->
-> __version:__ *string* (required) - version of the encoding schema used
-
-__contacts:__ *array* - holds an array of [contact](../mdtranslator/contact.md) objects.  The internal object stores information about a contact in an array so the contact can be stored once and reused multiple times throughout the metadata record.
-
-__metadata:__ *object* - an object that holds the [metadata](../mdtranslator/metadata.md) for the resource being described, generally a project or data resource.
-
-__dataDictionary__ *array* - an array of [dataDictionary](../mdtranslator/dataDictionary.md) objects describing the collection of physical objects or items in a data resource (schema).
-
-
+Newly instanced hash objects always set initial strings and numerics values to nil, arrays to empty [], and objects to empty {}.

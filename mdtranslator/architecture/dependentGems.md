@@ -1,6 +1,6 @@
 # mdTranslator
 
-### RubyGem dependencies
+## RubyGem dependencies
 
 mdTranslator has the following dependent RubyGems:
 
