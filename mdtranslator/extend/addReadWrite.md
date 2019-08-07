@@ -1,27 +1,13 @@
 # mdTranslator
 
-## Extending the mdTranslator
+## Adding New Readers and Writers
 
-### Creating Readers
+To date only metadata file formats based in XML or JSON have been addressed by mdTranslator, but these two formats probably cover the world of metadata standards.  Because software tools, process, and testing differ between XML and JSON, as well as between readers and writers, guidelines for development has been divided into the following four sections.  There is naturally some overlap in the development processes but hopefully treating each in a separate section will help the documentation be more clear.
 
-New Readers can be added with little to no impact on the base mdTranslator code. All code for a reader should be placed in folder structure with its root folder having the same name that was given to the reader.  The base mdTranslator code will transfer processing to the Reader based on the name of the Reader provided in the reader: parameter.  
+[__Add JSON Reader__](addJsonReader.md) - covers adding a reader for JSON formatted metadata files.  
 
-A developer of a new Reader should start by gaining an understanding of the [mdTranslator architecture](../mdtranslator/translatorArchitecture.md) and in particular the structure of the [internal object](../mdtranslator/internalObject.md) which the Reader is responsible for loading properly so that all writers have access to the metadata content.
+[__Add XML Reader__](addXMLReader.md) - covers adding a reader for XML formatted metadata files.  
 
-[__Reader Functions__](../mdtranslator/readerFunctions.md) - a list of functions the Reader is expected to perform. 
+[__Add JSON Writer__](addJsonWriter.md) - covers adding a writer for JSON formatted metadata files.  
 
-[__Rules for Readers__](../mdtranslator/readerRules.md) - a list of rules for developing Readers. 
-
-# mdTranslator
-
-## Extending the mdTranslator
-
-### Creating Writers
-
-New Writers can be added with little to no impact on the base mdTranslator code. All code for a writer should be placed in folder structure with its root folder having the same name that was given to the writer.  The base mdTranslator code will transfer processing to the Writer based on the name of the Writer provided in the writer: parameter.  
-
-A developer of a new Writer should start by gaining an understanding of the [mdTranslator architecture](../mdtranslator/translatorArchitecture.md) and in particular the structure of the [internal object](../mdtranslator/internalObject.md) from which the Writer will access the metadata content.
-
-[__Writer Functions__](../mdtranslator/writerFunctions.md) - a list of functions the Writer is expected to perform. 
-
-[__Rules for Writers__](../mdtranslator/writerRules.md) - a list of rules for developing Writers. 
+[__Add XML Writer__](addXMLWriter.md) - covers adding a writer for XML formatted metadata files.  

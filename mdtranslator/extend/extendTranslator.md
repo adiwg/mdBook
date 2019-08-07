@@ -2,9 +2,9 @@
 
 ## Extending the mdTranslator
 
-New readers and writers can be added with without impact to the base mdTranslator code.  And care should always be taken to construct new readers and writers in a way that will not interfere with existing readers, writers, and base modules.  Following the guidelines in this section will lead you to developing new code that will have minimal impact on the existing code and structure.  
+New readers and writers can be added with without impacting the base mdTranslator code.  And care should always be taken to construct new readers and writers in a way that will not interfere with existing readers, writers, and base modules.  Following the guidelines in this section will lead to developing new code that will have minimal impact on the existing code and application structure.  
 
-A developer of a new reader or writer should good working knowledge of the following:
+A developer of a new reader or writer should working knowledge of the following products:
 
 * Ruby programming language 2.5.1 or higher
 
@@ -38,12 +38,8 @@ A developer of a new reader or writer should good working knowledge of the follo
 
 * and, of course, a solid understanding of the reader or writer standard being added to mdTranslator.  
 
-New development should always be done in a remote branch of mdTranslator.  So start by forking the mdTranslator repo.
+New development should always be done in a remote branch of mdTranslator.  So start by forking the adiwg/mdTranslator repo.
 
-[__Fork the Reposotory__](forkRepository.md) - covers creating a personal copy fo the mdTranslator code library for your personal use or to develop new extensions, readers, and/or writers.
+[__Fork the Reposotory__](forkRepository.md) - covers creating a personal copy fo the mdTranslator code library for your personal use or to develop new extensions, readers, and/or writers to share with the community.
 
-[__mdTranslator base Architecture__](folderStructure.md) - covers the mdTranslator methods and work flow.  
-
-[__Adding Readers__](addReadWrite.md) - how to add a new mdTranslator reader. 
-
-[__Adding Writers__](creatingWriters.md) - how to add a new mdTranslator writer. 
+[__Contribute__](contribute.md) - covers the steps for sharing new or improved code with the ADIwg Metadata Tools community.
