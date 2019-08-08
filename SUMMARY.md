@@ -47,6 +47,7 @@
            * [Add XML Reader](mdtranslator/extend/addXMLReader.md)
            * [Add JSON Writer](mdtranslator/extend/addJsonWriter.md)
            * [Add XML Writer](mdtranslator/extend/addXMLWriter.md)
+       * [Extending the Schema](mdtranslator/extend/extendSchema.md)
 * [mdCodes](mdcodes/README.md)
    * [Usage](mdcodes/usage.md)
        * [Installation](mdcodes/installation.md)

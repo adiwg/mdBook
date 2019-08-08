@@ -92,7 +92,7 @@ end   ````
 
 ### Coding 
 
-When the 'translate' method is called for mdTranslator, the parameters are examined and control will be passed to the reader along with the input metadata file and the response hash.  The response hash will have the following elements populated by /lib/adiwg/mdtranslator.rb
+When mdTranslator's 'translate' method is called, the parameters are examined and control passed to the reader along with the input metadata file and the response hash.  The response hash will have the following elements pre-populated by /lib/adiwg/mdtranslator.rb
   * hResponseObj[:readerRequested] = reader
   * hResponseObj[:readerValidationLevel] = validate
   * hResponseObj[:writerRequested] = writer
@@ -101,10 +101,12 @@ When the 'translate' method is called for mdTranslator, the parameters are exami
   * hResponseObj[:writerCSSlink] = cssLink
   * hResponseObj[:translatorVersion] = ADIWG::Mdtranslator::VERSION
   
-1. Create the initial module for the reader.  
+1. Create the reader's initial module.  
    * Purpose:
       * Receive control from the 'translate' method.
-      * To validate the input file is structurally sound and is the appropriate format and version to be read into the internal object (data store).
+      * Validate the input file is structurally sound, is in the appropriate format, and of a version to be handled by the reader.
+      * Call the initial (high level) unpack method.
+      * Return the results of the unpack, the response hash, to the user. 
    * File path: /lib/adiwg/mdtranslator/readers/{reader_name}/
    * File name: {reader_name}_reader.rb 
    * Receiving method: 
@@ -114,48 +116,103 @@ When the 'translate' method is called for mdTranslator, the parameters are exami
    end 
    ````
    * Responsibilities:
-      * Parse the file.json to a hash {hash_file_name}.
+      * Parse the input JSON file to a hash {hash_file_name}.
       * Set hResponseObj[:readerStructureMessages] if problems found.
-      * Set hResponseObj[:readerStructurePass] if 'false'.
+      * Set hResponseObj[:readerStructurePass] to 'false' if problem.
       * Set hResponseObj[:readerVersionRequested]. 
       * Set hResponseObj[:readerVersionUsed]. 
-      * Call JSON schema validation if available.
-      * Set hResponseObj[:readerValidationPass]. 
-      * Call the reader's 'unpack' method.
+      * Call JSON schema validation method if written.
+      * Set hResponseObj[:readerValidationPass] to 'false' if problem. 
+      * Call the reader's initial 'unpack' method.
       ````ruby
         # unpack the mdJson into the internal object
         return {Reader_name}.unpack({hash_file_name}, hResponseObj)
       ````
 
-1. Create a 'modules' directory for the unpacking modules.  For flexibility create a separate unpacking module for each class or object in the metadata standard.  This simplifies writing, maintenance, and permits reuse of the module during unpacking.
+1. Create a 'modules' directory to hold the reader's unpacking modules.  For flexibility create a separate unpacking module for each class or object in the metadata standard.  This simplifies writing, maintenance, and permits reuse of the modules during unpacking.
    * Path: /lib/adiwg/mdtranslator/readers/{reader_name}/modules/ <br><br>
    
-1. Add initial unpacking module.  This module receives the entire metadata hash and controls the unpacking of the metadata into the internal object (data store).
+1. Create the initial (high level) unpacking module. 
+   * Purpose:
+      * Receive control from {reader_name}_reader.rb, this file was created in the first coding step.
+      * Create a new instance of the internal object (data store) to hold the results of the read operation.
+      * Hold other methods used by multiple of the reader's lower level unpack modules.
+      * Unpack the top level of the input metadata into the internal object, 'intObj'.
+      * Send the results of the read back to the user.
    * File path: /lib/adiwg/mdtranslator/readers/{reader_name}/modules/
    * File name: module_{reader_name}.rb 
-   * Receive control from {reader_name}_reader.rb
    * Receiving method: 
-   ````ruby
-   def self.unpack({hash_file}, hResponseObj)
-      # code ...
-   end 
-   ````
-   * Responsibilities:
-      * Load the message file to hash
-      * Instance the message path
-      * Set up message handling routines to use while unpacking
+     ````ruby
+     def self.unpack({hash_file}, hResponseObj)
+        # code ...
+     end 
+     ````
+  * Responsibilities:
+      * Load the message file to a hash.
+      * Instance the message file path.
+      * Create a new hash for the internal object (data store) named 'intObj' using 'intMetadataClass' methods.  Example:
+         ````ruby
+          intMetadataClass = InternalMetadata.new
+          intObj = intMetadataClass.newBase
+         ````
+      * Write error handling methods to use while unpacking elements.  See other readers for examples of necessary functionality.
          * loadMessages
          * findMessage
          * issueError
          * issueWarning
          * issueNotice
-      * Create new instance of the internal object (data store)
-      * Instance other useful objects such as 'contacts'
-      * Unpack high level of {hash_file} 
+      * Add other methods that will be used all or many of the reader's other unpack methods, such as 'findContact'. 
+      * Unpack the high level of {hash_file} into the internal object, intObj. Unpacking the highest level of the {hash_file} follows the same logic as unpacking any lower level of the JSON hash which is described below.<br><br>
       
-1. Unpack the high-level class/object into internal object (data store).  There can be a lot of flexibility in coding the unpacking.  I would suggest staying with one theme throughout the reader to improve coding speed and maintenance.  Here are a few examples:
+1. Write a separate unpack method for each class or object to be unpacked.  There can be a lot of flexibility in coding the unpacking modules.  However, I suggest staying with one theme throughout the reader to improve coding speed and maintenance.  
+   * Purpose:
+      * Unpack the object's elements from the input metadata and translate them into the internal object's structure.  This is most often straight forward, however sometimes it can get convoluted or even impractical.  
+      * Identify errors, problems with the input and report these to the user. 
+   * Receiving method parameters (object to unpack, response hash, in context):
+     ````ruby
+     def self.unpack(hCitation, responseObj, inContext = nil)
+         # code ...
+     end
+     ````
+   * Responsibilities:
+      * Set a path to the location of the error methods and any other general purpose reader methods.  Example:
+        ````ruby
+        @MessagePath = ADIWG::Mdtranslator::Readers::MdJson::MdJson
+        ````
+      * Test if the input object exists, else issue warning and return nil.  Example:
+         ````ruby
+         # return nil object if input is empty
+         if hCitation.empty?
+            @MessagePath.issueWarning(80, responseObj, inContext)
+            return nil
+         end
+         ````
+      * Construct an 'outContext' message to be used in error messages.  Use the inContext if present.  The inContext will describe the parent object of the current object being unpacked thus allowing a means of preserving a path.  Example:
+         ````ruby
+         outContext = 'citation'
+         outContext = inContext + ' > ' + outContext unless inContext.nil?
 
-   Unpack element
+         ````
+      * Unpack the object's elements into a local hash constructed from "/lib/adiwg/mdtranslator/internal/internal_metadata_obj.rb" methods.  Example: 
+         ````ruby
+         intMetadataClass = InternalMetadata.new
+         intAdd = intMetadataClass.newAddress
+         ````
+      * Pass objects to that object's unpacking method.  Test that returned unpacked objects are valid before adding them into the local hash.  Example:
+         ````ruby
+         # contact - address [address]
+         if hContact.has_key?('address')
+             hContact['address'].each do |item|
+               hReturn = Address.unpack(item, responseObj, outContext)
+               unless hReturn.nil?
+                  intContact[:addresses] << hReturn
+               end
+            end
+         end
+         ````
+   Here are some examples from the mdJson reader:
+
+   __Unpack element__...
    ````ruby
       # address - description 
       if hAddress.has_key?('description')
@@ -165,7 +222,7 @@ When the 'translate' method is called for mdTranslator, the parameters are exami
      end
    ````
    
-   Unpack array
+   __Unpack array__...
    ````ruby
       # mdJson - contact {contact} [] (required)
       if hMdJson.has_key?('contact')
@@ -182,7 +239,7 @@ When the 'translate' method is called for mdTranslator, the parameters are exami
       end   
    ````
    
-   Unpack object
+   __Unpack object__...
    ````ruby
       # mdJson - schema {schema} (required)
       if hMdJson.has_key?('schema')
@@ -199,17 +256,15 @@ When the 'translate' method is called for mdTranslator, the parameters are exami
       end
    ````
    
-   * Comment format shows the {object being unpacked} - {object element being unpacked (which could be an object)} {object type if object} {[] if array} {(required) if required}.
-       * In the above example 'mdJson' is the object being unpacked.
-       * 'schema' is the 'mdJson' element being unpacked which happens to be an object of type 'schema'.
-       * The 'schema' object is required by the by the mdJson standard.
-   * Test for empty and missing objects to avoid system and application error during processing.
-   * Since 'schema' is an object it will be passed to the Schema.unpack method for unpacking.
-   * If the returned object is valid, it is placed in the internal object.
-   * All element and object unpacking steps are tested and unexpected status reported via the response object.  
-   * The testing code is isolated from the unpacking block.  This makes the tests easy to find and maintain.  Decisions can be made based on the unpack status, showAllTags, and status of other unpacked elements or objects as required.
-
-1. 
+   * __Comment__ - The comments preceding an unpacking block describe where the element fits in the input metadata schema and has the following format:
+      * {object being unpacked} - {element being unpacked (which could be an object)} {object type if it is an object} {[] if an array} {(required) if required}.  In 'Unpack array' example above:
+         * 'mdJson' is the object being unpacked; 
+         * 'contact' is the 'mdJson' element being unpacked which happens to be an array of objects of type 'contact'.
+         * The 'contact' object is required by the by the mdJson standard.
+         
+   * __Testing__ - All element and object are tested as they are unpacked and any unexpected status reported via the response hash. 
+      * Test for empty and missing objects to avoid system and application error during processing.
+      * The testing code is isolated to a separate block immediately below the unpacking block.  This makes the tests easy to find and maintain.  Decisions can be made based on the unpack status, showAllTags, and status of other unpacked elements or objects as required.   
 
 ### Testing 
 
