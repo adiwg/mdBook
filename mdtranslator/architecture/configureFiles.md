@@ -4,7 +4,7 @@
 
 ### Rake
 
-__rakefile__ controls which tests are run from the terminal with the "rake" command.  Notice each reader and writer is listed on a separate line so one or more can be easily isolated during frequent testing periods or when changes are made to the mdJson schema which effect multiple readers and writers.  
+__Rakefile__ controls which tests are run from the terminal with the "rake" command.  Notice each reader and writer is listed on a separate line so one or more can be easily isolated during frequent testing periods or when changes are made to the mdJson schema which effect multiple readers and writers.  
 
 ````ruby
 

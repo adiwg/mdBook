@@ -27,7 +27,7 @@ These guidelines assume that the developer has already forked the mdTranslator a
    
 1. Create a folder for the reader code.
    * The reader folder will be in /lib/adiwg/mdtranslator/readers/.
-   * The reader folder must have the name of the reader.  <br><br>
+   * The reader folder name must be the name of the reader.  <br><br>
    
 1. Add the reader name to the CLI 'reader' parameter's enumeration list.
    * File: /lib/adiwg/mdtranslator_cli.rb
@@ -122,7 +122,7 @@ When mdTranslator's 'translate' method is called, the parameters are examined an
       * Set hResponseObj[:readerVersionRequested]. 
       * Set hResponseObj[:readerVersionUsed]. 
       * Call JSON schema validation method if written.
-      * Set hResponseObj[:readerValidationPass] to 'false' if problem. 
+      * Test for error and warning conditions. Call error methods which will set hResponseObj[:readerValidationPass] and hResponseObj[:readerValidationMessages] when appropriate. 
       * Call the reader's initial 'unpack' method.
       ````ruby
         # unpack the mdJson into the internal object
@@ -268,15 +268,24 @@ When mdTranslator's 'translate' method is called, the parameters are examined an
 
 ### Testing 
 
-1. 
+Testing the reader is done by sending known metadata records or metadata segments to a reader module and testing that the expected results are achieved.  All variations should be tested, elements with values, without values, invalid values, missing elements, empty arrays, arrays with single element, arrays with multiple elements, etc. All situations that throw error messages should be tested to see the proper error message is reported and no other messages that may re redundant or confusing.  Check that the message context is appropriate.
 
+Ruby minitest is used to help perform the tests.  
 
-### Publish
+For mdTranslator readers, its practical to test each reader module independently.  This means the test data file only needs to pass in the metadata segment the metadata module will process, not a full metadata record.  
 
-1. Add to Rails API
+1. Create a folder for the reader's test code.
+   * Folder path: /test/readers/.
+   * Folder name: must be the name of the reader.  <br><br>
+   
+1. Add a new folder for test data files if needed.  A test data file holds segments of metadata or full metadata records that will be processed by the reader and checked for expected results.
+   * Folder path: /test/readers/{reader name}/.
+   * Folder name: suggest "testData".  <br><br>
+  
+1. Add a parent test method to handle common tasks for all tests if useful.  Can be used to read and parse test data files and load components common to all tests.
+   * File path: /test/readers/{reader name}/.
+   * File name: {reader name}_test_parent.rb.  <br><br>
 
-1. Add to HTML writer
+1. Write tests.  You can view examples in the repo, but no requirements other than to be thorough.
 
-1. Bump version number
-
-1. Pull requests
+1. Run "rake" to test run all tests.  While building a reader you can comment out lines in "Rakefile" to exclude other readers and writers.  Before declaring completion, be sure to reactivate all reader and writer tests and then test all together to be sure the new reader did not introduce unanticipated errors.
