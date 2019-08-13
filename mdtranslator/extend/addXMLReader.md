@@ -81,6 +81,7 @@ end   ````
    * File path: /lib/adiwg/mdtranslator/readers/{reader_name}/
    * File name: {reader_name}_reader_messages_eng.yml 
    * File name should include language in which the messages are written.  Always include english, other languages when international support is added. 
+   * Messages are coded in YAML.
    * Template:
    ````yaml
     # Reader messages for {reader_name} {version}
