@@ -112,95 +112,132 @@ When mdTranslator's 'translate' method is called, the parameters are examined an
   
 1. Create the reader's initial module.  
    * Purpose:
-      * Receive control from the 'translate' method.
-      * Validate the input file is structurally sound, is in the appropriate format, and of a version to be handled by the reader.
-      * Call the initial (high level) unpack method.
+      * Setup jBuilder to write JSON metadata file.
+      * Set hResponseObj writer elements
+      * Call the initial (high level) build method.
       * Return the results of the unpack and the response hash, to the user. 
-   * File path: /lib/adiwg/mdtranslator/readers/{reader_name}/
-   * File name: {reader_name}_reader.rb 
+   * File path: /lib/adiwg/mdtranslator/writers/{writer_name}/
+   * File name: {writer_name}_writer.rb 
    * Receiving method: 
    ````ruby
-   def self.readFile(file, hResponseObj)
+   def self.startWriter(intObj, hResponseObj)
       # code ...
    end 
    ````
    * Responsibilities:
-      * Parse the input JSON file to a hash {hash_file_name}.
+      * Set the jBuilder flag to ignore empty elements if hResponse[:showAllTags] is "FALSE".
       ````ruby
-      # parse mdJson file
-       begin
-          hMdJson = JSON.parse(file)
-       rescue JSON::JSONError => err
-          hResponseObj[:readerStructureMessages] << 'ERROR: mdJson reader: Parsing mdJson Failed - see following message(s):\n'
-          hResponseObj[:readerStructureMessages] << err.to_s.slice(0, 300)
-          hResponseObj[:readerStructurePass] = false
-          return {}
-       end
+       Jbuilder.ignore_nil(!responseObj[:writerShowTags])
       ````
-      * Set hResponseObj[:readerStructureMessages] if problems found.
-      * Set hResponseObj[:readerStructurePass] to 'false' if problem.
-      * Set hResponseObj[:readerVersionRequested]. 
-      * Set hResponseObj[:readerVersionUsed]. 
-      * Call JSON schema validation method if written.
-         * Test for error and warning conditions. Call error methods which will set hResponseObj[:readerValidationPass] and hResponseObj[:readerValidationMessages] when appropriate. 
-      * Call the reader's initial 'unpack' method.
+      * Set hResponseObj[:writerOutputFormat] = 'json'
+      * Set hResponseObj[:writerVersion] from version file
       ````ruby
-       # unpack the mdJson into the internal object
-       return {Reader_name}.unpack({hash_file_name}, hResponseObj)
+       schemaVersion = Gem::Specification.find_by_name('adiwg-mdjson_schemas').version.to_s
+       responseObj[:writerVersion] = schemaVersion
       ````
-
-1. Create a 'modules' directory to hold the reader's unpacking modules.  For flexibility create a separate unpacking module for each object in the metadata standard.  This simplifies writing, maintenance, and permits reuse of the modules during unpacking.
-   * Path: /lib/adiwg/mdtranslator/readers/{reader_name}/modules/ <br><br>
-   
-1. Create the initial (high level) unpacking module. 
-   * Purpose:
-      * Receive control from {reader_name}_reader.rb, this file was created in the first coding step.
-      * Create a new instance of the internal object (data store) to hold the results of the read operation.
-      * To contain other methods used by multiple of the reader's lower level unpack modules.
-      * Unpack the top level of the input metadata into the internal object, 'intObj'.
-      * Send the results of the read back to the user.
-   * File path: /lib/adiwg/mdtranslator/readers/{reader_name}/modules/
-   * File name: module_{reader_name}.rb 
-   * Receiving method: 
-     ````ruby
-      def self.unpack({hash_file}, hResponseObj)
-         # code ...
-      end 
-     ````
-  * Responsibilities:
-      * Load the message file to a hash.
-      * Instance the message file path.
-      * Create a new hash for the internal object (data store) named 'intObj' using 'intMetadataClass' methods.  Example:
-         ````ruby
-          intMetadataClass = InternalMetadata.new
-          intObj = intMetadataClass.newBase
-         ````
+      * Call initial (high-level build module)
+      ````ruby
+       metadata = {Writer_name}.build(intObj, responseObj)
+      ````
+      {% hint style='tip' %}
+ The high-level build module will control the build process and receive the complete JSON metadata file.
+      {% endhint %}
+      * Set hResponseObj[:writerPass] based on messages returned during build processes.
+      ````ruby
+       responseObj[:writerPass] = true if responseObj[:writerMessages].empty?
+      ````
       * Write the error handling methods to be used while unpacking elements.  You can view other readers for examples of necessary functionality.  In general readers should be relaxed in regard to throwing errors.  Warnings should be issued rather than errors unless there are serious issues.
          * loadMessages
          * findMessage
          * issueError
          * issueWarning
          * issueNotice
-      * Add additional methods that can be used all or many of the reader's other unpacking methods, such as 'findContact'.  These may not be apparent until you are well into coding the reader.  
-      * Unpack the high level of {hash_file} into the internal object, intObj. Unpacking the highest level of the {hash_file} follows the same logic as unpacking any lower level of the JSON hash which is described below.<br><br>
-      
-1. Write a separate unpack method for each object to be unpacked.  There can be a lot of flexibility in coding the unpacking modules.  However, I suggest staying with one theme throughout the reader to improve coding speed and maintenance.  
+      {% hint style='tip' %}
+ The mdJson writer does not set many error messages.  The primary purpose of the mdJson format is to support mdEditor.  As such, partial records are often saved, reloaded, or shared.  Therefore strict adherence to the standard is not enforced.
+      {% endhint %}
+      * Act as a container for any other methods that will be common to many or all metadata build modules.  The following method will be useful to include if your metadata standard uses arrays:
+      ````ruby
+       # ignore jBuilder object mapping when array is empty
+       def self.json_map(collection = [], _class)
+          if collection.nil? || collection.empty?
+             return nil
+          else
+             collection.map { |item| _class.build(item).attributes! }
+          end
+       end
+      ````
+      * Convert the jBuilder document to proper JSON format
+      ````ruby
+       metadata.target!
+      ````
+
+1. Create a 'modules' directory to hold the writer's build modules.  For flexibility create a separate build module for each object in the metadata standard.  This simplifies writing, maintenance, and permits reuse of the modules during unpacking.
+   * Path: /lib/adiwg/mdtranslator/writers/{writer_name}/modules/ <br><br>
+   
+1. Create the initial (high level) build module. 
    * Purpose:
-      * Unpack the object's elements from the input metadata and translate them into the internal object's structure.  This is most often straight forward, however sometimes it can get convoluted or even impractical.  
-        {% hint style='tip' %}
- The internal object structure is closely patterned after ISO 19115-1.  Import to the internal object thus involves some amount of translation from the reader's metadata format to ISO 19115-1.
-        {% endhint %}
-      * Identify errors, problems with the input and report these to the user. 
-   * Receiving method parameters (object to unpack, response hash, in context):
+      * Receive control from {writer_name}_writer.rb, this file was created in the first coding step.
+      * Create a new jBuilder document.
+      * Initiate and build process.
+      * Send complete jBuilder file to the user.
+   * File path: /lib/adiwg/mdtranslator/writers/{writer_name}/modules/
+   * File name: {writer_name}_{writer_name}.rb 
+   * Receiving method: 
      ````ruby
-     def self.unpack(hCitation, responseObj, inContext = nil)
+      def self.build(internal object, hResponseObj)
+         # code ...
+      end 
+     ````
+  * Responsibilities:
+      * Create a new jBuilder document
+        ````ruby
+         Jbuilder.new do |json|
+            # code ... 
+         end
+        ````
+      * Build JSON metadata file.
+      
+         __element example__
+         ````ruby
+          json.name 'mdJson'
+         ````
+         __element in block example__
+         ````ruby
+          json.schema do
+             json.name 'mdJson'
+             json.version hResponseObj[:writerVersion]
+          end
+         ````
+         __array of objects example__
+         ````ruby
+          # mdJson - contacts [] (required)
+          json.contact intObj[:contacts].map { |obj| Contact.build(obj).attributes! }
+         ````
+         __array of objects using json_map example__
+         ````ruby
+          json.responsibleParty @Namespace.json_map(hCitation[:responsibleParties], ResponsibleParty)
+         ````
+         {% hint style='tip' %}
+ json_map is a method added to the startWriter method to handle empty arrays, see above.
+         {% endhint %}
+         
+1. Write a separate build method for each JSON metadata object.  There can be a lot of flexibility in coding the build modules.  However, I suggest staying with one theme throughout the reader to improve coding speed and maintenance.  
+   * Purpose:
+      * build the metadata object from mdTranslator's internal object.  This is most often straight forward, however sometimes it can get convoluted or even impractical.  
+        {% hint style='tip' %}
+ The internal object structure is closely patterned after ISO 19115-1.  Export from the internal object thus involves some amount of translation from the writer's metadata format to ISO 19115-1.
+        {% endhint %}
+      * Identify errors, problems with the output and report these to the user. 
+   * Receiving method parameters (internal object block, response hash, in context).  Pass in only the portion of the internal object that is being translated by this module:
+     ````ruby
+     def self.build(hInternalObjectBlock, responseObj, inContext = nil)
          # code ...
      end
      ````
    * Responsibilities:
       * Set a path to the location of the error methods and any other general purpose reader methods.  Example:
         ````ruby
-        require_relative 'module_mdJson'
+        require_relative 'mdJson_writer'
         ````
       * Test if the input object exists, else issue warning and return nil.  Example:
          ````ruby
@@ -214,88 +251,23 @@ When mdTranslator's 'translate' method is called, the parameters are examined an
          ````ruby
          outContext = 'citation'
          outContext = inContext + ' > ' + outContext unless inContext.nil?
-
          ````
-      * Unpack the object's elements into a local hash constructed from "/lib/adiwg/mdtranslator/internal/internal_metadata_obj.rb" methods.  Example: 
-         ````ruby
-         intMetadataClass = InternalMetadata.new
-         intAdd = intMetadataClass.newAddress
-         ````
-      * Unpack objects by sending them to that object's unpacking method.  Test that returned unpacked objects are valid before adding them into the local hash.  Example:
-         ````ruby
-         # contact - address [address]
-         if hContact.has_key?('address')
-             hContact['address'].each do |item|
-               hReturn = Address.unpack(item, responseObj, outContext)
-               unless hReturn.nil?
-                  intContact[:addresses] << hReturn
-               end
-            end
-         end
-         ````
-   Here are some examples from the mdJson reader:
-
-   __Unpack element__...
-   ````ruby
-      # address - description 
-      if hAddress.has_key?('description')
-        unless hAddress['description'] == ''
-           intAdd[:description] = hAddress['description']
-        end
-     end
-   ````
-   
-   __Unpack array__...
-   ````ruby
-      # mdJson - contact {contact} [] (required)
-      if hMdJson.has_key?('contact')
-         hMdJson['contact'].each do |hContact|
-            hReturn = Contact.unpack(hContact, responseObj)
-            unless hReturn.nil?
-               intObj[:contacts] << hReturn
-               @contacts = intObj[:contacts]
-            end
-         end
-      end
-      if intObj[:contacts].empty?
-         MdJson.issueError(532, responseObj)
-      end   
-   ````
-   
-   __Unpack object__...
-   ````ruby
-      # mdJson - schema {schema} (required)
-      if hMdJson.has_key?('schema')
-         hObject = hMdJson['schema']
-         unless hObject.empty?
-            hReturn = Schema.unpack(hObject, responseObj)
-            unless hReturn.nil?
-               intObj[:schema] = hReturn
-            end
-         end
-      end
-      if intObj[:schema].empty?
-         MdJson.issueError(531, responseObj)
-      end
-   ````
-   
-   * __Comment__ - The comments preceding an unpacking block describe where the element fits in the input metadata schema and has the following format:
-      * {object being unpacked} - {element being unpacked (which could be an object)} {object type if it is an object} {[] if an array} {(required) if required}.  In 'Unpack array' example above:
-         * 'mdJson' is the object being unpacked; 
-         * 'contact' is the 'mdJson' element being unpacked which happens to be an array of objects of type 'contact'.
-         * The 'contact' object is required by the by the mdJson standard.
+      * Build the JSON metadata object for the data found in the internal object block. 
+            
+   * __Comment__ - The comments preceding an build block describe where the build element fits in the JSON metadata schema and has the following format:
+      * {object being build} - {element being built (which could be an object)} {object type if it is an object} {[] if an array} {(required) if required}.
          
-   * __Testing__ - All element and object are tested as they are unpacked and any unexpected status reported via the response hash. 
-      * Test for empty and missing objects to avoid system and application error during processing.
-      * The testing code is isolated to a separate block immediately below the unpacking block.  This makes the tests easy to find and maintain.  Decisions can be made based on the unpack status, showAllTags, and status of other unpacked elements or objects as required.   
+   * __Testing__ - All element and object are tested as they are queried from the internal object and any unexpected status reported via the response hash. 
+      * Test for empty and missing required objects.
+      * The testing code is isolated to a separate block immediately below the unpacking block.  This makes the tests easy to find and maintain.  Decisions can be made based on the build status, showAllTags, and status of other build elements or objects as required.   
 
 ### Testing 
 
-Testing the reader is done by sending known metadata records or metadata segments to a reader module and testing that the expected results are achieved.  All variations should be tested, elements with values, without values, invalid values, missing elements, empty arrays, arrays with single element, arrays with multiple elements, etc. All situations that throw error messages should be tested to see the proper error message is reported and no other messages that may re redundant or confusing.  Also check that the message context is appropriate.
+Testing the writer is done by sending complete mdJson metadata records to mdTranslator and requesting translation to the writer in question then comparing results against validated metadata records or segments.  All variations should be tested, elements with values, without values, invalid values, missing elements, empty arrays, arrays with single element, arrays with multiple elements, etc. All situations that throw error messages should be tested to see the proper error message is reported and no other messages that may re redundant or confusing.  Also check that the message context is appropriate.
 
 Ruby minitest is used to help perform the tests. 
 
-For mdTranslator readers, its practical to test each reader module independently.  This means the test data file only needs to pass in the metadata segment the metadata module will process, not a full metadata record.  
+For mdTranslator writers, pass a mdJson metadata record to mdTranslator and request translation to the writer to be tested.  The Even though a full metadata record must be passed to mdTranslator.  
 
 {% hint style='tip' %}
   mdJSON segments and files are used to test the mdJson reader.  They are also used to test all writers as well because only the mdJson format completely encompasses the internal object.  Because of the heavy use of mdJson files and scripts in testing and ensuing maintenance issues when changes are made to the mdJson schema, mdJson construction helpers were built and added to "/test/helpers/".  Thus there are no static mdJson reader test scripts.  All tests are generated dynamically from these helpers.  This tactic could be taken with other readers as well if the developer desires.  See "/test/helpers/mdJson_hash_objects.rb" and "/test/helpers/mdJson_hash_functions.rb" for ideas.
