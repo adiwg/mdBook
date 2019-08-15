@@ -263,30 +263,46 @@ When mdTranslator's 'translate' method is called, the parameters are examined an
 
 ### Testing 
 
-Testing the writer is done by sending complete mdJson metadata records to mdTranslator and requesting translation to the writer in question then comparing results against validated metadata records or segments.  All variations should be tested, elements with values, without values, invalid values, missing elements, empty arrays, arrays with single element, arrays with multiple elements, etc. All situations that throw error messages should be tested to see the proper error message is reported and no other messages that may re redundant or confusing.  Also check that the message context is appropriate.
+Testing the writer is done by sending complete mdJson metadata records to mdTranslator and requesting translation to the writer to be tested, then compare the actual results against previously validated metadata records or segments.  The tests should cover all possible variations; elements with values, elements without values, invalid values, missing elements, empty arrays, arrays with single element, arrays with multiple elements, etc. All situations that throw error messages should also be tested to see the proper error message is reported and no additional or distracting messages are included.  And remember to check that the message context is appropriate.
 
-Ruby minitest is used to help perform the tests. 
+Ruby minitest is used to perform the tests. 
 
-For mdTranslator writers, pass a mdJson metadata record to mdTranslator and request translation to the writer to be tested.  The Even though a full metadata record must be passed to mdTranslator.  
+For mdTranslator writers, pass an mdJson metadata record to mdTranslator and request translation to the writer to be tested.  When mdJson metadata is read by mdTranslator it will pass through a validation process which rejects invalid records.  Although the mdJson must be valid it does not need to be comprehensive.  Add detail only for the metadata object being tested.  
 
+The best, and easiest, method of build the mdJson test files to generate them dynamically using the mdJson construction helper in "/test/helpers".  In one step you can create your valid base metadata record:
+````ruby
+ require_relative '../../helpers/mdJson_hash_objects'
+ require_relative '../../helpers/mdJson_hash_functions'
+
+# build mdJson test file in hash
+TDClass = MdJsonHashWriter.new
+mdHash = TDClass.base
+````
+In another step add a fully populated citation
+````ruby
+mdHash[:metadata][:resourceInfo][:citation] = TDClass.citation_full
+````
 {% hint style='tip' %}
-  mdJSON segments and files are used to test the mdJson reader.  They are also used to test all writers as well because only the mdJson format completely encompasses the internal object.  Because of the heavy use of mdJson files and scripts in testing and ensuing maintenance issues when changes are made to the mdJson schema, mdJson construction helpers were built and added to "/test/helpers/".  Thus there are no static mdJson reader test scripts.  All tests are generated dynamically from these helpers.  This tactic could be taken with other readers as well if the developer desires.  See "/test/helpers/mdJson_hash_objects.rb" and "/test/helpers/mdJson_hash_functions.rb" for ideas.
-{% endhint %} 
+  Another advantage is that should "citation" changes the helper will be updated and no changes will be required in your test script (unless it breaks).
+{% endhint %}
 
-1. Create a folder for the reader's test code.
-   * Folder path: /test/readers/.
-   * Folder name: must be the name of the reader.  <br><br>
+1. Create a folder for the writer's test code.
+   * Folder path: /test/writers/.
+   * Folder name: must be the name of the writer.  <br><br>
    
-1. Add a new folder for test data files if needed.  A test data file holds segments of metadata or full metadata records that will be processed by the reader and checked for expected results.
-   * Folder path: /test/readers/{reader name}/.
+1. Add a new folder for test data files if needed.  A test data file holds segments of metadata or full metadata records that will be processed by the writer and checked for expected or unexpected results.
+   * Folder path: /test/writers/{writer name}/.
    * Folder name: suggest "testData".  <br><br>
+   {% hint style='tip' %}
+ Most test scripts will be built using mdJson construction helpers discussed above.  But occasionally a metadata file of special construction will be needs and it can be placed here.
+   {% endhint %}
   
 1. Add a parent test method to handle common tasks for all tests if useful.  Methods to read and parse test data files and load components common to all tests can be placed in this parent method.
-   * File path: /test/readers/{reader name}/.
-   * File name: {reader name}_test_parent.rb.  <br><br>
+   * File path: /test/writers/{writer name}/.
+   * File name: {writer name}_test_parent.rb.  <br><br>
    
-1. Name each test module using the following pattern: "tc_{reader name}_{object name}.rb".  This will ensure rake will include your test module when running tests.  
+1. Name each test module using the following pattern: "tc_{writer name}_{object name}.rb".  This will ensure rake will include your test module when running tests.  
 
-1. Write tests.  You can view examples for other readers, but there are no requirements in writing the tests other than to be thorough. 
+1. Write tests.  You can view examples from other writers, but there are no requirements in writing the tests other than to be thorough. 
 
-1. Run "rake" to test run all tests.  While building a reader you can comment out lines in "Rakefile" to exclude other readers and writers.  Before declaring completion, be sure to reactivate all reader and writer tests and then test all together to be sure the new reader did not introduce unanticipated errors.
+1. Run "rake" to test run all tests.  While building a writer you can comment out lines in "Rakefile" to exclude other readers and writers.  Before declaring completion, be sure to reactivate all reader and writer tests and then test all together to be sure the new reader did not introduce unanticipated errors.

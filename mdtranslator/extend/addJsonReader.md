@@ -290,7 +290,7 @@ When mdTranslator's 'translate' method is called, the parameters are examined an
 
 Testing the reader is done by sending known metadata records or metadata segments to a reader module and testing that the expected results are achieved.  All variations should be tested, elements with values, without values, invalid values, missing elements, empty arrays, arrays with single element, arrays with multiple elements, etc. All situations that throw error messages should be tested to see the proper error message is reported and no other messages that may re redundant or confusing.  Also check that the message context is appropriate.
 
-Ruby minitest is used to help perform the tests. 
+Ruby minitest is used to perform the tests. 
 
 For mdTranslator readers, its practical to test each reader module independently.  This means the test data file only needs to pass in the metadata segment the metadata module will process, not a full metadata record.  
 
@@ -312,6 +312,6 @@ For mdTranslator readers, its practical to test each reader module independently
    
 1. Name each test module using the following pattern: "tc_{reader name}_{object name}.rb".  This will ensure rake will include your test module when running tests.  
 
-1. Write tests.  You can view examples for other readers, but there are no requirements in writing the tests other than to be thorough. 
+1. Write tests.  You can view examples from other readers, but there are no requirements in writing the tests other than to be thorough. 
 
 1. Run "rake" to test run all tests.  While building a reader you can comment out lines in "Rakefile" to exclude other readers and writers.  Before declaring completion, be sure to reactivate all reader and writer tests and then test all together to be sure the new reader did not introduce unanticipated errors.
