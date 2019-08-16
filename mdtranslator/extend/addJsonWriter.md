@@ -95,10 +95,7 @@ end   ````
        - {id: 2, message: "message 2"}
        - {id: 3, message: "message 3"}
    ````
-
-
-
-
+   
 ### Coding 
 
 When mdTranslator's 'translate' method is called, the parameters are examined and control passed to the reader along with the input metadata file and the response hash.  The response hash will have the following elements pre-populated by /lib/adiwg/mdtranslator.rb
@@ -112,6 +109,7 @@ When mdTranslator's 'translate' method is called, the parameters are examined an
   
 1. Create the writer's initial module.  
    * Purpose:
+      * Setup message processing.
       * Setup jBuilder to write the JSON metadata file.
       * Set hResponseObj writer elements
       * Call the initial (high level) build method.
@@ -125,6 +123,16 @@ When mdTranslator's 'translate' method is called, the parameters are examined an
    end 
    ````
    * Responsibilities:
+      * Load the message file to a hash.
+        ````ruby
+         # load error message array
+         file = File.join(File.dirname(__FILE__), '{writer_name}_writer_messages_eng') + '.yml'
+         hMessageList = YAML.load_file(file)
+        ````
+      * Instance the message file path for error methods.
+        ````ruby
+         @aMessagesList = hMessageList['messageList']
+        ````
       * Set the jBuilder flag to ignore empty elements if hResponse[:showAllTags] is "FALSE".
       ````ruby
        Jbuilder.ignore_nil(!responseObj[:writerShowTags])
@@ -132,8 +140,7 @@ When mdTranslator's 'translate' method is called, the parameters are examined an
       * Set hResponseObj[:writerOutputFormat] = 'json'
       * Set hResponseObj[:writerVersion] from version file
       ````ruby
-       schemaVersion = Gem::Specification.find_by_name('adiwg-mdjson_schemas').version.to_s
-       responseObj[:writerVersion] = schemaVersion
+       hResponseObj[:writerVersion] = ADIWG::Mdtranslator::Writers::{writer_name}::VERSION
       ````
       * Call initial (high-level build module)
       ````ruby

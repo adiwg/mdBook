@@ -135,14 +135,17 @@ When mdTranslator's 'translate' method is called, the parameters are examined an
       ````
       * Set hResponseObj[:readerStructureMessages] if problems found.
       * Set hResponseObj[:readerStructurePass] to 'false' if problem.
-      * Set hResponseObj[:readerVersionRequested]. 
-      * Set hResponseObj[:readerVersionUsed]. 
+      * Set hResponseObj[:readerVersionRequested] (if available in metadata standard and input file). 
+      * Set hResponseObj[:readerVersionUsed].
+        ````ruby
+         hResponseObj[:readerVersionUsed] = ADIWG::Mdtranslator::Readers::{reader_name}::VERSION
+        ````
       * Call XML schema validation method if written.
       * Call the reader's initial 'unpack' method.
-      ````ruby
-        # unpack the Nokogiri xPath document into the internal object
-        return {reader_name}.unpack(xDoc, hResponseObj)
-      ````
+        ````ruby
+          # unpack the Nokogiri xPath document into the internal object
+          return {reader_name}.unpack(xDoc, hResponseObj)
+        ````
 
 1. Create a 'modules' directory to hold the reader's unpacking modules.  For flexibility create a separate unpacking module for each object of object in the metadata standard.  This simplifies writing, maintenance, and permits reuse of the modules during unpacking.
    * Path: /lib/adiwg/mdtranslator/readers/{reader_name}/modules/ <br><br>
@@ -150,6 +153,7 @@ When mdTranslator's 'translate' method is called, the parameters are examined an
 1. Create the initial (high level) unpacking module. 
    * Purpose:
       * Receive control from {reader_name}_reader.rb, this file was created in the first coding step.
+      * Setup message processing.
       * Create a new instance of the internal object (data store) to hold the results of the read operation.
       * To contain other methods used by multiple of the reader's lower level unpack modules.
       * Unpack the top level of the input metadata into the internal object, 'intObj'.
@@ -164,7 +168,15 @@ When mdTranslator's 'translate' method is called, the parameters are examined an
      ````
    * Responsibilities:
       * Load the message file to a hash.
-      * Instance the message file path.
+         ````ruby
+          # load error message array
+          file = File.join(File.dirname(__FILE__), '{reader_name}_reader_messages_eng') + '.yml'
+          hMessageList = YAML.load_file(file)
+         ````
+      * Instance the message file path for error methods.
+         ```ruby
+          @aMessagesList = hMessageList['messageList']
+         ````
       * Create a new hash for the internal object (data store) named 'intObj' using 'intMetadataClass' methods.  Example:
          ````ruby
           intMetadataClass = InternalMetadata.new

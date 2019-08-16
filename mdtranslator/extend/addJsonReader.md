@@ -110,6 +110,7 @@ When mdTranslator's 'translate' method is called, the parameters are examined an
 1. Create the reader's initial module.  
    * Purpose:
       * Receive control from the 'translate' method.
+      * Setup message processing.
       * Validate the input file is structurally sound, is in the appropriate format, and of a version to be handled by the reader.
       * Call the initial (high level) unpack method.
       * Return the results of the unpack and the response hash, to the user. 
@@ -122,6 +123,16 @@ When mdTranslator's 'translate' method is called, the parameters are examined an
    end 
    ````
    * Responsibilities:
+      * Load the message file to a hash.
+         ````ruby
+          # load error message array
+          file = File.join(File.dirname(__FILE__), '{reader_name}_reader_messages_eng') + '.yml'
+          hMessageList = YAML.load_file(file)
+         ````
+      * Instance the message file path for error methods.
+         ```ruby
+          @aMessagesList = hMessageList['messageList']
+         ````
       * Parse the input JSON file to a hash {hash_file_name}.
       ````ruby
       # parse mdJson file
@@ -136,8 +147,11 @@ When mdTranslator's 'translate' method is called, the parameters are examined an
       ````
       * Set hResponseObj[:readerStructureMessages] if problems found.
       * Set hResponseObj[:readerStructurePass] to 'false' if problem.
-      * Set hResponseObj[:readerVersionRequested]. 
-      * Set hResponseObj[:readerVersionUsed]. 
+      * Set hResponseObj[:readerVersionRequested] (if available in metadata standard and input file). 
+      * Set hResponseObj[:readerVersionUsed].
+        ````ruby
+         hResponseObj[:readerVersionUsed] = ADIWG::Mdtranslator::Readers::{reader_name}::VERSION
+        ````
       * Call JSON schema validation method if written.
          * Test for error and warning conditions. Call error methods which will set hResponseObj[:readerValidationPass] and hResponseObj[:readerValidationMessages] when appropriate. 
       * Call the reader's initial 'unpack' method.

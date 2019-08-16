@@ -16,17 +16,16 @@ require 'builder'
    * The writer name must be unique among writer, but may be the same as a reader.
    * The writer name, with first letter capitalized, will be used to qualify the namespace for all writer files as follows:
    
-   ````ruby
-    module ADIWG
-       module Mdtranslator
-          module Writers
-             module WriterModule
+     ````ruby
+      module ADIWG
+         module Mdtranslator
+            module Writers
+               module WriterModule
  
                   def self.doSomething()
                      # code...
                   end
-
-   ````
+     ````
    * Writer module names may be named as needed. <br><br>
    
 1. Create a folder for the writer code.
@@ -36,46 +35,48 @@ require 'builder'
 1. Add the writer name to the CLI 'writer' parameter's enumeration list.
    * File: /lib/adiwg/mdtranslator_cli.rb
    * Code:
-   ````ruby
-    method_option :writer, :aliases => '-w',
+     ````ruby
+       method_option :writer, :aliases => '-w',
                  :desc => 'Writer to create your output metadata file, leave blank to validate input only',
                  :enum => %w{fgdc html iso19110 iso19115_1 iso19115_2 mdJson sbJson }
-   ````
+     ````
    
 1. Create a README file for the writer.  This file will be accessed by the mdTranslator API and website.  Include the origin and history of the metadata standard and links to any reference websites. 
    * Written in markdown.
    * File path: /lib/adiwg/mdtranslator/writers/{writer_name}/
    * File name: readme.md
    * Template:
-   ````markdown
-     ## {reader_name}
+     ````markdown
+       ## {reader_name}
 
-     ### Supported versions
+       ### Supported versions
 
-     > 2.x (example)
+       > 2.x (example)
 
-     ### Writer for {metadata standard} metadata format (writer_name)
+       ### Writer for {metadata standard} metadata format (writer_name)
 
-     Text goes here... 
-   ````
+       Text goes here... 
+     ````
 
 1. Create a version file for the writer.  This file will be accessed by the mdTranslator API, website, and writer.  This sets the current version of the writer. 
    * File path: /lib/adiwg/mdtranslator/writers/{writer_name}/
    * File name: version.rb
    * Template:
-   ````ruby
-    # adiwg / mdTranslator / writers / {writer_name}
+     ````ruby
+      # adiwg / mdTranslator / writers / {writer_name}
     
-    # {version} {date} {action}
+      # {version} {date} {action}
     
-    module ADIWG
-       module Mdtranslator
-          module Writers
-             module {Writer_name}
-                VERSION = '0.0.0'
-             end
-          end
-end   ````
+      module ADIWG
+         module Mdtranslator
+            module Writers
+               module {Writer_name}
+                  VERSION = '0.0.0'
+               end
+            end
+         end 
+      end
+     ````
 
 1. Add the file for writer messages. 
    * File path: /lib/adiwg/mdtranslator/writers/{writer_name}/
@@ -83,22 +84,19 @@ end   ````
    * File name should include language in which the messages are written.  Always include english, other languages when international support is added. 
    * Messages are coded in YAML.
    * Template:
-   ````yaml
-    # Writer messages for {writer_name} {version}
+     ````yaml
+      # Writer messages for {writer_name} {version}
     
-    # History:
-    #  {your name} {date} {action}
-    #  {your name} {date} original script
+      # History:
+      #  {your name} {date} {action}
+      #  {your name} {date} original script
     
-    messageList:
-       - {id: 1, message: "message 1"}
-       - {id: 2, message: "message 2"}
-       - {id: 3, message: "message 3"}
-   ````
-
-
-
-
+      messageList:
+         - {id: 1, message: "message 1"}
+         - {id: 2, message: "message 2"}
+         - {id: 3, message: "message 3"}
+     ````
+   
 ### Coding 
 
 When mdTranslator's 'translate' method is called, the parameters are examined and control passed to the reader along with the input metadata file and the response hash.  The response hash will have the following elements pre-populated by /lib/adiwg/mdtranslator.rb
@@ -112,43 +110,56 @@ When mdTranslator's 'translate' method is called, the parameters are examined an
   
 1. Create the writer's initial module.  
    * Purpose:
+      * Setup message processing.
       * Setup builder to write the XML metadata file.
-      * Set hResponseObj writer elements
+      * Set hResponseObj writer elements.
       * Call the initial (high level) build method.
       * Return the results of the build and the response hash, to the user. 
    * File path: /lib/adiwg/mdtranslator/writers/{writer_name}/
    * File name: {writer_name}_writer.rb 
    * Receiving method: 
-   ````ruby
-   def self.startWriter(intObj, hResponseObj)
-      # code ...
-   end 
-   ````
-   
-------
-
+     ````ruby
+      def self.startWriter(intObj, hResponseObj)
+         # code ...
+      end 
+     ````
    * Responsibilities:
-      * Set the jBuilder flag to ignore empty elements if hResponse[:showAllTags] is "FALSE".
-      ````ruby
-       Jbuilder.ignore_nil(!responseObj[:writerShowTags])
-      ````
+      * Load the message file to a hash.
+        ````ruby
+         # load error message array
+         file = File.join(File.dirname(__FILE__), '{writer_name}_writer_messages_eng') + '.yml'
+         hMessageList = YAML.load_file(file)
+        ````
+      * Instance the message file path for error methods.
+        ````ruby
+         @aMessagesList = hMessageList['messageList']
+        ````
       * Set hResponseObj[:writerOutputFormat] = 'json'
       * Set hResponseObj[:writerVersion] from version file
-      ````ruby
-       schemaVersion = Gem::Specification.find_by_name('adiwg-mdjson_schemas').version.to_s
-       responseObj[:writerVersion] = schemaVersion
-      ````
-      * Call initial (high-level build module)
-      ````ruby
-       metadata = {Writer_name}.build(intObj, responseObj)
-      ````
+        ````ruby
+         hResponseObj[:writerVersion] = ADIWG::Mdtranslator::Writers::{writer_name}::VERSION
+        ````
+      * Create a new XML document for the metadata output
+        ````ruby
+         # create new XML document
+         @xml = Builder::XmlMarkup.new(indent: 3)
+        ````  
+      * Instance the initial (high-level) build module.  Pass in the new XML document and response hash.
+        ````ruby
+         # start writing the XML record
+         metadataWriter = Fgdc.new(@xml, responseObj)
+        ````        
+      * Call the "writeXML" method of the initial build module. 
+        ````ruby
+         metadata = metadataWriter.writeXML(intObj)
+        ````
+      * Return the XML document to the user.
+        ````ruby
+         return metadata
+        ````
       {% hint style='tip' %}
- The high-level build module will control the build process and receive the complete JSON metadata file.
+ The high-level build module will control the build process and receive the complete XML metadata file.
       {% endhint %}
-      * Set hResponseObj[:writerPass] based on messages returned during build processes.
-      ````ruby
-       responseObj[:writerPass] = true if responseObj[:writerMessages].empty?
-      ````
       * Write the error handling methods to be used while unpacking elements.  You can view other readers for examples of necessary functionality.  In general readers should be relaxed in regard to throwing errors.  Warnings should be issued rather than errors unless there are serious issues.
          * loadMessages
          * findMessage
@@ -158,72 +169,60 @@ When mdTranslator's 'translate' method is called, the parameters are examined an
       {% hint style='tip' %}
  The mdJson writer does not set many error messages.  The primary purpose of the mdJson format is to support mdEditor.  As such, partial records are often saved, reloaded, or shared.  Therefore strict adherence to the standard is not enforced.
       {% endhint %}
-      * Act as a container for any other methods that will be common to many or all metadata build modules.  The following method will be useful to include if your metadata standard uses arrays:
-      ````ruby
-       # ignore jBuilder object mapping when array is empty
-       def self.json_map(collection = [], _class)
-          if collection.nil? || collection.empty?
-             return nil
-          else
-             collection.map { |item| _class.build(item).attributes! }
-          end
-       end
-      ````
-      * Convert the jBuilder document to proper JSON format
-      ````ruby
-       metadata.target!
-      ````
+      * Act as a container for any other methods that will be common to many or all metadata build modules. 
 
-1. Create a 'modules' directory to hold the writer's build modules.  For flexibility create a separate build module for each object in the metadata standard.  This simplifies writing, maintenance, and permits reuse of the modules during unpacking.
-   * Path: /lib/adiwg/mdtranslator/writers/{writer_name}/modules/ <br><br>
+1. Create a 'classes' directory to hold the writer's build modules.  For flexibility create a separate build module for each object in the metadata standard.  This simplifies writing, maintenance, and permits reuse of the modules during unpacking.
+   * Path: /lib/adiwg/mdtranslator/writers/{writer_name}/classes/ <br><br>
    
 1. Create the initial (high level) build module. 
    * Purpose:
       * Receive control from {writer_name}_writer.rb, this file was created in the first coding step.
-      * Create a new jBuilder document.
-      * Initiate and build process.
-      * Send complete jBuilder file to the user.
-   * File path: /lib/adiwg/mdtranslator/writers/{writer_name}/modules/
+      * Build the XML header
+      * Build the body framework and high-level metadata tags.
+      * Control the build process for lower levels of the record.
+   * File path: /lib/adiwg/mdtranslator/writers/{writer_name}/classes/
    * File name: {writer_name}_{writer_name}.rb 
-   * Receiving method: 
-     ````ruby
-      def self.build(internal object, hResponseObj)
-         # code ...
-      end 
-     ````
-  * Responsibilities:
-      * Create a new jBuilder document
+   * Responsibilities:
+      * Initialize method: Receive and instantiate the XML document and response hash for other methods in this class.
         ````ruby
-         Jbuilder.new do |json|
-            # code ... 
-         end
-        ````
-      * Build JSON metadata file.
-      
-         __element example__
-         ````ruby
-          json.name 'mdJson'
-         ````
-         __element in block example__
-         ````ruby
-          json.schema do
-             json.name 'mdJson'
-             json.version hResponseObj[:writerVersion]
+          def initialize(xml, hResponseObj)
+             @xml = xml
+             @hResponseObj = hResponseObj
+             @NameSpace = ADIWG::Mdtranslator::Writers::Iso19115_1
           end
-         ````
-         __array of objects example__
-         ````ruby
-          # mdJson - contacts [] (required)
-          json.contact intObj[:contacts].map { |obj| Contact.build(obj).attributes! }
-         ````
-         __array of objects using json_map example__
-         ````ruby
-          json.responsibleParty @Namespace.json_map(hCitation[:responsibleParties], ResponsibleParty)
-         ````
-         {% hint style='tip' %}
- json_map is a method added to the startWriter method to handle empty arrays, see above.
-         {% endhint %}
-         
+        ````
+      * Build method: 
+        ````ruby
+          def writeXML(intObj)
+             # code ...
+          end
+        ````
+      * Add document head.  Example:
+        ````ruby
+         # document head
+         metadata = @xml.instruct! :xml, encoding: 'UTF-8'
+         @xml.comment!('ISO 19115-1 METADATA')
+         @xml.comment!('The following metadata file was constructed using the ADIwg mdTranslator, http://mdtranslator.adiwg.org')
+         @xml.comment!('mdTranslator software is an open-source project of the Alaska Data Integration working group (ADIwg)')
+         @xml.comment!('mdTranslator and other metadata tools are available at https://github.com/adiwg')
+         @xml.comment!('ADIwg is not responsible for the content of this metadata record')
+         @xml.comment!('This metadata record was generated by mdTranslator ' + version + ' at ' + Time.now.to_s)
+        ````
+      * Add XML namespace tags if XSD is available.  Example:
+        ````ruby
+         # MD_Metadata
+         @xml.tag!('mdb:MD_Metadata',
+                  {
+                   'xmlns:xsi' => 'http://www.w3.org/2001/XMLSchema-instance',
+                   'xmlns:xlink' => 'http://www.w3.org/1999/xlink',
+                   'xmlns:gml' => 'http://www.opengis.net/gml/3.2',
+        ````
+      * Write element
+      * Write class
+      * Write array
+      
+----
+
 1. Write a separate build method for each JSON metadata object.  There can be a lot of flexibility in coding the build modules.  However, I suggest staying with one theme throughout the reader to improve coding speed and maintenance.  
    * Purpose:
       * build the metadata object from mdTranslator's internal object.  This is most often straight forward, however sometimes it can get convoluted or even impractical.  
