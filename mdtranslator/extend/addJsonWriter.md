@@ -6,7 +6,7 @@
 
 These guidelines assume that the developer has already forked the mdTranslator and is working in a branch other than "master" or "dev".
 
-JSON writers rely on building a JSON from the contents of the internal using the "jbuilder" gem.  The "jbuilder" gem is already install with mdTranslator.  Require the gem:
+JSON writers rely on building a JSON formatted metadata file from the contents of the internal object using the "jbuilder" gem.  The "jbuilder" gem is install with mdTranslator.  Require the gem:
 ```ruby
 require 'jbuilder'
 ```
@@ -110,12 +110,12 @@ When mdTranslator's 'translate' method is called, the parameters are examined an
   * hResponseObj[:writerCSSlink] = cssLink
   * hResponseObj[:translatorVersion] = ADIWG::Mdtranslator::VERSION
   
-1. Create the reader's initial module.  
+1. Create the writer's initial module.  
    * Purpose:
-      * Setup jBuilder to write JSON metadata file.
+      * Setup jBuilder to write the JSON metadata file.
       * Set hResponseObj writer elements
       * Call the initial (high level) build method.
-      * Return the results of the unpack and the response hash, to the user. 
+      * Return the results of the build and the response hash, to the user. 
    * File path: /lib/adiwg/mdtranslator/writers/{writer_name}/
    * File name: {writer_name}_writer.rb 
    * Receiving method: 
