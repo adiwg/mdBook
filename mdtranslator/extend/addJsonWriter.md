@@ -202,32 +202,8 @@ When mdTranslator's 'translate' method is called, the parameters are examined an
             # code ... 
          end
         ````
-      * Build JSON metadata file.
+      * Build the high-level JSON block for the metadata standard.
       
-         __element example__
-         ````ruby
-          json.name 'mdJson'
-         ````
-         __element in block example__
-         ````ruby
-          json.schema do
-             json.name 'mdJson'
-             json.version hResponseObj[:writerVersion]
-          end
-         ````
-         __array of objects example__
-         ````ruby
-          # mdJson - contacts [] (required)
-          json.contact intObj[:contacts].map { |obj| Contact.build(obj).attributes! }
-         ````
-         __array of objects using json_map example__
-         ````ruby
-          json.responsibleParty @Namespace.json_map(hCitation[:responsibleParties], ResponsibleParty)
-         ````
-         {% hint style='tip' %}
- json_map is a method added to the startWriter method to handle empty arrays, see above.
-         {% endhint %}
-         
 1. Write a separate build method for each JSON metadata object.  There can be a lot of flexibility in coding the build modules.  However, I suggest staying with one theme throughout the reader to improve coding speed and maintenance.  
    * Purpose:
       * build the metadata object from mdTranslator's internal object.  This is most often straight forward, however sometimes it can get convoluted or even impractical.  
@@ -260,9 +236,35 @@ When mdTranslator's 'translate' method is called, the parameters are examined an
          outContext = inContext + ' > ' + outContext unless inContext.nil?
          ````
       * Build the JSON metadata object for the data found in the internal object block. 
+      
+         * Build JSON metadata file.
+        
+           __element example__
+           ````ruby
+            json.name 'mdJson'
+           ````
+           __element in block example__
+           ````ruby
+            json.schema do
+               json.name 'mdJson'
+               json.version hResponseObj[:writerVersion]
+            end
+           ````
+           __array of objects example__
+           ````ruby
+            # mdJson - contacts [] (required)
+            json.contact intObj[:contacts].map { |obj| Contact.build(obj).attributes! }
+           ````
+           __array of objects using json_map example__
+           ````ruby
+            json.responsibleParty @Namespace.json_map(hCitation[:responsibleParties], ResponsibleParty)
+           ````
+           {% hint style='tip' %}
+   json_map is a method added to the startWriter method to handle empty arrays, see above.
+           {% endhint %}
             
    * __Comment__ - The comments preceding an build block describe where the build element fits in the JSON metadata schema and has the following format:
-      * {object being build} - {element being built (which could be an object)} {object type if it is an object} {[] if an array} {(required) if required}.
+      * {object being build} - {element being built (which could be an object)} {object type if it is an object} {[] if an array} {(required) if required}. <br><br>
          
    * __Testing__ - All element and object are tested as they are queried from the internal object and any unexpected status reported via the response hash. 
       * Test for empty and missing required objects.
@@ -276,18 +278,18 @@ Ruby minitest is used to perform the tests.
 
 For mdTranslator writers, pass an mdJson metadata record to mdTranslator and request translation to the writer to be tested.  When mdJson metadata is read by mdTranslator it will pass through a validation process which rejects invalid records.  Although the mdJson must be valid it does not need to be comprehensive.  Add detail only for the metadata object being tested.  
 
-The best, and easiest, method of build the mdJson test files to generate them dynamically using the mdJson construction helper in "/test/helpers".  In one step you can create your valid base metadata record:
+The best, and easiest, method for building the mdJson test files is to generate them dynamically using the mdJson construction helpers in "/test/helpers".  In one step you can create your valid base metadata record:
 ````ruby
  require_relative '../../helpers/mdJson_hash_objects'
  require_relative '../../helpers/mdJson_hash_functions'
 
-# build mdJson test file in hash
-TDClass = MdJsonHashWriter.new
-mdHash = TDClass.base
+#  build mdJson test file in hash
+ TDClass = MdJsonHashWriter.new
+ mdHash = TDClass.base
 ````
-In another step add a fully populated citation
+In another steps add a fully populated blocks of data to meet your specific test requirements.
 ````ruby
-mdHash[:metadata][:resourceInfo][:citation] = TDClass.citation_full
+ mdHash[:metadata][:resourceInfo][:citation] = TDClass.citation_full
 ````
 {% hint style='tip' %}
   Another advantage is that should "citation" changes the helper will be updated and no changes will be required in your test script (unless it breaks).
