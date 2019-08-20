@@ -30,6 +30,8 @@ A developer of a new reader or writer should working knowledge of the following 
 
 * XSD and XMLSpy or equivalent for XML readers and writers
 
+* Ruby builder for XML writers
+
 * jBuilder for JSON writers
 
 * JSON Schema for JSON readers
