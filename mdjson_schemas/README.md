@@ -1,7 +1,5 @@
 # mdJSON Schemas
-[![Build Status](https://travis-ci.org/adiwg/mdJson-schemas.svg?branch=master)](https://travis-ci.org/adiwg/mdJson-schemas)
-[![Gem Version](https://badge.fury.io/rb/adiwg-mdjson_schemas.svg)](http://badge.fury.io/rb/adiwg-mdjson_schemas)
-[![npm version](https://badge.fury.io/js/mdjson-schemas.svg)](https://badge.fury.io/js/mdjson-schemas)
+[![Build Status](https://travis-ci.org/adiwg/mdJson-schemas.svg?branch=master)](https://travis-ci.org/adiwg/mdJson-schemas) [![Gem Version](https://badge.fury.io/rb/adiwg-mdjson_schemas.svg)](http://badge.fury.io/rb/adiwg-mdjson_schemas) [![npm version](https://badge.fury.io/js/mdjson-schemas.svg)](https://badge.fury.io/js/mdjson-schemas)
 
 ![mdJSON Schemas](/assets/logos/mdJSONSchemas_logo.png)
 

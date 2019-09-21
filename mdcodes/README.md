@@ -1,10 +1,8 @@
 # mdCodes
 
-![mdCodes](/assets/logos/mdCodes_logo.png)
+[![Build Status](https://travis-ci.org/adiwg/mdCodes.svg)](https://travis-ci.org/adiwg/mdCodes) [![Gem Version](https://badge.fury.io/rb/adiwg-mdcodes.svg)](http://badge.fury.io/rb/adiwg-mdcodes) [![npm version](https://badge.fury.io/js/mdcodes.svg)](https://badge.fury.io/js/mdcodes)
 
-[![Build Status](https://travis-ci.org/adiwg/mdCodes.svg)](https://travis-ci.org/adiwg/mdCodes)
-[![Gem Version](https://badge.fury.io/rb/adiwg-mdcodes.svg)](http://badge.fury.io/rb/adiwg-mdcodes)
-[![npm version](https://badge.fury.io/js/mdcodes.svg)](https://badge.fury.io/js/mdcodes)
+![mdCodes](/assets/logos/mdCodes_logo.png)
 
 ## Overview
 

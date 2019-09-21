@@ -16,5 +16,5 @@ A tool to test a metadata file written in the ADIwg mdJSON standard for valid in
 ### [Translator](https://www.adiwg.org/mdTools/#translator-page)
 Interfaces with the mdTranslator to convert an input metadata record to another standard, such as the ADIwg mdJSON standard or ISO 19115-1 XML.
 
-### [mdCodes](https://www.adiwg.org/mdTools/#codes-page)
-View mdCodes in HTML table, JSON, or CSV formats..
+### [Codes](https://www.adiwg.org/mdTools/#codes-page)
+View mdCodes in HTML table, JSON, or CSV formats.

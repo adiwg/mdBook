@@ -1,6 +1,5 @@
 # mdTranslator
-[![Build Status](https://travis-ci.org/adiwg/mdTranslator.svg?branch=master)](https://travis-ci.org/adiwg/mdTranslator)
-[![Gem Version](https://badge.fury.io/rb/adiwg-mdtranslator.svg)](http://badge.fury.io/rb/adiwg-mdtranslator)
+[![Build Status](https://travis-ci.org/adiwg/mdTranslator.svg?branch=master)](https://travis-ci.org/adiwg/mdTranslator) [![Gem Version](https://badge.fury.io/rb/adiwg-mdtranslator.svg)](http://badge.fury.io/rb/adiwg-mdtranslator)
 
 ## Overview
 **mdTranslator** is the engine of the mdToolkit. It translates metadata content in any supported reader format into any of the supported writer formats.  mdTranslator supports this standard-to-standard translation by organizing all metadata content into its own [internal metadata content standard](extend/internalObject.md).  Each mdTranslator reader must write its metadata content into the internal data store so that any of the writers can then read and write from this store.

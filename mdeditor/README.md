@@ -1,6 +1,6 @@
 [![mdEditor Homepage](/assets/logos/mdEditor_logo.png)](https://www.mdeditor.org/)
 
-Go to the [mdEditor Homepage](https://www.mdeditor.org/)
+## Go to the [mdEditor Homepage](https://www.mdeditor.org/)
 
 ## Architecture Overview
 
