@@ -1,3 +1,3 @@
-# Structure
+# Basic mdJSON Structure
 
-![Overview of mdJSON structure](../assets/images/mdjson_overview.png)
+![Overview of mdJSON structure](../assets/mdTranslator/mdjson_overview.png)

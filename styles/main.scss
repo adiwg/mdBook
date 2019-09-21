@@ -12,10 +12,8 @@ $glossary-text: #444;
 $section-text: #ff4500;
 $midnight: #191970;
 $panel-back: #e3e3e3;
-
 @import 'buttons';
 @import 'elements';
-
 @mixin headings($from: 1, $to: 6) {
   @for $i from $from through $to {
     h#{$i} {
@@ -91,20 +89,28 @@ $panel-back: #e3e3e3;
 }
 
 .book .footer-section {
-  .footer-author {
-    font-size: 1em !important;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 0px;
+  border-top: 1px solid $gray-light;
+  color: $gray-light;
+  font-size: 0.8em !important;
+  padding-top: 1em;
+  display: flex;
+  justify-content: space-between;
+
+  .glossary-term {
+    border: 0;
+    cursor: default !important;
   }
-  .footer-normal {
-    font-size: .7em;
-    color: #888;
-    .glossary-term {
-      border: 0px;
-      cursor: default !important;
+
+  .footer-logo {
+    padding-right: 1em;
+
+    img {
+      max-height: 90%;
+      opacity: 0.75;
     }
   }
-  .footer-right {
-    text-align: right;
+
+  .footer-text {
+    white-space: nowrap;
   }
 }

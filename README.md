@@ -1,5 +1,7 @@
 #Introduction
 
+![mdToolkit](assets/logos/mdToolkit.png)
+
 This book contains the documentation for the *Alaska Data Integration Working Group (ADIwg) Metadata Toolkit* (standards, applications, libraries, and services).
 
 ## Open Source Toolkit
