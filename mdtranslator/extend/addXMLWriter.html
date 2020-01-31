@@ -1,0 +1,1552 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Add XML Writer · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../website-1580505734694.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="extendSchema.html" />
+    
+    
+    <link rel="prev" href="addJsonWriter.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../../overview.html">
+            
+                <a href="../../overview.html">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../../project_history.html">
+            
+                <a href="../../project_history.html">
+            
+                    
+                    Project History
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../../about_adiwg.html">
+            
+                <a href="../../about_adiwg.html">
+            
+                    
+                    About ADIwg
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../adiwg_metadata_standard/">
+            
+                <a href="../../adiwg_metadata_standard/">
+            
+                    
+                    ADIwg Metadata Standard
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../adiwg_metadata_standard/iso_support.html">
+            
+                <a href="../../adiwg_metadata_standard/iso_support.html">
+            
+                    
+                    ISO Support
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../adiwg_metadata_standard/19115-1.html">
+            
+                <a href="../../adiwg_metadata_standard/19115-1.html">
+            
+                    
+                    19115-1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../adiwg_metadata_standard/19115-2.html">
+            
+                <a href="../../adiwg_metadata_standard/19115-2.html">
+            
+                    
+                    19115-2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../adiwg_metadata_standard/19110.html">
+            
+                <a href="../../adiwg_metadata_standard/19110.html">
+            
+                    
+                    19110
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../adiwg_metadata_standard/fgdc_csdgm_support.html">
+            
+                <a href="../../adiwg_metadata_standard/fgdc_csdgm_support.html">
+            
+                    
+                    FGDC CSDGM Support
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../mdjson_schemas/">
+            
+                <a href="../../mdjson_schemas/">
+            
+                    
+                    mdJSON
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../mdjson_schemas/structure.html">
+            
+                <a href="../../mdjson_schemas/structure.html">
+            
+                    
+                    Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../mdjson_schemas/json_schemas.html">
+            
+                <a href="../../mdjson_schemas/json_schemas.html">
+            
+                    
+                    JSON Schemas
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../mdjson_schema_viewer/">
+            
+                <a href="../../mdjson_schema_viewer/">
+            
+                    
+                    mdTools
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../mdjson_schema_viewer/usage.html">
+            
+                <a href="../../mdjson_schema_viewer/usage.html">
+            
+                    
+                    Usage
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../mdjson_schema_viewer/schema_tree.html">
+            
+                <a href="../../mdjson_schema_viewer/schema_tree.html">
+            
+                    
+                    Viewer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../../mdjson_schema_viewer/validator.html">
+            
+                <a href="../../mdjson_schema_viewer/validator.html">
+            
+                    
+                    Validator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../../mdjson_schema_viewer/translator.html">
+            
+                <a href="../../mdjson_schema_viewer/translator.html">
+            
+                    
+                    Translator
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../mdjson_schema_viewer/development.html">
+            
+                <a href="../../mdjson_schema_viewer/development.html">
+            
+                    
+                    Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../mdtranslatorOverview.html">
+            
+                <a href="../mdtranslatorOverview.html">
+            
+                    
+                    mdTranslator
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../install/installation.html">
+            
+                <a href="../install/installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../install/installInRuby.html">
+            
+                <a href="../install/installInRuby.html">
+            
+                    
+                    in Ruby
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../install/installInRails.html">
+            
+                <a href="../install/installInRails.html">
+            
+                    
+                    in Rails
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../use/usage.html">
+            
+                <a href="../use/usage.html">
+            
+                    
+                    Usage
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../use/useRubyGem.html">
+            
+                <a href="../use/useRubyGem.html">
+            
+                    
+                    Ruby Gem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../use/useCli.html">
+            
+                <a href="../use/useCli.html">
+            
+                    
+                    Command Line Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../use/useRoR.html">
+            
+                <a href="../use/useRoR.html">
+            
+                    
+                    Ruby on Rails
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.4" data-path="../use/publicApi.html">
+            
+                <a href="../use/publicApi.html">
+            
+                    
+                    Public mdTranslator API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../architecture/architecture.html">
+            
+                <a href="../architecture/architecture.html">
+            
+                    
+                    Architecture
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../architecture/translatorArchitecture.html">
+            
+                <a href="../architecture/translatorArchitecture.html">
+            
+                    
+                    mdTranslator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../architecture/commandLineInterface.html">
+            
+                <a href="../architecture/commandLineInterface.html">
+            
+                    
+                    Command Line Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="../architecture/structure/dirStructure.html">
+            
+                <a href="../architecture/structure/dirStructure.html">
+            
+                    
+                    File Directory Structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.3.1" data-path="../architecture/structure/binDirectory.html">
+            
+                <a href="../architecture/structure/binDirectory.html">
+            
+                    
+                    bin Directory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3.2" data-path="../architecture/structure/libDirectory.html">
+            
+                <a href="../architecture/structure/libDirectory.html">
+            
+                    
+                    lib Directory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3.3" data-path="../architecture/structure/testDirectory.html">
+            
+                <a href="../architecture/structure/testDirectory.html">
+            
+                    
+                    test Directory
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.4" data-path="../architecture/executionPath.html">
+            
+                <a href="../architecture/executionPath.html">
+            
+                    
+                    Execution Path
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.5" data-path="../architecture/internalObject.html">
+            
+                <a href="../architecture/internalObject.html">
+            
+                    
+                    Internal Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.6" data-path="../architecture/responseHash.html">
+            
+                <a href="../architecture/responseHash.html">
+            
+                    
+                    Response Hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.7" data-path="../architecture/dependentGems.html">
+            
+                <a href="../architecture/dependentGems.html">
+            
+                    
+                    RubyGem Dependencies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.8" data-path="../architecture/configureFiles.html">
+            
+                <a href="../architecture/configureFiles.html">
+            
+                    
+                    Configuration Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="extendTranslator.html">
+            
+                <a href="extendTranslator.html">
+            
+                    
+                    Extending the mdTranslator
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.4.1" data-path="forkRepository.html">
+            
+                <a href="forkRepository.html">
+            
+                    
+                    Fork the Repository
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.2" data-path="contribute.html">
+            
+                <a href="contribute.html">
+            
+                    
+                    Contribute to mdTranslator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.3" data-path="addReadWrite.html">
+            
+                <a href="addReadWrite.html">
+            
+                    
+                    Add Reader or Writer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.4.3.1" data-path="addJsonReader.html">
+            
+                <a href="addJsonReader.html">
+            
+                    
+                    Add JSON Reader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.3.2" data-path="addXMLReader.html">
+            
+                <a href="addXMLReader.html">
+            
+                    
+                    Add XML Reader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.3.3" data-path="addJsonWriter.html">
+            
+                <a href="addJsonWriter.html">
+            
+                    
+                    Add JSON Writer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.4.3.4" data-path="addXMLWriter.html">
+            
+                <a href="addXMLWriter.html">
+            
+                    
+                    Add XML Writer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.4" data-path="extendSchema.html">
+            
+                <a href="extendSchema.html">
+            
+                    
+                    Extending the Schema
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../mdtranslator_ror_api/">
+            
+                <a href="../../mdtranslator_ror_api/">
+            
+                    
+                    mdTranslator Rails API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../mdeditor/">
+            
+                <a href="../../mdeditor/">
+            
+                    
+                    mdEditor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../mdcodes/">
+            
+                <a href="../../mdcodes/">
+            
+                    
+                    mdCodes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../mdcodes/usage.html">
+            
+                <a href="../../mdcodes/usage.html">
+            
+                    
+                    Usage
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.1" data-path="../../mdcodes/installation.html">
+            
+                <a href="../../mdcodes/installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.2" data-path="../../mdcodes/ruby.html">
+            
+                <a href="../../mdcodes/ruby.html">
+            
+                    
+                    Ruby
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.3" data-path="../../mdcodes/api.html">
+            
+                <a href="../../mdcodes/api.html">
+            
+                    
+                    API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.4" data-path="../../mdcodes/output.html">
+            
+                <a href="../../mdcodes/output.html">
+            
+                    
+                    Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../mdcodes/development.html">
+            
+                <a href="../../mdcodes/development.html">
+            
+                    
+                    Development
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.2.1" data-path="../../mdcodes/architecture.html">
+            
+                <a href="../../mdcodes/architecture.html">
+            
+                    
+                    Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.2" data-path="../../mdcodes/creating_static_codelists.html">
+            
+                <a href="../../mdcodes/creating_static_codelists.html">
+            
+                    
+                    Creating Static Codelists
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../appendix.html">
+            
+                <a href="../../appendix.html">
+            
+                    
+                    Appendix
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../appendix/mdjson_data_dictionary.html">
+            
+                <a href="../../appendix/mdjson_data_dictionary.html">
+            
+                    
+                    mdJSON Data Dictionary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Add XML Writer</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="mdtranslator">mdTranslator</h1>
+<h2 id="add-an-xml-writer">Add an XML Writer</h2>
+<h3 id="setup">Setup</h3>
+<p>These guidelines assume that the developer has already forked the mdTranslator and is working in a branch other than &quot;master&quot; or &quot;dev&quot;.</p>
+<p>XML writers rely on building an XML formatted metadata file from the contents of the internal object using the &quot;builder&quot; gem.  The &quot;builder&quot; gem is installed with mdTranslator.  Require the gem:</p>
+<pre><code class="lang-ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">&apos;builder&apos;</span>
+</code></pre>
+<ol>
+<li><p>Name the writer</p>
+<ul>
+<li>The writer name should be a single word or mnemonic using only lowercase letters, numbers, and the underscore ( _ ).</li>
+<li>The writer name must be unique among writer, but may be the same as a reader.</li>
+<li><p>The writer name, with first letter capitalized, will be used to qualify the namespace for all writer files as follows:</p>
+<pre><code class="lang-ruby"> <span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">ADIWG</span></span>
+    <span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Mdtranslator</span></span>
+       <span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Writers</span></span>
+          <span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">WriterModule</span></span>
+
+             <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">self</span>.<span class="hljs-title">doSomething</span><span class="hljs-params">()</span></span>
+                <span class="hljs-comment"># code...</span>
+             <span class="hljs-keyword">end</span>
+</code></pre>
+</li>
+<li>Writer module names may be named as needed. <br><br></li>
+</ul>
+</li>
+<li><p>Create a folder for the writer code.</p>
+<ul>
+<li>The writer folder will be in /lib/adiwg/mdtranslator/writers/.</li>
+<li>The writer folder name must be the name of the writer.  <br><br></li>
+</ul>
+</li>
+<li><p>Add the writer name to the CLI &apos;writer&apos; parameter&apos;s enumeration list.</p>
+<ul>
+<li>File: /lib/adiwg/mdtranslator_cli.rb</li>
+<li>Code:<pre><code class="lang-ruby">  method_option <span class="hljs-symbol">:writer</span>, <span class="hljs-symbol">:aliases</span> =&gt; <span class="hljs-string">&apos;-w&apos;</span>,
+            <span class="hljs-symbol">:desc</span> =&gt; <span class="hljs-string">&apos;Writer to create your output metadata file, leave blank to validate input only&apos;</span>,
+            <span class="hljs-symbol">:enum</span> =&gt; <span class="hljs-string">%w{fgdc html iso19110 iso19115_1 iso19115_2 mdJson sbJson }</span>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>Create a README file for the writer.  This file will be accessed by the mdTranslator API and website.  Include the origin and history of the metadata standard and links to any reference websites. </p>
+<ul>
+<li>Written in markdown.</li>
+<li>File path: /lib/adiwg/mdtranslator/writers/{writer_name}/</li>
+<li>File name: readme.md</li>
+<li><p>Template:</p>
+<pre><code class="lang-markdown">  ## {reader_name}
+
+  ### Supported versions
+
+  &gt; 2.x (example)
+
+  ### Writer for {metadata standard} metadata format (writer_name)
+
+  Text goes here...
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>Create a version file for the writer.  This file will be accessed by the mdTranslator API, website, and writer.  This sets the current version of the writer. </p>
+<ul>
+<li>File path: /lib/adiwg/mdtranslator/writers/{writer_name}/</li>
+<li>File name: version.rb</li>
+<li><p>Template:</p>
+<pre><code class="lang-ruby"> <span class="hljs-comment"># adiwg / mdTranslator / writers / {writer_name}</span>
+
+ <span class="hljs-comment"># {version} {date} {action}</span>
+
+ <span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">ADIWG</span></span>
+    <span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Mdtranslator</span></span>
+       <span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Writers</span></span>
+          <span class="hljs-class"><span class="hljs-keyword">module</span> {<span class="hljs-title">Writer_name</span>}</span>
+             VERSION = <span class="hljs-string">&apos;0.0.0&apos;</span>
+          <span class="hljs-keyword">end</span>
+       <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span> 
+ <span class="hljs-keyword">end</span>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>Add the file for writer messages. </p>
+<ul>
+<li>File path: /lib/adiwg/mdtranslator/writers/{writer_name}/</li>
+<li>File name: {writer_name}_writer_messages_eng.yml </li>
+<li>File name should include language in which the messages are written.  Always include english, other languages when international support is added. </li>
+<li>Messages are coded in YAML.</li>
+<li><p>Template:</p>
+<pre><code class="lang-yaml"> <span class="hljs-comment"># Writer messages for {writer_name} {version}</span>
+
+ <span class="hljs-comment"># History:</span>
+ <span class="hljs-comment">#  {your name} {date} {action}</span>
+ <span class="hljs-comment">#  {your name} {date} original script</span>
+
+<span class="hljs-attr"> messageList:</span>
+<span class="hljs-bullet">    -</span> {id: <span class="hljs-number">1</span>, message: <span class="hljs-string">&quot;message 1&quot;</span>}
+<span class="hljs-bullet">    -</span> {id: <span class="hljs-number">2</span>, message: <span class="hljs-string">&quot;message 2&quot;</span>}
+<span class="hljs-bullet">    -</span> {id: <span class="hljs-number">3</span>, message: <span class="hljs-string">&quot;message 3&quot;</span>}
+</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="coding">Coding</h3>
+<p>When mdTranslator&apos;s &apos;translate&apos; method is called, the parameters are examined and control passed to the reader along with the input metadata file and the response hash.  The response hash will have the following elements pre-populated by /lib/adiwg/mdtranslator.rb</p>
+<ul>
+<li>hResponseObj[:readerRequested] = reader</li>
+<li>hResponseObj[:readerValidationLevel] = validate</li>
+<li>hResponseObj[:writerRequested] = writer</li>
+<li>hResponseObj[:writerForceValid] = forceValid</li>
+<li>hResponseObj[:writerShowTags] = showAllTags</li>
+<li>hResponseObj[:writerCSSlink] = cssLink</li>
+<li>hResponseObj[:translatorVersion] = ADIWG::Mdtranslator::VERSION</li>
+</ul>
+<ol>
+<li><p>Create the writer&apos;s initial module.  </p>
+<ul>
+<li>Purpose:<ul>
+<li>Setup message processing.</li>
+<li>Setup builder to write the XML metadata file.</li>
+<li>Set hResponseObj writer elements.</li>
+<li>Call the initial (high level) build method.</li>
+<li>Return the results of the build and the response hash, to the user. </li>
+</ul>
+</li>
+<li>File path: /lib/adiwg/mdtranslator/writers/{writer_name}/</li>
+<li>File name: {writer_name}_writer.rb </li>
+<li>Receiving method: <pre><code class="lang-ruby"> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">self</span>.<span class="hljs-title">startWriter</span><span class="hljs-params">(intObj, hResponseObj)</span></span>
+    <span class="hljs-comment"># code ...</span>
+ <span class="hljs-keyword">end</span>
+</code></pre>
+</li>
+<li>Responsibilities:<ul>
+<li>Load the message file to a hash.<pre><code class="lang-ruby"> <span class="hljs-comment"># load error message array</span>
+ file = File.join(File.dirname(__FILE_<span class="hljs-number">_</span>), <span class="hljs-string">&apos;{writer_name}_writer_messages_eng&apos;</span>) + <span class="hljs-string">&apos;.yml&apos;</span>
+ hMessageList = YAML.load_file(file)
+</code></pre>
+</li>
+<li>Instance the message file path for error methods.<pre><code class="lang-ruby"> @aMessagesList = hMessageList[<span class="hljs-string">&apos;messageList&apos;</span>]
+</code></pre>
+</li>
+<li>Set hResponseObj[:writerOutputFormat] = &apos;json&apos;</li>
+<li>Set hResponseObj[:writerVersion] from version file<pre><code class="lang-ruby"> hResponseObj[<span class="hljs-symbol">:writerVersion</span>] = <span class="hljs-symbol">ADIWG:</span><span class="hljs-symbol">:Mdtranslator</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Writers</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:</span>{writer_name}<span class="hljs-symbol">:</span><span class="hljs-symbol">:VERSION</span>
+</code></pre>
+</li>
+<li>Create a new XML document for the metadata output<pre><code class="lang-ruby"> <span class="hljs-comment"># create new XML document</span>
+ @xml = <span class="hljs-symbol">Builder:</span><span class="hljs-symbol">:XmlMarkup</span>.new(<span class="hljs-symbol">indent:</span> <span class="hljs-number">3</span>)
+</code></pre>
+</li>
+<li>Instance the initial (high-level) build module.  Pass in the new XML document and response hash.<pre><code class="lang-ruby"> <span class="hljs-comment"># start writing the XML record</span>
+ metadataWriter = Fgdc.new(@xml, responseObj)
+</code></pre>
+</li>
+<li>Call the &quot;writeXML&quot; method of the initial build module. <pre><code class="lang-ruby"> metadata = metadataWriter.writeXML(intObj)
+</code></pre>
+</li>
+<li>Return the XML document to the user.<pre><code class="lang-ruby"> <span class="hljs-keyword">return</span> metadata
+</code></pre>
+<div class="alert alert-success hints-alert"><div class="hints-icon"><i class="fa fa-lightbulb-o"></i></div><div class="hints-container"><p> The high-level build module will control the build process and receive the complete XML metadata file.</p>
+</div></div></li>
+<li>Write the error handling methods to be used while unpacking elements.  You can view other readers for examples of necessary functionality.  In general readers should be relaxed in regard to throwing errors.  Warnings should be issued rather than errors unless there are serious issues.<ul>
+<li>loadMessages</li>
+<li>findMessage</li>
+<li>issueError</li>
+<li>issueWarning</li>
+<li>issueNotice
+<div class="alert alert-success hints-alert"><div class="hints-icon"><i class="fa fa-lightbulb-o"></i></div><div class="hints-container"><p> The mdJson writer does not set many error messages.  The primary purpose of the mdJson format is to support mdEditor.  As such, partial records are often saved, reloaded, or shared.  Therefore strict adherence to the standard is not enforced.</p>
+</div></div></li>
+</ul>
+</li>
+<li>Act as a container for any other methods that will be common to many or all metadata build modules. <br><br></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Create a &apos;classes&apos; directory to hold the writer&apos;s build modules.  For flexibility create a separate build module for each object in the metadata standard.  This simplifies writing, maintenance, and permits reuse of the modules during unpacking.</p>
+<ul>
+<li>Path: /lib/adiwg/mdtranslator/writers/{writer_name}/classes/ <br><br></li>
+</ul>
+</li>
+<li><p>Create the initial (high level) build module. </p>
+<ul>
+<li>Purpose:<ul>
+<li>Receive control from {writer_name}_writer.rb, this file was created in the first coding step.</li>
+<li>Build the XML header</li>
+<li>Build the body framework and high-level metadata tags.</li>
+<li>Control the build process for lower levels of the record.</li>
+</ul>
+</li>
+<li>File path: /lib/adiwg/mdtranslator/writers/{writer_name}/classes/</li>
+<li>File name: {writer<em>name}</em>{writer_name}.rb </li>
+<li>Responsibilities:<ul>
+<li>Initialize method: Receive and instantiate the XML document and response hash for other methods in this class.  Include the namespace for error methods and any other method that are to be generally available.<pre><code class="lang-ruby">  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span><span class="hljs-params">(xml, hResponseObj)</span></span>
+     @xml = xml
+     @hResponseObj = hResponseObj
+     @NameSpace = <span class="hljs-symbol">ADIWG:</span><span class="hljs-symbol">:Mdtranslator</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Writers</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Iso19115_1</span>
+  <span class="hljs-keyword">end</span>
+</code></pre>
+</li>
+<li>Build method: <pre><code class="lang-ruby">  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">writeXML</span><span class="hljs-params">(intObj)</span></span>
+     <span class="hljs-comment"># code ...</span>
+  <span class="hljs-keyword">end</span>
+</code></pre>
+</li>
+<li>Add document head.  Example:<pre><code class="lang-ruby"> <span class="hljs-comment"># document head</span>
+ metadata = @xml.instruct! <span class="hljs-symbol">:xml</span>, <span class="hljs-symbol">encoding:</span> <span class="hljs-string">&apos;UTF-8&apos;</span>
+ @xml.comment!(<span class="hljs-string">&apos;ISO 19115-1 METADATA&apos;</span>)
+ @xml.comment!(<span class="hljs-string">&apos;The following metadata file was constructed using the ADIwg mdTranslator, http://mdtranslator.adiwg.org&apos;</span>)
+ @xml.comment!(<span class="hljs-string">&apos;mdTranslator software is an open-source project of the Alaska Data Integration working group (ADIwg)&apos;</span>)
+ @xml.comment!(<span class="hljs-string">&apos;mdTranslator and other metadata tools are available at https://github.com/adiwg&apos;</span>)
+ @xml.comment!(<span class="hljs-string">&apos;ADIwg is not responsible for the content of this metadata record&apos;</span>)
+ @xml.comment!(<span class="hljs-string">&apos;This metadata record was generated by mdTranslator &apos;</span> + version + <span class="hljs-string">&apos; at &apos;</span> + Time.now.to_s)
+</code></pre>
+</li>
+<li>Add XML namespace tags if XSD is available.  Example:<pre><code class="lang-ruby"> <span class="hljs-comment"># MD_Metadata</span>
+ @xml.tag!(<span class="hljs-string">&apos;mdb:MD_Metadata&apos;</span>,
+          {
+           <span class="hljs-string">&apos;xmlns:xsi&apos;</span> =&gt; <span class="hljs-string">&apos;http://www.w3.org/2001/XMLSchema-instance&apos;</span>,
+           <span class="hljs-string">&apos;xmlns:xlink&apos;</span> =&gt; <span class="hljs-string">&apos;http://www.w3.org/1999/xlink&apos;</span>,
+           <span class="hljs-string">&apos;xmlns:gml&apos;</span> =&gt; <span class="hljs-string">&apos;http://www.opengis.net/gml/3.2&apos;</span>,
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Write a separate build method for each XML metadata object.  There can be a lot of flexibility in coding the build modules.  However, I suggest staying with one theme throughout the reader to improve coding speed and maintenance.  </p>
+<ul>
+<li>Purpose:<ul>
+<li>build the metadata object from mdTranslator&apos;s internal object.  This is most often straight forward, however sometimes it can get convoluted or even impractical.<br><div class="alert alert-success hints-alert"><div class="hints-icon"><i class="fa fa-lightbulb-o"></i></div><div class="hints-container"><p> The internal object structure is closely patterned after ISO 19115-1.  Export from the internal object thus involves some amount of translation from the writer&apos;s metadata format to ISO 19115-1.</p>
+</div></div></li>
+<li>Identify errors, problems with the output and report these to the user. </li>
+</ul>
+</li>
+<li>Receiving method parameters (internal object block, response hash, in context).  Pass in only the portion of the internal object that is being translated by this module:<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">self</span>.<span class="hljs-title">writeXML</span><span class="hljs-params">(hInternalObjectBlock, inContext = <span class="hljs-keyword">nil</span>)</span></span>
+    <span class="hljs-comment"># code ...</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+</li>
+<li><p>Responsibilities:</p>
+<ul>
+<li>Test if the input object exists, else issue warning and return nil.  Example:<pre><code class="lang-ruby"> <span class="hljs-comment"># return nil object if input is empty</span>
+ <span class="hljs-keyword">if</span> hCitation.empty?
+    MdJson.issueWarning(<span class="hljs-number">80</span>, responseObj, inContext)
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">nil</span>
+ <span class="hljs-keyword">end</span>
+</code></pre>
+</li>
+<li>Construct an &apos;outContext&apos; message to be used in error messages.  Use the inContext if present.  The inContext will describe the parent object of the current object being unpacked thus allowing a means of preserving a path.  Example:<pre><code class="lang-ruby"> outContext = <span class="hljs-string">&apos;citation&apos;</span>
+ outContext = inContext + <span class="hljs-string">&apos; &gt; &apos;</span> + outContext <span class="hljs-keyword">unless</span> inContext.<span class="hljs-keyword">nil</span>?
+</code></pre>
+</li>
+<li>build the XML file for the writer standard.<ul>
+<li><strong>element example</strong>:<pre><code class="lang-ruby"> <span class="hljs-comment"># bounding box - west longitude (required)</span>
+ <span class="hljs-keyword">unless</span> hBBox[<span class="hljs-symbol">:westLongitude</span>].<span class="hljs-keyword">nil</span>?
+    @xml.tag!(<span class="hljs-string">&apos;gex:westBoundLongitude&apos;</span>) <span class="hljs-keyword">do</span>
+       @xml.tag!(<span class="hljs-string">&apos;gco:Decimal&apos;</span>, hBBox[<span class="hljs-symbol">:westLongitude</span>])
+    <span class="hljs-keyword">end</span>
+ <span class="hljs-keyword">end</span>
+ <span class="hljs-keyword">if</span> hBBox[<span class="hljs-symbol">:westLongitude</span>].<span class="hljs-keyword">nil</span>?
+    @NameSpace.issueError(<span class="hljs-number">10</span>)
+ <span class="hljs-keyword">end</span>
+</code></pre>
+</li>
+<li><strong>class example</strong>:<pre><code class="lang-ruby"> <span class="hljs-comment"># data identification - citation {CI_Citation} (required)</span>
+ hCitation = hResource[<span class="hljs-symbol">:citation</span>]
+ <span class="hljs-keyword">unless</span> hCitation.empty?
+    @xml.tag!(<span class="hljs-string">&apos;mri:citation&apos;</span>) <span class="hljs-keyword">do</span>
+       citationClass.writeXML(hCitation, <span class="hljs-string">&apos;main resource&apos;</span>)
+    <span class="hljs-keyword">end</span>
+ <span class="hljs-keyword">end</span>
+ <span class="hljs-keyword">if</span> hCitation.empty?
+    @NameSpace.issueWarning(<span class="hljs-number">50</span>, <span class="hljs-string">&apos;mri:citation&apos;</span>)
+ <span class="hljs-keyword">end</span>
+</code></pre>
+</li>
+<li><strong>array example</strong>:<pre><code class="lang-ruby"> <span class="hljs-comment"># data identification - credit []</span>
+ aCredits = hResource[<span class="hljs-symbol">:credits</span>]
+ aCredits.each <span class="hljs-keyword">do</span> |credit|
+    @xml.tag!(<span class="hljs-string">&apos;mri:credit&apos;</span>) <span class="hljs-keyword">do</span>
+       @xml.tag!(<span class="hljs-string">&apos;gco:CharacterString&apos;</span>, credit)
+    <span class="hljs-keyword">end</span>
+ <span class="hljs-keyword">end</span>
+ <span class="hljs-keyword">if</span> aCredits.empty? &amp;&amp; @hResponseObj[<span class="hljs-symbol">:writerShowTags</span>]
+    @xml.tag!(<span class="hljs-string">&apos;mri:credit&apos;</span>)
+ <span class="hljs-keyword">end</span>
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Comment</strong> - The comments preceding an build block describe where the build element fits in the XML metadata schema and has the following format:</p>
+<ul>
+<li>{object being build} - {element being built (which could be an object)} {object type if it is an object} {[] if an array} {(required) if required}. <br><br></li>
+</ul>
+</li>
+<li><p><strong>Testing</strong> - All element and object are tested as they are queried from the internal object and any unexpected status reported via the response hash. </p>
+<ul>
+<li>Test for empty and missing required objects.</li>
+<li>The testing code is isolated to a separate block immediately below the unpacking block.  This makes the tests easy to find and maintain.  Decisions can be made based on the build status, showAllTags, and status of other build elements or objects as required.   </li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="testing">Testing</h3>
+<p>Testing the writer is done by sending complete mdJson metadata records to mdTranslator and requesting translation to the writer to be tested, then compare the actual results against previously validated metadata records or segments.  The tests should cover all possible variations; elements with values, elements without values, invalid values, missing elements, empty arrays, arrays with single element, arrays with multiple elements, etc. All situations that throw error messages should also be tested to see the proper error message is reported and no additional or distracting messages are included.  And remember to check that the message context is appropriate.</p>
+<p>Ruby minitest is used to perform the tests. </p>
+<p>For mdTranslator writers, pass an mdJson metadata record to mdTranslator and request translation to the writer to be tested.  When mdJson metadata is read by mdTranslator it will pass through a validation process which rejects invalid records.  Although the mdJson must be valid it does not need to be comprehensive.  Add detail only for the metadata object being tested.  </p>
+<p>The best, and easiest, method for building the mdJson test files is to generate them dynamically using the mdJson construction helpers in &quot;/test/helpers&quot;.  In one step you can create your valid base metadata record:</p>
+<pre><code class="lang-ruby"> require_relative <span class="hljs-string">&apos;../../helpers/mdJson_hash_objects&apos;</span>
+ require_relative <span class="hljs-string">&apos;../../helpers/mdJson_hash_functions&apos;</span>
+
+ <span class="hljs-comment"># build mdJson test file in hash</span>
+ TDClass = MdJsonHashWriter.new
+ mdHash = TDClass.base
+</code></pre>
+<p>In another steps add a fully populated blocks of data to meet your specific test requirements.</p>
+<pre><code class="lang-ruby"> mdHash[<span class="hljs-symbol">:metadata</span>][<span class="hljs-symbol">:resourceInfo</span>][<span class="hljs-symbol">:citation</span>] = TDClass.citation_full
+</code></pre>
+<p><div class="alert alert-success hints-alert"><div class="hints-icon"><i class="fa fa-lightbulb-o"></i></div><div class="hints-container"><p>  Another advantage is that when an object&apos;s schema changes and the helper is updated, no changes are required to the tests to assess the impact of the changes, unless of course the change breaks the code or requires additional tests.</p>
+</div></div></p>
+<ol>
+<li><p>Create a folder for the writer&apos;s test code.</p>
+<ul>
+<li>Folder path: /test/writers/.</li>
+<li>Folder name: must be the name of the writer.  <br><br></li>
+</ul>
+</li>
+<li><p>Add a new folder for test data files if needed.  A test data file holds segments of metadata or full metadata records that will be processed by the writer and checked for expected or unexpected results.</p>
+<ul>
+<li>Folder path: /test/writers/{writer name}/.</li>
+<li>Folder name: suggest &quot;testData&quot;.  <br><br>
+<div class="alert alert-success hints-alert"><div class="hints-icon"><i class="fa fa-lightbulb-o"></i></div><div class="hints-container"><p> Most test scripts will be built using mdJson construction helpers discussed above.  But occasionally a metadata file of special construction will be needs and it can be placed here.</p>
+</div></div></li>
+</ul>
+</li>
+<li><p>Add a parent test file to hold common tasks for all tests if useful.  Methods to read and parse test data files and load components common to all tests can be placed in this parent method.</p>
+<ul>
+<li>File path: /test/writers/{writer name}/.</li>
+<li>File name: {writer name}_test_parent.rb.  <br><br></li>
+</ul>
+</li>
+<li><p>Write the XML test data first.  If you have an XSD use XMLSpy, Oxygen or similar tool to validate the test data before saving it in a test file.  In this way you are only comparing against validated metadata. The test data file also serves as an excellent pattern while coding the writer.  </p>
+</li>
+<li><p>Name each test module using the following pattern: &quot;tc<em>{writer name}</em>{object name}.rb&quot;.  This will ensure rake will include your test module when running tests.  </p>
+</li>
+<li><p>Write tests.  You can view examples from other writers, but there are no requirements in writing the tests other than to be thorough. </p>
+</li>
+<li><p>Use Nokogiri XPath to extract segments for the minitests.  There is no need to compare the entire returned metadata file against a full file in testData; and that would create many problems in itself.  Save only the validated clip to be compared against in the testData file and extract the clip to test from the result metadata using Nokogiri XPath.  </p>
+<p>These are a few methods added to the XML writer&apos;s parent test file.  &apos;get_xml&apos; handles loading the XML reference XML and &apos;run_test&apos; handles extracting XML segments using Nokogiri XPath.  Note that before the minitest is performed the white space needs to be squeezed out the XML strings.</p>
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">self</span>.<span class="hljs-title">get_xml</span><span class="hljs-params">(fileName)</span></span>
+   file = File.join(File.dirname(__FILE_<span class="hljs-number">_</span>), <span class="hljs-string">&apos;testData&apos;</span>, fileName) + <span class="hljs-string">&apos;.xml&apos;</span>
+   xDoc = <span class="hljs-symbol">Nokogiri:</span><span class="hljs-symbol">:XML</span>(File.read(file))
+   <span class="hljs-keyword">return</span> xDoc
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">self</span>.<span class="hljs-title">run_test</span><span class="hljs-params">(hIn, expectFile, expectPath, gotPath, gotSuffix = <span class="hljs-number">0</span>)</span></span>
+
+   <span class="hljs-comment"># read the fgdc reference file</span>
+   xFile = get_xml(expectFile)
+   xExpect = xFile.xpath(expectPath)
+   expect = xExpect.to_s.squeeze(<span class="hljs-string">&apos; &apos;</span>)
+
+   hResponseObj = <span class="hljs-symbol">ADIWG:</span><span class="hljs-symbol">:Mdtranslator</span>.translate(
+      <span class="hljs-symbol">file:</span> hIn.to_json, <span class="hljs-symbol">reader:</span> <span class="hljs-string">&apos;mdJson&apos;</span>, <span class="hljs-symbol">writer:</span> <span class="hljs-string">&apos;iso19115_1&apos;</span>, <span class="hljs-symbol">showAllTags:</span> <span class="hljs-keyword">true</span>, <span class="hljs-symbol">validate:</span> <span class="hljs-string">&apos;none&apos;</span>
+   )
+   pass = hResponseObj[<span class="hljs-symbol">:writerPass</span>] &amp;&amp;
+      hResponseObj[<span class="hljs-symbol">:readerStructurePass</span>] &amp;&amp;
+      hResponseObj[<span class="hljs-symbol">:readerValidationPass</span>] &amp;&amp;
+      hResponseObj[<span class="hljs-symbol">:readerExecutionPass</span>]
+
+   xMetadata = <span class="hljs-symbol">Nokogiri:</span><span class="hljs-symbol">:XML</span>(hResponseObj[<span class="hljs-symbol">:writerOutput</span>])
+   xGot = xMetadata.xpath(gotPath)[gotSuffix]
+   got = xGot.to_s.squeeze(<span class="hljs-string">&apos; &apos;</span>)
+
+   <span class="hljs-keyword">return</span> expect, got, pass, hResponseObj[<span class="hljs-symbol">:writerMessages</span>]
+
+<span class="hljs-keyword">end</span>
+</code></pre>
+</li>
+<li><p>Run &quot;rake&quot; to test run all tests.  While building a writer you can comment out lines in &quot;Rakefile&quot; to exclude other readers and writers.  Before declaring completion, be sure to reactivate all reader and writer tests and then test all together to be sure the new reader did not introduce unanticipated errors.</p>
+</li>
+</ol>
+<div class="page-wrapper">
+    <div class="page-inner">
+        <section class="footer-section">
+            <div class="footer-logo">
+                <img src="data:image/png;base64,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">
+            </div>
+            <div class="footer-text">
+                an Alaska Data Integration working group <i><b>project</b></i><br>
+                    Report any issues with this page to
+                    <a href="mailto:feedback@mdeditor.org?subject=mdBook%20Documentation%20Issue&amp;body=Please%20include%20page%20name" target="_blank">
+                        feedback@mdeditor.org</a><br>
+                    Document updated <span id="compileDate"></span>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script>
+    var dt = new Date();
+    document.getElementById("compileDate").innerHTML = dt.toLocaleDateString();
+</script>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="addJsonWriter.html" class="navigation navigation-prev " aria-label="Previous page: Add JSON Writer">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="extendSchema.html" class="navigation navigation-next " aria-label="Next page: Extending the Schema">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Add XML Writer","level":"1.5.4.3.4","depth":4,"next":{"title":"Extending the Schema","level":"1.5.4.4","depth":3,"path":"mdtranslator/extend/extendSchema.md","ref":"mdtranslator/extend/extendSchema.md","articles":[]},"previous":{"title":"Add JSON Writer","level":"1.5.4.3.3","depth":4,"path":"mdtranslator/extend/addJsonWriter.md","ref":"mdtranslator/extend/addJsonWriter.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","styles-sass-fix","regexplace","code","expandable-chapters","customize-footer"],"pluginsConfig":{"regexplace":{"substitutes":[{"pattern":"<img (.*)alt=\"([^\"]*)\"(.*) {0,1}/{0,1}> {0,}{caption([^\\}]*)}","flags":"g","substitute":"<figure id=\"fig_PAGE_LEVEL_._INDEX_\" class=\"screenshot\"><img $1alt=\"$2\" $4$3><figcaption><span>Image _INDEX_: </span>$2</figcaption></figure>"},{"pattern":"<!-- tasks -->","flags":"g","substitute":"<div class=\"list-tasks\">"},{"pattern":"<!-- endtasks -->","flags":"g","substitute":"</div>"},{"pattern":"1({<strong>type</strong>:.*})1","flags":"g","substitute":"<span class=\"md-type\">$1<br>Usage: </span>"},{"pattern":"2{(.*)}2","flags":"g","substitute":"<br><span class=\"md-type\">$1 </span>"}]},"styles-sass-fix":{},"customize-footer":{},"search":{},"layout":{"footerPath":"layouts/footer1.html"},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-lightbulb-o","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website-1580505734694.css","ebook":"ebook-1580505734708.css","pdf":"pdf-1580505734716.css","mobi":"mobi-1580505734724.css","epub":"epub-1580505734732.css"}},"file":{"path":"mdtranslator/extend/addXMLWriter.md","mtime":"2020-01-31T21:21:11.183Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-31T21:22:13.583Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
