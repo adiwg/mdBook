@@ -67,6 +67,11 @@
                "pattern": "2{(.*)}2",
                "flags": "g",
                "substitute": "<br><span class=\"md-type\">$1 </span>"
+            },
+            {
+               "pattern": "&lt;\/?(?:(?:li)|(?:ul))&gt;",
+               "flags": "g",
+               "substitute": ""
             }
          ]
       },
