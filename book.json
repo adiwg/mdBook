@@ -39,6 +39,26 @@
                "substitute": "</div>"
             },
             {
+               "pattern": "<!-- main -->",
+               "flags": "g",
+               "substitute": "<div id=\"top\">"
+            },
+            {
+               "pattern": "<!-- endmain -->",
+               "flags": "g",
+               "substitute": "</main>"
+            },
+            {
+               "pattern": "<!-- section -->",
+               "flags": "g",
+               "substitute": "<section class=\"section\">"
+            },
+            {
+               "pattern": "<!-- endsection -->",
+               "flags": "g",
+               "substitute": "</section>"
+            },
+            {
                "pattern": "1({<strong>type</strong>:.*})1",
                "flags": "g",
                "substitute": "<span class=\"md-type\">$1<br>Usage: </span>"
