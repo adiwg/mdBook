@@ -371,3 +371,12 @@ a.btn.disabled, fieldset[disabled] a.btn {
       opacity: 0.75; }
   .book .footer-section .footer-text {
     white-space: nowrap; }
+
+.mdjson-data-dictionary small {
+  font-size: .75em; }
+
+.mdjson-data-dictionary .page-inner {
+  max-width: 1000px; }
+  .mdjson-data-dictionary .page-inner section table {
+    display: block;
+    font-size: .9em; }
